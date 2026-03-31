@@ -1,0 +1,112 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NhaHangKKTS_Nhom10_Khoa:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/NhaHangKKTS_Nhom10_Khoa_jar2</output-path>
+    <root id="archive" name="NhaHangKKTS_Nhom10_Khoa.jar">
+      <element id="module-output" name="NhaHangKKTS_Nhom10_Khoa" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/17.0.2/javafx-base-17.0.2-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/microsoft/sqlserver/mssql-jdbc/12.8.1.jre11/mssql-jdbc-12.8.1.jre11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/17.0.2/javafx-graphics-17.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/17.0.2/javafx-fxml-17.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13.4/itextpdf-5.5.13.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/17.0.2/javafx-graphics-17.0.2-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/github/bajins/datetime-picker-javafx/1.0.0/datetime-picker-javafx-1.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/17.0.2/javafx-fxml-17.0.2-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-crypto/6.3.4/spring-security-crypto-6.3.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/17.0.2/javafx-base-17.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/17.0.2/javafx-controls-17.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/micrometer/micrometer-observation/1.12.11/micrometer-observation-1.12.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/micrometer/micrometer-commons/1.12.11/micrometer-commons-1.12.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/17.0.2/javafx-controls-17.0.2-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/6.3.4/spring-security-core-6.3.4.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Maven: com.itextpdf:itextpdf:5.5.13.4" />
+      <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:12.8.1.jre11" />
+      <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+      <element id="library" level="project" name="Maven: org.springframework.security:spring-security-crypto:6.3.4" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-aop:6.1.14" />
+      <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.6.2" />
+      <element id="library" level="project" name="Maven: io.github.bajins:datetime-picker-javafx:1.0.0" />
+      <element id="library" level="project" name="Maven: io.micrometer:micrometer-commons:1.12.11" />
+      <element id="library" level="project" name="Maven: io.micrometer:micrometer-observation:1.12.11" />
+      <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:6.3.4" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-beans:6.1.14" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-context:6.1.14" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-core:6.1.14" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-expression:6.1.14" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-jcl:6.1.14" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-console-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-console-l1-2-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-datetime-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-debug-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-errorhandling-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-file-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-file-l1-2-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-file-l2-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-handle-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-heap-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-interlocked-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-libraryloader-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-localization-l1-2-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-memory-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-namedpipe-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-processenvironment-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-processthreads-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-processthreads-l1-1-1.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-profile-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-string-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-synch-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-synch-l1-2-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-sysinfo-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-timezone-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-core-util-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-conio-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-convert-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-environment-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-filesystem-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-heap-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-locale-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-math-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-multibyte-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-private-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-process-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-runtime-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-stdio-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-string-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-time-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/api-ms-win-crt-utility-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/decora_sse.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/fxplugins.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/glass.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/glib-lite.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/gstreamer-lite.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/javafx_font.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/javafx_iio.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/jfxmedia.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/jfxwebkit.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/msvcp140.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/msvcp140_1.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/msvcp140_2.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/prism_common.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/prism_d3d.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/prism_sw.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/ucrtbase.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/vcruntime140.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-23/bin/vcruntime140_1.dll" />
+      <element id="library" level="application" name="Java-FX" />
+      <element id="library" level="project" name="Maven: org.apiguardian:apiguardian-api:1.1.2" />
+      <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.8.2" />
+      <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2" />
+      <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.8.2" />
+      <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-engine:1.8.2" />
+      <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.2.0" />
+    </root>
+  </artifact>
+</component>

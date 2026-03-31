@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane prefHeight="800.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThongKe_Control">
+    <tabs>
+        <!-- Tab 1: Statistics -->
+        <Tab closable="false" text="          Tổng quan          ">
+            <content>
+                <AnchorPane prefHeight="800.0" prefWidth="1340.0">
+                    <children>
+                        <!-- Header Labels for statistics -->
+                        <HBox alignment="center" layoutX="491.0" layoutY="8.0" prefHeight="80.0" prefWidth="829.0" spacing="30.0">
+                            <children>
+                                <VBox alignment="center" prefHeight="80.0" prefWidth="220.0">
+                                    <children>
+                                        <Label prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #f1c40f; -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-alignment: center;" text="Hóa đơn trong tháng:" />
+                                        <Label fx:id="lbSoHoaDon" prefHeight="40.0" prefWidth="220.0" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-background-color: #f1c40f; -fx-alignment: center;" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="center" prefHeight="80.0" prefWidth="220.0">
+                                    <children>
+                                        <Label prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #f1c40f; -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-alignment: center;" text="Doanh thu của tháng:" />
+                                        <Label fx:id="lbDoanhThuThang" prefHeight="40.0" prefWidth="220.0" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-background-color: #f1c40f; -fx-alignment: center;" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="center" prefHeight="80.0" prefWidth="220.0">
+                                    <children>
+                                        <Label prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #f1c40f; -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-alignment: center;" text="Doanh thu của năm:" />
+                                        <Label fx:id="lbDoanhThuNam" prefHeight="40.0" prefWidth="220.0" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-background-color: #f1c40f; -fx-alignment: center;" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+                        <!-- ComboBoxes for selecting time period and year -->
+                        <HBox layoutX="34.0" layoutY="14.0" prefHeight="40.0" prefWidth="400.0" spacing="20.0">
+                            <children>
+                                <ComboBox fx:id="monthComboBox" onAction="#handleClick" prefHeight="40.0" prefWidth="200.0" promptText="Tháng ">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="1" />
+                                            <String fx:value="2" />
+                                            <String fx:value="3" />
+                                            <String fx:value="4" />
+                                            <String fx:value="5" />
+                                            <String fx:value="6" />
+                                            <String fx:value="7" />
+                                            <String fx:value="8" />
+                                            <String fx:value="9" />
+                                            <String fx:value="10" />
+                                            <String fx:value="11" />
+                                            <String fx:value="12" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <ComboBox fx:id="yearComboBox" onAction="#handleClick" prefHeight="40.0" prefWidth="150.0" promptText="Năm">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="2020" />
+                                            <String fx:value="2021" />
+                                            <String fx:value="2022" />
+                                            <String fx:value="2023" />
+                                            <String fx:value="2024" />
+                                            <String fx:value="2025" />
+                                            <String fx:value="2026" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                            </children>
+                        </HBox>
+
+                        <!-- BarChart for revenue statistics -->
+                        <BarChart fx:id="revenueBarChart" layoutX="20.0" layoutY="100.0" prefHeight="629.0" prefWidth="750.0" style="-fx-background-color: #ffffff;" title="Doanh thu theo thời gian">
+                            <xAxis>
+                                <CategoryAxis label="Thời gian" tickLabelRotation="45">
+                                    <categories>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Tháng 1" />
+                                            <String fx:value="Tháng 2" />
+                                            <String fx:value="Tháng 3" />
+                                            <String fx:value="Tháng 4" />
+                                            <String fx:value="Tháng 5" />
+                                            <String fx:value="Tháng 6" />
+                                            <String fx:value="Tháng 7" />
+                                            <String fx:value="Tháng 8" />
+                                            <String fx:value="Tháng 9" />
+                                            <String fx:value="Tháng 10" />
+                                            <String fx:value="Tháng 11" />
+                                            <String fx:value="Tháng 12" />
+                                        </FXCollections>
+                                    </categories>
+                                </CategoryAxis>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis label="Doanh thu" />
+                            </yAxis>
+                        </BarChart>
+
+                        <!-- PieChart for revenue breakdown by category -->
+                        <PieChart fx:id="revenuePieChart" layoutX="790.0" layoutY="100.0" prefHeight="320.0" prefWidth="500.0" style="-fx-background-color: #ffffff;" title="Tỷ lệ doanh thu theo loại sản phẩm" />
+
+                        <!-- BarChart for top employee revenue -->
+                        <BarChart fx:id="employeeRevenueBarChart" barGap="5" categoryGap="5" layoutX="790.0" layoutY="429.0" prefHeight="302.0" prefWidth="500.0" style="-fx-background-color: #ffffff;" title="Top doanh thu nhân viên">
+                            <xAxis>
+                                <CategoryAxis label="Nhân viên">
+                                </CategoryAxis>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis label="Doanh thu" />
+                            </yAxis>
+                        </BarChart>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+
+        <Tab closable="false" text="         Cụ thể         ">
+            <content>
+                <AnchorPane prefHeight="800.0" prefWidth="1340.0">
+                    <children>
+
+                        <HBox layoutX="20.0" layoutY="20.0" prefHeight="122.0" prefWidth="1086.0" spacing="40.0" style="-fx-background-color: #E0E0E0; -fx-padding: 15px;">
+                            <children>
+                                <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #00BFFF; -fx-padding: 10px;">
+                                    <children>
+                                        <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Doanh thu trong ngày:" />
+                                        <Label fx:id="revenueTodayLabel" style="-fx-font-size: 22; -fx-font-weight: bold;" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #00BFFF; -fx-padding: 10px;">
+                                    <children>
+                                        <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Số hóa đơn trong ngày:" />
+                                        <Label fx:id="totalInvoicesLabel" style="-fx-font-size: 22; -fx-font-weight: bold;" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #00BFFF; -fx-padding: 10px;">
+                                    <children>
+                                        <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Số lượng món ăn bán trong ngày:" />
+                                        <Label fx:id="totalDishesSoldLabel" style="-fx-font-size: 22; -fx-font-weight: bold;" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #00BFFF; -fx-padding: 10px;">
+                                    <children>
+                                        <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Số khách hàng mới:" />
+                                        <Label fx:id="newCustomersLabel" style="-fx-font-size: 22; -fx-font-weight: bold;" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <VBox layoutX="920.0" layoutY="150.0" prefHeight="518.0" prefWidth="398.0" spacing="10.0" style="-fx-background-color: #F5F5F5; -fx-padding: 20px; -fx-border-color: lightgrey; -fx-border-width: 1;">
+                            <children>
+                                <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Tỷ lệ các món ăn bán trong ngày:" />
+                                <PieChart fx:id="dishesPieChart" prefHeight="406.0" prefWidth="357.0" />
+                            </children>
+                        </VBox>
+                        <VBox layoutX="20.0" layoutY="150.0" prefHeight="600.0" prefWidth="900.0" spacing="10.0" style="-fx-background-color: #F5F5F5; -fx-padding: 20px; -fx-border-color: lightgrey; -fx-border-width: 1;">
+                            <children>
+                                <Label style="-fx-font-size: 18; -fx-font-weight: bold; -fx-alignment: CENTER;" text="Doanh thu 7 ngày gần nhất:" />
+                                <LineChart fx:id="revenueLast7DaysChart" prefHeight="500.0" prefWidth="850.0">
+                                    <xAxis>
+                                        <CategoryAxis label="Ngày" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis label="Doanh thu" />
+                                    </yAxis>
+                                </LineChart>
+
+                            </children>
+                        </VBox>
+                        <DatePicker fx:id="pickDate" layoutX="1119.0" layoutY="95.0" onAction="#handleClick1" prefHeight="34.0" prefWidth="175.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.DatBan_Control">
+   <children>
+      <BorderPane fx:id="borderDatBan" prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="80.0" prefWidth="1314.0" style="-fx-background-color: rgb(217, 217, 217);" stylesheets="@../css/MainFormDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="khua" mnemonicParsing="false" onAction="#KhuAClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: rgb(126, 142, 135);" text="Khu A" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/restaurant.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="khub" mnemonicParsing="false" onAction="#KhuBClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: rgb(19, 95, 60);" text="Khu B" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/restaurant.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="khuc" mnemonicParsing="false" onAction="#KhuCClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: rgb(26, 140, 211);" text="Khu C" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/restaurant.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/phone.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="100.0" top="28.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="txtSDTKH" prefHeight="30.0" prefWidth="160.0" promptText="Nhập SĐT khách hàng">
+                     <HBox.margin>
+                        <Insets left="5.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <DatePicker fx:id="chonNgay" layoutX="2000.0" prefHeight="30.0" prefWidth="145.0">
+                     <HBox.margin>
+                        <Insets left="110.0" top="25.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ComboBox fx:id="chonBuoi" prefHeight="30.0" prefWidth="130.0" promptText="Chọn buổi">
+                     <HBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Button layoutX="1000.0" mnemonicParsing="false" onAction="#locTheoNgay" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: #50A8FA;" text="Kiểm tra" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="70.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/find.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <Pane prefHeight="646.0" prefWidth="1307.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="b" prefHeight="652.0" prefWidth="1314.0" style="-fx-background-color: white;" stylesheets="@../css/HoverBan.css">
+                     <children>
+                        <Pane layoutX="26.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(217, 217, 217);" />
+                        <Label layoutX="78.0" layoutY="612.0" prefHeight="21.0" prefWidth="76.0" text="Bàn trống">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="194.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(255, 0, 0);" />
+                        <Label layoutX="246.0" layoutY="612.0" prefHeight="21.0" prefWidth="118.0" text="Bàn đã được đặt">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="410.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(61, 116, 41);" />
+                        <Label layoutX="462.0" layoutY="612.0" prefHeight="21.0" prefWidth="292.0" text="Bàn đang phục vụ">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B01" fitHeight="150.0" fitWidth="150.0" layoutX="60.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="145.0" text="B01">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B02" fitHeight="150.0" fitWidth="150.0" layoutX="320.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="145.0" text="B02">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B03" fitHeight="150.0" fitWidth="150.0" layoutX="582.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="626.0" layoutY="145.0" text="B03">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B04" fitHeight="150.0" fitWidth="150.0" layoutX="840.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="884.0" layoutY="145.0" text="B04">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B05" fitHeight="150.0" fitWidth="150.0" layoutX="1100.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1144.0" layoutY="145.0" text="B05">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B06" fitHeight="150.0" fitWidth="150.0" layoutX="60.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="335.0" text="B06">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B07" fitHeight="150.0" fitWidth="150.0" layoutX="320.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="335.0" text="B07">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B08" fitHeight="150.0" fitWidth="150.0" layoutX="582.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="626.0" layoutY="335.0" text="B08">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B09" fitHeight="150.0" fitWidth="150.0" layoutX="840.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="884.0" layoutY="335.0" text="B09">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B10" fitHeight="150.0" fitWidth="150.0" layoutX="1100.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1144.0" layoutY="335.0" text="B10">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B11" fitHeight="150.0" fitWidth="150.0" layoutX="60.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="525.0" text="B11">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B12" fitHeight="150.0" fitWidth="150.0" layoutX="320.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="525.0" text="B12">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B13" fitHeight="150.0" fitWidth="150.0" layoutX="582.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="626.0" layoutY="525.0" text="B13">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B14" fitHeight="150.0" fitWidth="150.0" layoutX="840.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="884.0" layoutY="525.0" text="B14">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="B15" fitHeight="150.0" fitWidth="150.0" layoutX="1100.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1144.0" layoutY="525.0" text="B15">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Line endX="-19.79998779296875" endY="363.20001220703125" layoutX="544.0" layoutY="222.0" startX="-19.79998779296875" startY="-195.20001220703125" />
+                        <Label layoutX="8.0" text="Bàn 4 ghế">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="535.0" text="Bàn 6 ghế">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="c" prefHeight="652.0" prefWidth="1314.0" style="-fx-background-color: white;" stylesheets="@../css/HoverBan.css">
+                     <children>
+                        <Pane layoutX="26.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(217, 217, 217);" />
+                        <Label layoutX="78.0" layoutY="612.0" prefHeight="21.0" prefWidth="76.0" text="Bàn trống">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="194.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(255, 0, 0);" />
+                        <Label layoutX="246.0" layoutY="612.0" prefHeight="21.0" prefWidth="118.0" text="Bàn đã được đặt">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="410.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(61, 116, 41);" />
+                        <Label layoutX="462.0" layoutY="612.0" prefHeight="21.0" prefWidth="257.0" text="Bàn đang phục vụ">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C01" fitHeight="150.0" fitWidth="150.0" layoutX="60.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="139.0" text="C01">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C02" fitHeight="150.0" fitWidth="150.0" layoutX="320.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="145.0" text="C02">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C03" fitHeight="150.0" fitWidth="150.0" layoutX="582.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="626.0" layoutY="145.0" text="C03">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C04" fitHeight="150.0" fitWidth="150.0" layoutX="840.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="884.0" layoutY="145.0" text="C04">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C05" fitHeight="150.0" fitWidth="150.0" layoutX="1100.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1144.0" layoutY="145.0" text="C05">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C06" fitHeight="150.0" fitWidth="150.0" layoutX="60.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="335.0" text="C06">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C07" fitHeight="150.0" fitWidth="150.0" layoutX="320.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="335.0" text="C07">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C08" fitHeight="150.0" fitWidth="150.0" layoutX="582.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="626.0" layoutY="335.0" text="C08">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C09" fitHeight="150.0" fitWidth="150.0" layoutX="840.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="884.0" layoutY="335.0" text="C09">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C10" fitHeight="150.0" fitWidth="150.0" layoutX="1100.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1144.0" layoutY="335.0" text="C10">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C11" fitHeight="150.0" fitWidth="150.0" layoutX="60.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="525.0" text="C11">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C12" fitHeight="150.0" fitWidth="150.0" layoutX="320.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="525.0" text="C12">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C13" fitHeight="150.0" fitWidth="150.0" layoutX="582.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="626.0" layoutY="525.0" text="C13">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C14" fitHeight="150.0" fitWidth="150.0" layoutX="840.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="884.0" layoutY="525.0" text="C14">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="C15" fitHeight="150.0" fitWidth="150.0" layoutX="1100.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1144.0" layoutY="525.0" text="C15">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Line endX="-19.79998779296875" endY="363.20001220703125" layoutX="1069.0" layoutY="222.0" startX="-19.79998779296875" startY="-195.20001220703125" />
+                        <Label layoutX="1056.0" text="Bàn 16 ghế">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Line endX="-19.79998779296875" endY="363.20001220703125" layoutX="544.0" layoutY="222.0" startX="-19.79998779296875" startY="-195.20001220703125" />
+                        <Label layoutX="535.0" text="Bàn 12 ghế">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" text="Bàn 8 ghế">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="a" prefHeight="652.0" prefWidth="1314.0" style="-fx-background-color: white;" stylesheets="@../css/HoverBan.css">
+                     <children>
+                        <Pane layoutX="26.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(217, 217, 217);" />
+                        <Label layoutX="78.0" layoutY="612.0" prefHeight="21.0" prefWidth="76.0" text="Bàn trống">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="194.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(255, 0, 0);" />
+                        <Label layoutX="246.0" layoutY="612.0" prefHeight="21.0" prefWidth="118.0" text="Bàn đã được đặt">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="410.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(61, 116, 41);" />
+                        <Label layoutX="462.0" layoutY="612.0" prefHeight="21.0" prefWidth="136.0" text="Bàn đang phục vụ">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A01" fitHeight="150.0" fitWidth="150.0" layoutX="60.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="145.0" text="A01">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A02" fitHeight="150.0" fitWidth="150.0" layoutX="320.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="145.0" text="A02">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A03" fitHeight="150.0" fitWidth="150.0" layoutX="582.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="626.0" layoutY="145.0" text="A03">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A04" fitHeight="150.0" fitWidth="150.0" layoutX="840.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="884.0" layoutY="145.0" text="A04">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A05" fitHeight="150.0" fitWidth="150.0" layoutX="1100.0" layoutY="30.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1144.0" layoutY="145.0" text="A05">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A06" fitHeight="150.0" fitWidth="150.0" layoutX="60.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="335.0" text="A06">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A07" fitHeight="150.0" fitWidth="150.0" layoutX="320.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="335.0" text="A07">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A08" fitHeight="150.0" fitWidth="150.0" layoutX="582.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="626.0" layoutY="335.0" text="A08">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A09" fitHeight="150.0" fitWidth="150.0" layoutX="840.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="884.0" layoutY="335.0" text="A09">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A10" fitHeight="150.0" fitWidth="150.0" layoutX="1100.0" layoutY="220.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1144.0" layoutY="335.0" text="A10">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A11" fitHeight="150.0" fitWidth="150.0" layoutX="60.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="104.0" layoutY="525.0" text="A11">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A12" fitHeight="150.0" fitWidth="150.0" layoutX="320.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="525.0" text="A12">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A13" fitHeight="150.0" fitWidth="150.0" layoutX="582.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="626.0" layoutY="525.0" text="A13">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A14" fitHeight="150.0" fitWidth="150.0" layoutX="840.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="884.0" layoutY="525.0" text="A14">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="A15" fitHeight="150.0" fitWidth="150.0" layoutX="1100.0" layoutY="410.0" onMouseClicked="#chonBan" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/banTrong.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="1144.0" layoutY="525.0" text="A15">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" text="Bàn 2 ghế">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+      <Pane fx:id="pnTTDatBan" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: white;" />
+   </children>
+</StackPane>

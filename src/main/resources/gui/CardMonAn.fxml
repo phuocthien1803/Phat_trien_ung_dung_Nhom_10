@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="cardMon" prefHeight="150.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CardMonAn_Control">
+   <children>
+      <VBox layoutX="43.0" prefHeight="150.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="150.0" prefWidth="150.0">
+               <children>
+                  <ImageView fx:id="hinhMonAn" fitHeight="109.0" fitWidth="150.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="25.0" prefWidth="150.0">
+               <children>
+                  <Label fx:id="tenMonAn" alignment="CENTER" prefHeight="38.0" prefWidth="170.0" text="Tên món" />
+               </children>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="150.0">
+               <children>
+                  <Label fx:id="giaMonAn" alignment="CENTER" prefHeight="41.0" prefWidth="186.0" text="0.0 VNĐ" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/HoverMenu.css" />
+      <URL value="@../css/MainFormDesign.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="anchor-pane-hover" />
+      <String fx:value="card" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

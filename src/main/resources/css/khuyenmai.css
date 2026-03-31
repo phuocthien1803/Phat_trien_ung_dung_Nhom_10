@@ -1,0 +1,28 @@
+
+#table_km .column-header {
+    -fx-pref-height: 30px;
+    -fx-font-size: 16px;
+    -fx-background-color: #ff9f41;
+    -fx-border-color: #ff9f41;
+    -fx-border-width: 0 0 2px 0;
+}
+
+#table_km .cell {
+    -fx-alignment: CENTER;
+    -fx-pref-height: 30px;
+    -fx-font-size: 16px;
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 0 0;
+}
+
+/* Đặt viền cho TableView */
+#table_km {
+    -fx-border-color: transparent;
+}
+
+/* Đặt viền cho các ô hàng */
+#table_km .table-row-cell {
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 1px 0;
+}
+

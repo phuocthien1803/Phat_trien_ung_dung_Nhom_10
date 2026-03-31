@@ -1,0 +1,99 @@
+
+#table_tt .column-header {
+    -fx-pref-height: 50px;
+    -fx-font-size: 16px;
+    -fx-background-color: rgb(26, 140, 211);
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 0 2px 0;
+}
+
+#table_tt .cell {
+    -fx-alignment: CENTER;
+    -fx-pref-height: 50px;
+    -fx-font-size: 25px;
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 0 0;
+}
+
+/* Đặt viền cho TableView */
+#table_tt {
+    -fx-border-color: transparent;
+}
+
+/* Đặt viền cho các ô hàng */
+#table_tt .table-row-cell {
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 1px 0;
+}
+#title_km {
+    -fx-background-color: #ff9f41;
+}
+.txt_decor {
+    -fx-font-size: 20px;
+}
+#txt_mahoadon {
+    -fx-font-weight: bold;
+    -fx-text-fill: #00BFFF;
+}
+#txt_tongtien{
+    -fx-text-fill: red;
+}
+#txt_khachtra {
+    -fx-font-weight: bold;
+}
+#table_monan .column-header {
+    -fx-pref-height: 50px;
+    -fx-font-size: 16px;
+    -fx-background-color: rgb(26, 140, 211);
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 0 2px 0;
+}
+
+#table_monan .cell {
+    -fx-alignment: CENTER;
+    -fx-pref-height: 50px;
+    -fx-font-size: 25px;
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 0 0;
+}
+
+/* Đặt viền cho TableView */
+#table_monan {
+    -fx-border-color: transparent;
+}
+
+/* Đặt viền cho các ô hàng */
+#table_monan .table-row-cell {
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 1px 0;
+}
+
+#table_nhanvien .column-header {
+    -fx-pref-height: 50px;
+    -fx-font-size: 16px;
+    -fx-background-color: rgb(26, 140, 211);
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 0 2px 0;
+}
+
+#table_nhanvien .cell {
+    -fx-alignment: CENTER;
+    -fx-pref-height: 50px;
+    -fx-font-size: 16px;
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 0 0;
+}
+
+/* Đặt viền cho TableView */
+#table_nhanvien {
+    -fx-border-color: transparent;
+}
+
+/* Đặt viền cho các ô hàng */
+#table_nhanvien .table-row-cell {
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 1px 0;
+}
+
+
+

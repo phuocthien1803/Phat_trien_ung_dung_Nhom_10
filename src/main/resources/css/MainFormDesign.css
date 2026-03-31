@@ -1,0 +1,51 @@
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);
+}
+
+.card{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: #00BFFF;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1.5px;
+}
+.table-view .column-header-background{
+    -fx-background-color: #00BFFF;
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-background-insets: 0 0 0 0;
+}
+
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size: 35px;
+    -fx-font-size: 14px;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: #fff;
+}
+.cell {
+    -fx-font-size: 13px;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #45a049, #3e8e41);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.4, 0, 2);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button:pressed {
+    -fx-background-color: #3e8e41;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 5, 0.2, 0, 1);
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+
+

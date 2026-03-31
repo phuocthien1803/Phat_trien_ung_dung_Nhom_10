@@ -1,0 +1,27 @@
+
+#banghoadon .column-header {
+    -fx-pref-height: 50px;
+    -fx-font-size: 16px;
+    -fx-background-color: rgb(26, 140, 211);
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 0 2px 0;
+}
+
+#banghoadon .cell {
+    -fx-alignment: CENTER;
+    -fx-pref-height: 50px;
+    -fx-font-size: 25px;
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 0 0;
+}
+
+/* Đặt viền cho TableView */
+#banghoadon {
+    -fx-border-color: transparent;
+}
+
+/* Đặt viền cho các ô hàng */
+#banghoadon .table-row-cell {
+    -fx-border-color: #00BFFF;
+    -fx-border-width: 0 1px 1px 0;
+}

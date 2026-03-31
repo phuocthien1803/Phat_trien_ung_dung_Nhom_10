@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: d7d7d7;" stylesheets="@../css/MainFormDesign.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.QuanLyBan_Control">
+   <children>
+      <Button layoutX="6.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnDatBan" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: rgb(26, 140, 211);" text="Đặt bàn" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/bell.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="144.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnHoaDon" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: rgb(26, 140, 211);" text="Hóa đơn" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/bill.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="282.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnThemKH" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: rgb(26, 140, 211);" text="Thêm KH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <BorderPane layoutX="7.0" layoutY="52.0" prefHeight="662.0" prefWidth="1297.0" style="-fx-background-color: #d7d7d7;">
+         <left>
+            <AnchorPane prefHeight="662.0" prefWidth="765.0" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="shadow" stylesheets="@../css/MainFormDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="DEEPSKYBLUE" layoutX="64.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách hàng" textAlignment="CENTER" wrappingWidth="269.60002441406243">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="91.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/name.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtTenKH" layoutX="123.0" layoutY="116.0" prefHeight="26.0" prefWidth="180.0" promptText="Tên khách hàng" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
+                     <font>
+                        <Font size="13.0" />
+                     </font></TextField>
+                  <TextField fx:id="txtSdtKH" layoutX="123.0" layoutY="71.0" prefHeight="26.0" prefWidth="180.0" promptText="Nhập số điện thoại" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
+                     <font>
+                        <Font size="13.0" />
+                     </font></TextField>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="91.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/phone.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="91.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/rewarddaden.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtDiemTL" layoutX="123.0" layoutY="162.0" prefHeight="26.0" prefWidth="180.0" promptText="Điểm tích lũy" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
+                     <font>
+                        <Font size="13.0" />
+                     </font></TextField>
+                  <Text fill="DEEPSKYBLUE" layoutX="407.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin đặt bàn:" textAlignment="CENTER" wrappingWidth="269.60002441406243">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="hinhThucDatBan" layoutX="487.0" layoutY="71.0" prefHeight="26.0" prefWidth="180.0" promptText="Chọn hình thức đặt bàn" />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="452.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/table.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="452.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/calendar.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtSoLuongKH" layoutX="486.0" layoutY="204.0" prefHeight="26.0" prefWidth="180.0" promptText="Nhập số lượng khách " style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
+                     <font>
+                        <Font size="13.0" />
+                     </font></TextField>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="452.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/customer.png" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="tableDatMon" layoutX="44.0" layoutY="279.0" prefHeight="240.0" prefWidth="677.0" styleClass="trans">
+                    <columns>
+                      <TableColumn fx:id="colTenMon" prefWidth="195.0" text="Tên món ăn" />
+                      <TableColumn fx:id="colGhiChu" prefWidth="132.0" text="Ghi chú" />
+                        <TableColumn fx:id="colGiaTien" prefWidth="110.0" text="Giá tiền" />
+                        <TableColumn fx:id="colSoLuong" prefWidth="74.4000244140625" text="Số lượng" />
+                        <TableColumn fx:id="colThanhTien" prefWidth="110.0" text="Thành tiền" />
+                        <TableColumn fx:id="colVAT" prefWidth="49.60003662109375" text="VAT" />
+                    </columns>
+                  </TableView>
+                  <Text fill="DEEPSKYBLUE" layoutX="255.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin đặt món" textAlignment="CENTER" wrappingWidth="269.60002441406243">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnDatBan" layoutX="642.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonBtnDatBan" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" text="Đặt bàn" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/booking.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnVangLai" layoutX="529.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonBtnVangLai" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" text="Vãng lai" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/stranger.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnCoc" layoutX="416.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonBtnCoc" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" text="Chưa cọc" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="chuaCoc" fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fill="#1a8cd3" layoutX="428.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền:" wrappingWidth="98.13671875">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#1a8cd3" layoutX="428.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiền phải cọc:" wrappingWidth="117.33673095703125">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="maBan" layoutX="650.0" layoutY="14.0" text="XD" textFill="DEEPSKYBLUE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTongTien" layoutX="551.0" layoutY="528.0" text="0 VNĐ" textFill="#1a8cd3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTienCoc" layoutX="551.0" layoutY="559.0" text="0 VNĐ" textFill="#1a8cd3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="ngayDatBan" layoutX="487.0" layoutY="116.0" prefHeight="26.0" prefWidth="180.0" promptText="Chọn ngày đặt bàn" />
+                  <ComboBox fx:id="gioDatBan" layoutX="487.0" layoutY="162.0" prefHeight="26.0" prefWidth="85.0" promptText="Giờ " />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="452.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/clock.png" />
+                     </image>
+                  </ImageView>
+                  <ComboBox fx:id="phutDatBan" layoutX="582.0" layoutY="162.0" prefHeight="26.0" prefWidth="85.0" promptText="Phút" />
+               </children>
+               <effect>
+                  <Shadow />
+               </effect>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="662.0" prefWidth="521.0" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="shadow" stylesheets="@../css/MainFormDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane layoutX="9.0" layoutY="156.0" prefHeight="492.0" prefWidth="502.0">
+                     <content>
+                        <GridPane fx:id="gridPaneMenu" prefHeight="18.0" prefWidth="98.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <Text fill="DEEPSKYBLUE" layoutX="133.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU" textAlignment="CENTER" wrappingWidth="269.60002441406243">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="202.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/menu.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="49.0" layoutY="104.0" mnemonicParsing="false" onAction="#chonTrangMonAn" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: FFE500; -fx-background-radius: 20; -fx-blend-mode: hard-light;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/food.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="194.0" layoutY="104.0" mnemonicParsing="false" onAction="#chonTrangDoUong" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 20;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/soda.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="339.0" layoutY="104.0" mnemonicParsing="false" onAction="#chonTrangRuouBia" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: FAC050; -fx-background-radius: 20;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/alcoholic-drink.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="txtTenMonCanTim" layoutX="56.0" layoutY="64.0" prefHeight="30.0" prefWidth="180.0" promptText="Nhập tên món ăn cần tìm" />
+                  <Button layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#timMonAn" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #00bfff; -fx-background-radius: 10;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/find.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+      <Button layoutX="1270.0" layoutY="5.0" mnemonicParsing="false" onAction="#dongPane" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="btnDong" fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

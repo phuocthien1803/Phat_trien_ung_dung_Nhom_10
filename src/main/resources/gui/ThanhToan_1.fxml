@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #BBBBBB;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThanhToan_1_Control">
+   <children>
+      <Pane fx:id="pn_thanhtoan1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Separator layoutX="915.0" orientation="VERTICAL" prefHeight="434.0" prefWidth="13.0" />
+            <TableView id="table_tt" fx:id="table_chitiet" prefHeight="434.0" prefWidth="920.0" stylesheets="@../css/thanhtoan1.css">
+              <columns>
+                <TableColumn fx:id="colTenMonAn" prefWidth="314.0" text="Tên món ăn" />
+                  <TableColumn fx:id="colGia" prefWidth="167.0" text="Giá" />
+                  <TableColumn fx:id="colSL" prefWidth="91.0" text="Số lượng" />
+                  <TableColumn fx:id="colVAT" prefWidth="145.0" text="VAT" />
+                  <TableColumn fx:id="colThanhTien" prefWidth="166.0" text="Thành tiền" />
+              </columns>
+            </TableView>
+            <GridPane layoutX="924.0" prefHeight="424.0" prefWidth="391.0" style="-fx-background-color: #ffffff;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btn_1" alignment="CENTER" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: #00bbff; -fx-background-radius: 10;" text="1,000" textFill="WHITE" GridPane.columnSpan="2">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_2" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: #00bbff; -fx-background-radius: 10;" text="2,000" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_5" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: #00bbff; -fx-background-radius: 10;" text="5,000" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_10" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: #00bbff; -fx-background-radius: 10;" text="10,000" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_20" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: #00bbff; -fx-background-radius: 10;" text="20,000" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_50" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: #00bbff; -fx-background-radius: 10;" text="50,000" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_500" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: rgb(26, 140, 211); -fx-background-radius: 10;" text="500,000" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_200" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: rgb(26, 140, 211); -fx-background-radius: 10;" text="200,000" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <padding>
+                        <Insets left="6.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_reset" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: #ff003f; -fx-background-radius: 10;" text="Clear" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_100" layoutX="205.0" layoutY="304.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="181.0" style="-fx-background-color: rgb(26, 140, 211); -fx-background-radius: 10;" text="100,000" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <Label layoutX="14.0" layoutY="434.0" text="Thông tin thanh toán:" textFill="#00bbff">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <Label layoutX="402.0" layoutY="681.0" text="Tiền trả lại:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="505.0" prefHeight="36.0" prefWidth="85.0" text="Mã HD:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField id="txt_mahoadon" fx:id="txt_mahoadon" layoutX="171.0" layoutY="501.0" prefHeight="44.0" prefWidth="296.0" styleClass="txt_decor" stylesheets="@../css/thanhtoan1.css" />
+            <Button fx:id="btn_thanhtoan" layoutX="779.0" layoutY="645.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="516.0" style="-fx-background-color: #298527; -fx-background-radius: 10px;;" text="Thanh Toán (F1)" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnHoanTac_tt" layoutX="779.0" layoutY="563.0" mnemonicParsing="false" onAction="#handleHoanTac" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: #ff003f; -fx-background-radius: 10px;;" text="Quay lại (F3)" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_Xuathd_tt" layoutX="1044.0" layoutY="563.0" mnemonicParsing="false" onAction="#handleXuatHD" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: #ffe500; -fx-background-radius: 10px;" text="Xuất hoá đơn (F2)" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="791.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/u-turn-arrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="1049.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/printer.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="-3.0" layoutY="481.0" prefHeight="2.0" prefWidth="1322.0" />
+            <Label layoutX="24.0" layoutY="678.0" prefHeight="36.0" prefWidth="120.0" text="Khách trả:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="562.0" prefHeight="49.0" prefWidth="120.0" text="Tổng tiền:">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <TextField id="txt_tongtien" fx:id="txt_tongtien" editable="false" layoutX="171.0" layoutY="564.0" prefHeight="44.0" prefWidth="579.0" styleClass="txt_decor" stylesheets="@../css/thanhtoan1.css" />
+            <TextField id="txt_tientralai" fx:id="txt_tralai" editable="false" layoutX="537.0" layoutY="677.0" prefHeight="36.0" prefWidth="215.0" styleClass="txt_decor" stylesheets="@../css/thanhtoan1.css" />
+            <ImageView fitHeight="58.0" fitWidth="51.0" layoutX="14.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/list.png" />
+               </image>
+            </ImageView>
+            <TextField id="txt_khachtra" fx:id="txt_khachtra" layoutX="171.0" layoutY="677.0" prefHeight="36.0" prefWidth="226.0" styleClass="txt_decor" stylesheets="@../css/thanhtoan1.css" />
+            <Label fx:id="txt_giamgia" alignment="CENTER_RIGHT" layoutX="655.0" layoutY="573.0" prefHeight="27.0" prefWidth="51.0" text="Label" textFill="#1bb547">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label layoutX="476.0" layoutY="499.0" prefHeight="49.0" prefWidth="163.0" text="Điểm tích luỹ: ">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="txt_diemtichluy" layoutX="644.0" layoutY="504.0" prefHeight="40.0" prefWidth="72.0" text="0/500" textFill="#1bb547">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_apdung" contentDisplay="CENTER" layoutX="717.0" layoutY="510.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20px;">
+            <graphic>
+               <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/exchange.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+            <Button fx:id="btn_equal" alignment="CENTER" layoutX="781.0" layoutY="503.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #4460cc; -fx-background-radius: 15;" text="1,000" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_100k" alignment="CENTER" layoutX="1049.0" layoutY="503.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #4460cc; -fx-background-radius: 15;" text="100,000" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_500k" alignment="CENTER" layoutX="1180.0" layoutY="503.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #4460cc; -fx-background-radius: 15;" text="500,000" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_10k" alignment="CENTER" layoutX="915.0" layoutY="503.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #4460cc; -fx-background-radius: 15;" text="10,000" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Separator layoutX="894.0" layoutY="433.0" prefHeight="3.0" prefWidth="424.0" />
+            <Separator layoutX="760.0" layoutY="481.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="13.0" />
+            <Button fx:id="btn_apdungkm" contentDisplay="CENTER" layoutX="709.0" layoutY="572.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="29.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20px;">
+            <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="725.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/question-mark.png" />
+               </image>
+            </ImageView>
+            </graphic>
+            </Button>
+            <Label layoutX="33.0" layoutY="614.0" prefHeight="49.0" prefWidth="120.0" text="Tiền cọc:">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <TextField id="txt_tongtien" fx:id="txt_phaitra" editable="false" layoutX="537.0" layoutY="621.0" prefHeight="44.0" prefWidth="215.0" styleClass="txt_decor" stylesheets="@../css/thanhtoan1.css" />
+            <Label layoutX="402.0" layoutY="625.0" prefHeight="36.0" prefWidth="131.0" text="Phải trả:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField id="txt_tientralai" fx:id="txt_tiencoc" editable="false" layoutX="171.0" layoutY="621.0" prefHeight="44.0" prefWidth="226.0" styleClass="txt_decor" stylesheets="@../css/thanhtoan1.css" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
