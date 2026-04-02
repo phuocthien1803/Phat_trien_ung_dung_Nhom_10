@@ -75,7 +75,7 @@
       </Pane>
       <Pane layoutX="226.0" prefHeight="70.0" prefWidth="1314.0" style="-fx-background-color: #8B0000;">
          <children>
-            <Label layoutX="224.0" layoutY="-2.0" text="NHÀ HÀNG KKTS No10" textFill="WHITE">
+            <Label layoutX="224.0" layoutY="-2.0" text="NHÀ HÀNG Tân Hải Vân" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="52.0" />
                </font>

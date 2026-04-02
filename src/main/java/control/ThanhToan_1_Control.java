@@ -817,7 +817,7 @@ public class ThanhToan_1_Control {
 //                e.printStackTrace();
 //            }
             // Edit nội dung hóa đơn
-            Paragraph restaurantName = new Paragraph("Nha Hang KKTS No 10", FontFactory.getFont("Times New Roman", 16, Font.BOLD));
+            Paragraph restaurantName = new Paragraph("Nha Hang Tan Hai Van", FontFactory.getFont("Times New Roman", 16, Font.BOLD));
             restaurantName.setAlignment(Element.ALIGN_CENTER);
             document.add(restaurantName);
             if (kiemtra==1){
