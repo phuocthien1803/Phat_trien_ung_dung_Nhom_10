@@ -85,7 +85,7 @@ public class ThongTinNhanVien_Control implements Initializable {
             Stage dangNhapStage = new Stage();
             dangNhapStage.setScene(new Scene(dangNhapRoot));
             dangNhapStage.setTitle("Đăng nhập");
-            dangNhapStage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logoxoanen.png")));
+            dangNhapStage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logo.png")));
             dangNhapStage.show();
         } catch (IOException e) {
             throw new RuntimeException("Lỗi tải giao diện Đăng nhập", e);

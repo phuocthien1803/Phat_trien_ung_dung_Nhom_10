@@ -135,12 +135,12 @@ public class ThanhToan_1_Control {
         KhachHang firstKhachHang = khachHangInfo.get(0);
         int diemTichLuy = firstKhachHang.getDiemTichLuy();
         txt_diemtichluy.setText(diemTichLuy+"/500");
-        btn_thanhtoan.setOnMouseEntered(e -> btn_thanhtoan.setStyle("-fx-background-color: #166E2D; -fx-text-fill: white;"));
-        btn_thanhtoan.setOnMouseExited(e -> btn_thanhtoan.setStyle("-fx-background-color: #298527; -fx-text-fill: white;"));
-        btnHoanTac_tt.setOnMouseEntered(e -> btnHoanTac_tt.setStyle("-fx-background-color: #BD1D08; -fx-text-fill: white;"));
-        btnHoanTac_tt.setOnMouseExited(e -> btnHoanTac_tt.setStyle("-fx-background-color: #FF003F; -fx-text-fill: white;"));
-        btn_Xuathd_tt.setOnMouseEntered(e -> btn_Xuathd_tt.setStyle("-fx-background-color: #FAFA02; -fx-text-fill: white;"));
-        btn_Xuathd_tt.setOnMouseExited(e -> btn_Xuathd_tt.setStyle("-fx-background-color: #FFE500; -fx-text-fill: white;"));
+        btn_thanhtoan.setOnMouseEntered(e -> btn_thanhtoan.setStyle("-fx-background-color: #A11212; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37;"));
+        btn_thanhtoan.setOnMouseExited(e -> btn_thanhtoan.setStyle("-fx-background-color: #8B0000; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37;"));
+        btnHoanTac_tt.setOnMouseEntered(e -> btnHoanTac_tt.setStyle("-fx-background-color: #5A0A0A; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37;"));
+        btnHoanTac_tt.setOnMouseExited(e -> btnHoanTac_tt.setStyle("-fx-background-color: #A11212; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37;"));
+        btn_Xuathd_tt.setOnMouseEntered(e -> btn_Xuathd_tt.setStyle("-fx-background-color: #D4AF37; -fx-text-fill: #121212; -fx-border-color: #FFD700;"));
+        btn_Xuathd_tt.setOnMouseExited(e -> btn_Xuathd_tt.setStyle("-fx-background-color: #FFD700; -fx-text-fill: #121212; -fx-border-color: #D4AF37;"));
         ObservableList<ChiTietHD_MonAn> hoaDonList1 = ThanhToan_1_DAO.getHoaDonList1(maHoaDon);
         TableColumn<ChiTietHD_MonAn, Integer> colStt = new TableColumn<>("STT");
         //load du lieu len chitiethd
@@ -1122,4 +1122,3 @@ public class ThanhToan_1_Control {
     }
 
 }
-

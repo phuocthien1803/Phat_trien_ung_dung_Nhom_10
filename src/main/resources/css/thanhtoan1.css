@@ -2,8 +2,8 @@
 #table_tt .column-header {
     -fx-pref-height: 50px;
     -fx-font-size: 16px;
-    -fx-background-color: rgb(26, 140, 211);
-    -fx-border-color: #00BFFF;
+    -fx-background-color: #8B0000;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 0 2px 0;
 }
 
@@ -11,7 +11,9 @@
     -fx-alignment: CENTER;
     -fx-pref-height: 50px;
     -fx-font-size: 25px;
-    -fx-border-color: #00BFFF;
+    -fx-text-fill: #F5F5F5;
+    -fx-background-color: #1B1212;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 0 0;
 }
 
@@ -22,21 +24,23 @@
 
 /* Đặt viền cho các ô hàng */
 #table_tt .table-row-cell {
-    -fx-border-color: #00BFFF;
+    -fx-background-color: #1B1212;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 1px 0;
 }
 #title_km {
-    -fx-background-color: #ff9f41;
+    -fx-background-color: #8B0000;
 }
 .txt_decor {
     -fx-font-size: 20px;
+    -fx-text-fill: #F5F5F5;
 }
 #txt_mahoadon {
     -fx-font-weight: bold;
-    -fx-text-fill: #00BFFF;
+    -fx-text-fill: #FFD700;
 }
 #txt_tongtien{
-    -fx-text-fill: red;
+    -fx-text-fill: #FFD700;
 }
 #txt_khachtra {
     -fx-font-weight: bold;
@@ -44,8 +48,8 @@
 #table_monan .column-header {
     -fx-pref-height: 50px;
     -fx-font-size: 16px;
-    -fx-background-color: rgb(26, 140, 211);
-    -fx-border-color: #00BFFF;
+    -fx-background-color: #8B0000;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 0 2px 0;
 }
 
@@ -53,7 +57,9 @@
     -fx-alignment: CENTER;
     -fx-pref-height: 50px;
     -fx-font-size: 25px;
-    -fx-border-color: #00BFFF;
+    -fx-text-fill: #F5F5F5;
+    -fx-background-color: #1B1212;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 0 0;
 }
 
@@ -64,15 +70,16 @@
 
 /* Đặt viền cho các ô hàng */
 #table_monan .table-row-cell {
-    -fx-border-color: #00BFFF;
+    -fx-background-color: #1B1212;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 1px 0;
 }
 
 #table_nhanvien .column-header {
     -fx-pref-height: 50px;
     -fx-font-size: 16px;
-    -fx-background-color: rgb(26, 140, 211);
-    -fx-border-color: #00BFFF;
+    -fx-background-color: #8B0000;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 0 2px 0;
 }
 
@@ -80,7 +87,9 @@
     -fx-alignment: CENTER;
     -fx-pref-height: 50px;
     -fx-font-size: 16px;
-    -fx-border-color: #00BFFF;
+    -fx-text-fill: #F5F5F5;
+    -fx-background-color: #1B1212;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 0 0;
 }
 
@@ -91,9 +100,9 @@
 
 /* Đặt viền cho các ô hàng */
 #table_nhanvien .table-row-cell {
-    -fx-border-color: #00BFFF;
+    -fx-background-color: #1B1212;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 1px 0;
 }
-
 
 

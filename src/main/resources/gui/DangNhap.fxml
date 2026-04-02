@@ -19,7 +19,7 @@
          <children>
             <ImageView fitHeight="296.0" fitWidth="268.0" layoutX="16.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/logoxoanen.png" />
+                  <Image url="@../images/logo.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="450.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
@@ -36,7 +36,7 @@
             </ImageView>
             <ImageView fitHeight="210.0" fitWidth="187.0" layoutX="57.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/logoxoanen.png" />
+                  <Image url="@../images/logo.png" />
                </image>
             </ImageView>
          </children>
@@ -45,19 +45,19 @@
    <center>
       <AnchorPane prefHeight="432.0" prefWidth="400.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="textFieldDN" layoutX="128.0" layoutY="203.0" prefHeight="28.0" prefWidth="180.0" promptText="Tên đăng nhập" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" styleClass="textDN" stylesheets="@../css/DangNhap.css" text="NVTN01012401" />
-            <PasswordField fx:id="password" layoutX="128.0" layoutY="266.0" prefHeight="28.0" prefWidth="180.0" promptText="Mật khẩu" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" styleClass="textDN" stylesheets="@../css/DangNhap.css" />
+            <TextField fx:id="textFieldDN" layoutX="128.0" layoutY="203.0" prefHeight="28.0" prefWidth="180.0" promptText="Tên đăng nhập" style="-fx-border-color: #D4AF37; -fx-border-width: 0px 0px 2px 0px;" styleClass="textDN" stylesheets="@../css/DangNhap.css" text="NVTN01012401" />
+            <PasswordField fx:id="password" layoutX="128.0" layoutY="266.0" prefHeight="28.0" prefWidth="180.0" promptText="Mật khẩu" style="-fx-border-color: #D4AF37; -fx-border-width: 0px 0px 2px 0px;" styleClass="textDN" stylesheets="@../css/DangNhap.css" />
 
-            <Text fill="DEEPSKYBLUE" layoutX="60.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng Nhập Tài Khoản" textAlignment="CENTER" wrappingWidth="280.8000793457031">
+            <Text fill="#D4AF37" layoutX="60.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng Nhập Tài Khoản" textAlignment="CENTER" wrappingWidth="280.8000793457031">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Button fx:id="btnDangNhap" layoutX="128.0" layoutY="353.0" mnemonicParsing="false" onAction="#dangNhap" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #00BFFF;" text="Đăng Nhập" textFill="WHITE">
+            <Button fx:id="btnDangNhap" layoutX="128.0" layoutY="353.0" mnemonicParsing="false" onAction="#dangNhap" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #8B0000;" text="Đăng Nhập" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button fx:id="btnLamMoi" layoutX="229.0" layoutY="353.0" mnemonicParsing="false" onAction="#lamMoi" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #00BFFF; -fx-border-radius: 50;" text="Làm Mới" textFill="WHITE">
+            <Button fx:id="btnLamMoi" layoutX="229.0" layoutY="353.0" mnemonicParsing="false" onAction="#lamMoi" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #8B0000; -fx-border-radius: 50;" text="Làm Mới" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
@@ -81,8 +81,8 @@
                   <Image url="@../images/hide.png" />
                </image>
             </ImageView>
-            <TextField fx:id="textFieldMK" layoutX="128.0" layoutY="266.0" prefHeight="28.0" prefWidth="180.0" promptText="Mật khẩu" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" styleClass="textDN" stylesheets="@../css/DangNhap.css" />
-            <Label layoutX="129.0" layoutY="323.0" onMouseClicked="#quenMKClicked" prefHeight="18.0" prefWidth="84.0" style="-fx-background-color: white;" text="Quên mật khẩu" textFill="DEEPSKYBLUE">
+            <TextField fx:id="textFieldMK" layoutX="128.0" layoutY="266.0" prefHeight="28.0" prefWidth="180.0" promptText="Mật khẩu" style="-fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" styleClass="textDN" stylesheets="@../css/DangNhap.css" />
+            <Label layoutX="129.0" layoutY="323.0" onMouseClicked="#quenMKClicked" prefHeight="18.0" prefWidth="84.0" style="-fx-background-color: white;" text="Quên mật khẩu" textFill="#D4AF37">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>

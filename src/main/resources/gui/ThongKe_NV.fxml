@@ -11,30 +11,30 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThongKe_NV_Control">
     <!-- HBox chứa các thông tin thống kê ngắn gọn -->
-    <HBox layoutX="20.0" layoutY="20.0" prefHeight="100.0" prefWidth="1300.0" spacing="40.0" style="-fx-background-color: #E0E0E0; -fx-padding: 15px;">
+    <HBox layoutX="20.0" layoutY="20.0" prefHeight="100.0" prefWidth="1300.0" spacing="40.0" style="-fx-background-color: #2A1515; -fx-padding: 15px;">
         <children>
             <!-- Doanh thu trong ngày -->
-            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #00BFFF; -fx-padding: 10px;">
-                <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Doanh thu trong ngày:" />
-                <Label fx:id="revenueTodayLabel" style="-fx-font-size: 22; -fx-font-weight: bold;" />
+            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #8B0000; -fx-padding: 10px;">
+                <Label style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #F5F5F5;" text="Doanh thu trong ngày:" />
+                <Label fx:id="revenueTodayLabel" style="-fx-font-size: 22; -fx-font-weight: bold; -fx-text-fill: #FFD700;" />
             </VBox>
 
             <!-- Số hóa đơn trong ngày -->
-            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #00BFFF; -fx-padding: 10px;">
-                <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Số hóa đơn trong ngày:" />
-                <Label fx:id="totalInvoicesLabel" style="-fx-font-size: 22; -fx-font-weight: bold;" />
+            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #8B0000; -fx-padding: 10px;">
+                <Label style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #F5F5F5;" text="Số hóa đơn trong ngày:" />
+                <Label fx:id="totalInvoicesLabel" style="-fx-font-size: 22; -fx-font-weight: bold; -fx-text-fill: #FFD700;" />
             </VBox>
 
             <!-- Số lượng món ăn bán trong ngày -->
-            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #00BFFF; -fx-padding: 10px;">
-                <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Số lượng món ăn bán trong ngày:" />
-                <Label fx:id="totalDishesSoldLabel" style="-fx-font-size: 22; -fx-font-weight: bold;" />
+            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #8B0000; -fx-padding: 10px;">
+                <Label style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #F5F5F5;" text="Số lượng món ăn bán trong ngày:" />
+                <Label fx:id="totalDishesSoldLabel" style="-fx-font-size: 22; -fx-font-weight: bold; -fx-text-fill: #FFD700;" />
             </VBox>
 
             <!-- Số khách hàng mới -->
-            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #00BFFF; -fx-padding: 10px;">
-                <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Số khách hàng mới:" />
-                <Label fx:id="newCustomersLabel" style="-fx-font-size: 22; -fx-font-weight: bold;" />
+            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #8B0000; -fx-padding: 10px;">
+                <Label style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #F5F5F5;" text="Số khách hàng mới:" />
+                <Label fx:id="newCustomersLabel" style="-fx-font-size: 22; -fx-font-weight: bold; -fx-text-fill: #FFD700;" />
             </VBox>
         </children>
     </HBox>

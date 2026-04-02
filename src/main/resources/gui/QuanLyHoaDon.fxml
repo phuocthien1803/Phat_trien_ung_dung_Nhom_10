@@ -17,13 +17,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: d7d7d7;" stylesheets="@../css/MainFormDesign.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.QuanLyHoaDon_Control">
+<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #1B1212;" stylesheets="@../css/MainFormDesign.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.QuanLyHoaDon_Control">
    <children>
-      <BorderPane fx:id="ttHoaDon" layoutX="7.0" layoutY="52.0" prefHeight="662.0" prefWidth="1297.0" style="-fx-background-color: #d7d7d7;">
+      <BorderPane fx:id="ttHoaDon" layoutX="7.0" layoutY="52.0" prefHeight="662.0" prefWidth="1297.0" style="-fx-background-color: #1B1212;">
          <right>
             <AnchorPane prefHeight="662.0" prefWidth="521.0" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="shadow" stylesheets="@../css/MainFormDesign.css" BorderPane.alignment="CENTER">
                <children>
-                  <Text fill="DEEPSKYBLUE" layoutX="133.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU" textAlignment="CENTER" wrappingWidth="269.60002441406243">
+                  <Text fill="#D4AF37" layoutX="133.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU" textAlignment="CENTER" wrappingWidth="269.60002441406243">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -33,7 +33,7 @@
                         <Image url="@../images/menu.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="49.0" layoutY="105.0" mnemonicParsing="false" onAction="#chonTrangMonAn" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: FFE500; -fx-background-radius: 20; -fx-blend-mode: hard-light;" textFill="WHITE">
+                  <Button layoutX="49.0" layoutY="105.0" mnemonicParsing="false" onAction="#chonTrangMonAn" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #D4AF37; -fx-background-radius: 20; -fx-blend-mode: hard-light;" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -45,7 +45,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button layoutX="194.0" layoutY="105.0" mnemonicParsing="false" onAction="#chonTrangDoUong" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 20;" textFill="WHITE">
+                  <Button layoutX="194.0" layoutY="105.0" mnemonicParsing="false" onAction="#chonTrangDoUong" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #A11212; -fx-background-radius: 20;" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -57,7 +57,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button layoutX="339.0" layoutY="105.0" mnemonicParsing="false" onAction="#chonTrangRuouBia" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: FAC050; -fx-background-radius: 20;" textFill="WHITE">
+                  <Button layoutX="339.0" layoutY="105.0" mnemonicParsing="false" onAction="#chonTrangRuouBia" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #D4AF37; -fx-background-radius: 20;" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -70,7 +70,7 @@
                      </graphic>
                   </Button>
                   <TextField fx:id="txtTenMonCanTim" layoutX="56.0" layoutY="64.0" prefHeight="30.0" prefWidth="180.0" promptText="Nhập tên món ăn cần tìm" />
-                  <Button layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#timMonAn" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #00bfff; -fx-background-radius: 10;" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#timMonAn" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #8B0000; -fx-background-radius: 10;" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -82,7 +82,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button layoutX="460.0" layoutY="12.0" mnemonicParsing="false" onAction="#quayLai" prefHeight="11.0" prefWidth="52.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" textFill="WHITE">
+                  <Button layoutX="460.0" layoutY="12.0" mnemonicParsing="false" onAction="#quayLai" prefHeight="11.0" prefWidth="52.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -109,7 +109,7 @@
          <left>
             <AnchorPane prefHeight="662.0" prefWidth="765.0" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="shadow" stylesheets="@../css/MainFormDesign.css" BorderPane.alignment="CENTER">
                <children>
-                  <Text fill="DEEPSKYBLUE" layoutX="220.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách hàng" textAlignment="CENTER" wrappingWidth="269.60002441406243">
+                  <Text fill="#D4AF37" layoutX="220.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách hàng" textAlignment="CENTER" wrappingWidth="269.60002441406243">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -144,7 +144,7 @@
                         <Font size="13.0" />
                      </font>
                   </TextField>
-                  <Text fill="DEEPSKYBLUE" layoutX="477.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin đặt bàn" textAlignment="CENTER" wrappingWidth="269.60002441406243">
+                  <Text fill="#D4AF37" layoutX="477.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin đặt bàn" textAlignment="CENTER" wrappingWidth="269.60002441406243">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -164,12 +164,12 @@
                         <Image url="@../images/customer.png" />
                      </image>
                   </ImageView>
-                  <Text fill="DEEPSKYBLUE" layoutX="255.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin đặt món" textAlignment="CENTER" wrappingWidth="269.60002441406243">
+                  <Text fill="#D4AF37" layoutX="255.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin đặt món" textAlignment="CENTER" wrappingWidth="269.60002441406243">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnCapNhat" layoutX="642.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonCapNhat" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" text="Cập nhật" textFill="WHITE">
+                  <Button fx:id="btnCapNhat" layoutX="642.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonCapNhat" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" text="Cập nhật" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -181,7 +181,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnHuy" layoutX="534.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonHuy" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" text="Hủy" textFill="WHITE">
+                  <Button fx:id="btnHuy" layoutX="534.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonHuy" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" text="Hủy" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -203,7 +203,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnCheckIn" layoutX="410.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonCheckIn" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" text="Chưa CheckIn" textFill="WHITE">
+                  <Button fx:id="btnCheckIn" layoutX="410.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonCheckIn" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" text="Chưa CheckIn" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -235,7 +235,7 @@
                         <Image url="@../images/project-status.png" />
                      </image>
                   </ImageView>
-                  <Text fill="DEEPSKYBLUE" layoutX="-15.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hóa đơn" textAlignment="CENTER" wrappingWidth="269.60002441406243">
+                  <Text fill="#D4AF37" layoutX="-15.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hóa đơn" textAlignment="CENTER" wrappingWidth="269.60002441406243">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -292,7 +292,7 @@
             </AnchorPane>
          </left>
       </BorderPane>
-      <BorderPane fx:id="dsHoaDon" layoutX="7.0" layoutY="52.0" prefHeight="662.0" prefWidth="1297.0" style="-fx-background-color: #d7d7d7;" stylesheets="@../css/MainFormDesign.css">
+      <BorderPane fx:id="dsHoaDon" layoutX="7.0" layoutY="52.0" prefHeight="662.0" prefWidth="1297.0" style="-fx-background-color: #1B1212;" stylesheets="@../css/MainFormDesign.css">
          <bottom>
             <AnchorPane prefHeight="662.0" prefWidth="1298.0" style="-fx-background-color: white; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@../css/MainFormDesign2.css" BorderPane.alignment="CENTER">
                <children>
@@ -307,7 +307,7 @@
                         <TableColumn fx:id="colTrangThaiHD" prefWidth="215.2000732421875" text="Trạng thái hóa đơn" />
                      </columns>
                   </TableView>
-                  <Text fill="DEEPSKYBLUE" layoutX="411.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách hóa đơn của bàn" textAlignment="CENTER" wrappingWidth="506.39995117187493">
+                  <Text fill="#D4AF37" layoutX="411.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách hóa đơn của bàn" textAlignment="CENTER" wrappingWidth="506.39995117187493">
                      <font>
                         <Font name="System Bold" size="36.0" />
                      </font>
@@ -318,7 +318,7 @@
                      </image>
                   </ImageView>
                   <TextField fx:id="txtTimKH" layoutX="424.0" layoutY="70.0" prefHeight="30.0" prefWidth="180.0" promptText="Nhập tên khách hàng" />
-                  <Button layoutX="1118.0" layoutY="70.0" mnemonicParsing="false" onAction="#timHoaDon" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #00bfff; -fx-background-radius: 10;" textFill="WHITE">
+                  <Button layoutX="1118.0" layoutY="70.0" mnemonicParsing="false" onAction="#timHoaDon" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #8B0000; -fx-background-radius: 10;" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -353,7 +353,7 @@
                         <Image url="@../images/clock.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="maBan" layoutX="903.0" text="XD" textFill="DEEPSKYBLUE">
+                  <Label fx:id="maBan" layoutX="903.0" text="XD" textFill="#D4AF37">
                      <font>
                         <Font name="System Bold" size="36.0" />
                      </font>
@@ -362,7 +362,7 @@
             </AnchorPane>
          </bottom>
       </BorderPane>
-      <Button layoutX="6.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnDatBan" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: rgb(26, 140, 211);" text="Đặt bàn" textFill="WHITE">
+      <Button layoutX="6.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnDatBan" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Đặt bàn" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -374,7 +374,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="144.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnHoaDon" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: rgb(26, 140, 211);" text="Hóa đơn" textFill="WHITE">
+      <Button layoutX="144.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnHoaDon" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Hóa đơn" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -386,7 +386,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="282.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnThemKH" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: rgb(26, 140, 211);" text="Thêm KH" textFill="WHITE">
+      <Button layoutX="282.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnThemKH" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #8B0000;" text="Thêm KH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -398,7 +398,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="1270.0" layoutY="5.0" mnemonicParsing="false" onAction="#dongPane" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" textFill="WHITE">
+      <Button layoutX="1270.0" layoutY="5.0" mnemonicParsing="false" onAction="#dongPane" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

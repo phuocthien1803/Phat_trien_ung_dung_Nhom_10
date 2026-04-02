@@ -2,8 +2,8 @@
 #table_km .column-header {
     -fx-pref-height: 30px;
     -fx-font-size: 16px;
-    -fx-background-color: #ff9f41;
-    -fx-border-color: #ff9f41;
+    -fx-background-color: #8B0000;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 0 2px 0;
 }
 
@@ -11,7 +11,9 @@
     -fx-alignment: CENTER;
     -fx-pref-height: 30px;
     -fx-font-size: 16px;
-    -fx-border-color: #00BFFF;
+    -fx-text-fill: #F5F5F5;
+    -fx-background-color: #1B1212;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 0 0;
 }
 
@@ -22,7 +24,7 @@
 
 /* Đặt viền cho các ô hàng */
 #table_km .table-row-cell {
-    -fx-border-color: #00BFFF;
+    -fx-background-color: #1B1212;
+    -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 1px 0;
 }
-
