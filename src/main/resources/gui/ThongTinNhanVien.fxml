@@ -9,9 +9,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThongTinNhanVien_Control">
    <top>
-      <Pane prefHeight="70.0" prefWidth="500.0" style="-fx-background-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #00BFFF;" BorderPane.alignment="CENTER">
+      <Pane prefHeight="70.0" prefWidth="500.0" style="-fx-background-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #8B0000;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="132.0" layoutY="17.0" text="Thông tin nhân viên" textFill="DEEPSKYBLUE">
+            <Label layoutX="132.0" layoutY="17.0" text="Thông tin nhân viên" textFill="#D4AF37">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -20,7 +20,7 @@
       </Pane>
    </top>
    <bottom>
-      <Pane prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2px 0px 0px 0px; -fx-border-color: #00BFFF;" BorderPane.alignment="CENTER">
+      <Pane prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 2px 0px 0px 0px; -fx-border-color: #8B0000;" BorderPane.alignment="CENTER">
          <children>
             <Button layoutX="85.0" layoutY="14.0" mnemonicParsing="false" onAction="#doiMatKhau" style="-fx-background-color: rgb(0, 182, 243); -fx-background-radius: 15;" text="Đổi mật khẩu" textFill="WHITE">
                <font>
@@ -40,31 +40,31 @@
          <children>
             <Pane fx:id="paneTTNV" layoutX="3.0" layoutY="2.0" prefHeight="358.0" prefWidth="500.0" style="-fx-background-color: white;">
                <children>
-                  <TextField fx:id="txtNS" editable="false" layoutX="250.0" layoutY="240.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="txtNS" editable="false" layoutX="250.0" layoutY="240.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
                   <Label layoutX="86.0" layoutY="20.0" text="Mã nhân viên">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtMNV" editable="false" layoutX="250.0" layoutY="20.0" prefHeight="27.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="txtMNV" editable="false" layoutX="250.0" layoutY="20.0" prefHeight="27.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
                   <Label layoutX="86.0" layoutY="75.0" text="Tên nhân viên">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtTNV" editable="false" layoutX="250.0" layoutY="75.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="txtTNV" editable="false" layoutX="250.0" layoutY="75.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
                   <Label layoutX="109.0" layoutY="128.0" text="Giới tính">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtGT" editable="false" layoutX="250.0" layoutY="130.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="txtGT" editable="false" layoutX="250.0" layoutY="130.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
                   <Label layoutX="86.0" layoutY="185.0" text="Số điện thoại">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtSDT" editable="false" layoutX="250.0" layoutY="185.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="txtSDT" editable="false" layoutX="250.0" layoutY="185.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
                   <Label layoutX="101.0" layoutY="240.0" text="Ngày sinh">
                      <font>
                         <Font name="System Bold" size="20.0" />
@@ -75,7 +75,7 @@
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtCV" editable="false" layoutX="250.0" layoutY="295.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="txtCV" editable="false" layoutX="250.0" layoutY="295.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
                </children>
             </Pane>
             <Pane fx:id="paneDMK" prefHeight="358.0" prefWidth="500.0" style="-fx-background-color: white;">
@@ -90,9 +90,9 @@
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtMKCu" layoutX="285.0" layoutY="40.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #00BFFF;" />
-                  <TextField fx:id="txtMKMoi" layoutX="285.0" layoutY="103.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
-                  <Button layoutX="65.0" layoutY="246.0" mnemonicParsing="false" onAction="#xacNhanCilcked" prefHeight="43.0" prefWidth="162.0" style="-fx-background-color: #06D001; -fx-background-radius: 15;" text="Xác nhận" textFill="WHITE">
+                  <TextField fx:id="txtMKCu" layoutX="285.0" layoutY="40.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #8B0000;" />
+                  <TextField fx:id="txtMKMoi" layoutX="285.0" layoutY="103.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button layoutX="65.0" layoutY="246.0" mnemonicParsing="false" onAction="#xacNhanCilcked" prefHeight="43.0" prefWidth="162.0" style="-fx-background-color: #8B0000; -fx-border-color: #D4AF37; -fx-background-radius: 15;" text="Xác nhận" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -107,7 +107,7 @@
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtChkMKMoi" layoutX="285.0" layoutY="164.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="txtChkMKMoi" layoutX="285.0" layoutY="164.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
                   <Label fx:id="lblTB" layoutX="57.0" layoutY="208.0" textFill="RED" />
                </children>
             </Pane>

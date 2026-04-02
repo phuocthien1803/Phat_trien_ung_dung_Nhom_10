@@ -19,7 +19,7 @@ public class TrangChu_GUI extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(TrangChu_GUI.class.getResource("TrangChu.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Chương trình quản lý nhà hàng");
-        stage.getIcons().add(new Image("file:src/main/resources/images/kktsno10.png"));
+        stage.getIcons().add(new Image(TrangChu_GUI.class.getResourceAskktsno10.pngimages/logo.png")));
         stage.setScene(scene);
         stage.show();
     }

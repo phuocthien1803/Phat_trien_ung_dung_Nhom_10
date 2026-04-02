@@ -1,0 +1,181 @@
+{
+  "mode": "apply",
+  "products_found": 56,
+  "local_dishes": 15,
+  "replaced_images": 15,
+  "failed_downloads": [],
+  "logo": {
+    "source": "http://bizweb.dktcdn.net/100/448/704/themes/854708/assets/logo_share.png?1764787373355",
+    "status": "replaced"
+  },
+  "min_score": 0.58,
+  "matches": [
+    {
+      "code": "FO01",
+      "local_name": "Gà rán",
+      "local_file": "gaRan.png",
+      "remote_name": "Đặt món online nhà hàng Tân Hải Vân (auto-fill)",
+      "remote_page": "https://www.tanhaivan.com/dat-mon-online-nha-hang-tan-hai-van",
+      "remote_image": "https://bizweb.dktcdn.net/100/448/704/products/banh-ca-rot-nhan-khoai-mon-tan-hai-van.jpg?v=1705050278090",
+      "score": 0.4486
+    },
+    {
+      "code": "FO02",
+      "local_name": "Cơm chiên",
+      "local_file": "comChien.png",
+      "remote_name": "Cơm Chiên Gà Xé Cá Mặn",
+      "remote_page": "https://tanhaivan.com/com-chien-ga-xe-ca-man",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/com-chien-ga-xe-ca-man-tan-hai-van.jpg?v=1705033415210",
+      "score": 0.6981
+    },
+    {
+      "code": "FO03",
+      "local_name": "Gà chiên nước mắm",
+      "local_file": "gaChienNuocMam.png",
+      "remote_name": "Hủ Tiếu Sate Bò (auto-fill)",
+      "remote_page": "https://tanhaivan.com/hu-tieu-bo-sate",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/hu-tieu-bo-sa-te-tan-hai-van.jpg?v=1705046559087",
+      "score": 0.5462
+    },
+    {
+      "code": "FO04",
+      "local_name": "Lẩu thái hải sản",
+      "local_file": "lauThaiHaiSan.png",
+      "remote_name": "Bồ Câu Phong Sa (auto-fill)",
+      "remote_page": "https://tanhaivan.com/bo-cau-quay-phong-sa-1",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/bo-cau-quay-phong-sa-tan-hai-van.jpg?v=1704960987063",
+      "score": 0.4156
+    },
+    {
+      "code": "FO05",
+      "local_name": "Tôm hùm sốt trứng muối",
+      "local_file": "tomHumSotTrungMuoi.png",
+      "remote_name": "Vịt Quay Bắc Kinh (auto-fill)",
+      "remote_page": "https://tanhaivan.com/vit-quay-bac-kinh-tan-hai-van",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/vit-quay-bac-kinh-tan-hai-van.jpg?v=1721015341243",
+      "score": 0.4797
+    },
+    {
+      "code": "FO06",
+      "local_name": "Tôm tít hấp sả",
+      "local_file": "tomTitHapSa.png",
+      "remote_name": "Cháo Ếch Singapore (auto-fill)",
+      "remote_page": "https://tanhaivan.com/chao-ech-singapore-1",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/chao-ech-singapore-tan-hai-van.jpg?v=1705033154487",
+      "score": 0.4627
+    },
+    {
+      "code": "FO07",
+      "local_name": "Ba chỉ bò sốt cay",
+      "local_file": "baChiBoSotCay.png",
+      "remote_name": "Há Cảo Bào Ngư (2 Viên) (auto-fill)",
+      "remote_page": "https://tanhaivan.com/ha-cao-bao-ngu-2-vien",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/ha-cao-bao-ngu-tan-hai-van.jpg?v=1705051347637",
+      "score": 0.5486
+    },
+    {
+      "code": "FO08",
+      "local_name": "Mực sốt bơ tỏi",
+      "local_file": "mucSotBoToi.png",
+      "remote_name": "Sườn Rang Muối Tỏi (auto-fill)",
+      "remote_page": "https://tanhaivan.com/suon-rang-muoi-toi",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/suon-rang-muoi-toi-tan-hai-van.jpg?v=1704968828780",
+      "score": 0.502
+    },
+    {
+      "code": "FO09",
+      "local_name": "Tôm nướng phô mai",
+      "local_file": "tomNuongMoMai.png",
+      "remote_name": "Bánh Bao Đặc Biệt (2 cái) (auto-fill)",
+      "remote_page": "https://tanhaivan.com/banh-bao-tan-hai-van",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/banh-bao-tan-hai-van.jpg?v=1704969799750",
+      "score": 0.43
+    },
+    {
+      "code": "FO10",
+      "local_name": "Chân gà rút xương sốt Thái",
+      "local_file": "chanGaRutXuongSotThai.png",
+      "remote_name": "Cua Rang Tiêu Singapore (auto-fill)",
+      "remote_page": "https://tanhaivan.com/cua-gach-rang-tieu-singapore",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/cua-gach-rang-tieu-singapore-tan-hai-van.jpg?v=1705033481393",
+      "score": 0.5629
+    },
+    {
+      "code": "FO11",
+      "local_name": "Cá lóc kho tiêu",
+      "local_file": "caLocKhoTieu.png",
+      "remote_name": "Bánh Bao Trứng Muối (2 cái) (auto-fill)",
+      "remote_page": "https://tanhaivan.com/banh-bao-trung-muoi",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/banh-bao-trung-muoi-tan-hai-van.jpg?v=1705031734407",
+      "score": 0.4856
+    },
+    {
+      "code": "FO12",
+      "local_name": "Sườn xào chua ngọt",
+      "local_file": "suonXaoChuaNgot.png",
+      "remote_name": "Bắp Bò Tiềm Thuốc Bắc (auto-fill)",
+      "remote_page": "https://tanhaivan.com/bap-bo-tiem-thuoc-bac",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/bap-bo-tiem-thuoc-bac-tan-hai-van.jpg?v=1705032913387",
+      "score": 0.5064
+    },
+    {
+      "code": "FO13",
+      "local_name": "Gà nướng than hồng",
+      "local_file": "gaNuongThanHong.png",
+      "remote_name": "Bánh Bao Trà Xanh Cheese (auto-fill)",
+      "remote_page": "https://tanhaivan.com/banh-bao-tra-xanh-cheese",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/banh-bao-tra-xanh-tan-hai-van.jpg?v=1705051106623",
+      "score": 0.4762
+    },
+    {
+      "code": "FO14",
+      "local_name": "Gỏi gà xé",
+      "local_file": "goiGaXe.png",
+      "remote_name": "Mì Gà Xé",
+      "remote_page": "https://tanhaivan.com/mi-ga-xe",
+      "remote_image": "https://bizweb.dktcdn.net/100/448/704/products/hu-tieu-bo-sa-te-tan-hai-van.jpg?v=1705046559087",
+      "score": 0.7796
+    },
+    {
+      "code": "FO15",
+      "local_name": "Trứng vịt lộn sốt me",
+      "local_file": "vitLonSotMe.png",
+      "remote_name": "Bánh Cuốn Chiên Sốt Tương X.O (auto-fill)",
+      "remote_page": "https://tanhaivan.com/banh-cuon-chien-sot-x-o",
+      "remote_image": "http://bizweb.dktcdn.net/thumb/grande/100/448/704/products/banh-cuon-chien-sot-x-o-tan-hai-van.jpg?v=1705032379280",
+      "score": 0.416
+    }
+  ],
+  "remote_product_names_sample": [
+    "Đặt món online nhà hàng Tân Hải Vân",
+    "Hủ Tiếu Sate Bò",
+    "Bồ Câu Phong Sa",
+    "Vịt Quay Bắc Kinh",
+    "Cháo Ếch Singapore",
+    "Há Cảo Bào Ngư (2 Viên)",
+    "Sườn Rang Muối Tỏi",
+    "Bánh Bao Đặc Biệt (2 cái)",
+    "Cua Rang Tiêu Singapore",
+    "Bánh Bao Trứng Muối (2 cái)",
+    "Bắp Bò Tiềm Thuốc Bắc",
+    "Bánh Bao Trà Xanh Cheese",
+    "Bánh Cuốn Chiên Sốt Tương X.O",
+    "Cua Xào Miến Bào Ngư",
+    "Bò Kho Không",
+    "Gỏi Trái Cây Nhiệt Đới Chay",
+    "Gà Quay Da Giòn (1 con)",
+    "Bánh Cà Rốt Nhân Khoai Môn",
+    "Bò Kho Bánh Mì",
+    "Chân Gà Chưng Tàu Xì",
+    "Bò Collagen",
+    "Cơm Chiên Gà Xé Cá Mặn",
+    "Cải Thìa Xào Tỏi",
+    "Giò Heo Hầm Chao Đỏ",
+    "Bánh Cuốn Tôm (3 cái)",
+    "Nui Xào Bò Lúc Lắc",
+    "Rau củ nướng sốt chay",
+    "Sườn Non Kinh Đô",
+    "Mì Xào Giòn La Hán Chay",
+    "Bánh Cuốn Tôm Chiên Trứng ( 3 cái)"
+  ]
+}

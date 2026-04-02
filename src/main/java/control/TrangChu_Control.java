@@ -22,6 +22,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class TrangChu_Control implements Initializable {
+    private static final String MENU_BUTTON_DEFAULT_STYLE =
+            "-fx-background-color: #8B0000; -fx-border-color: #D4AF37; -fx-text-fill: #F5F5F5; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10";
+    private static final String MENU_BUTTON_ACTIVE_STYLE =
+            "-fx-background-color: #F5F5F5; -fx-border-color: #D4AF37; -fx-text-fill: #8B0000; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10";
     @FXML
     private Button btnDatBan;
     @FXML
@@ -61,7 +65,13 @@ public class TrangChu_Control implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        btnDatBan.setStyle("-fx-background-color: #ffffff; -fx-border-color: #ffffff; -fx-text-fill: #00b6f3;-fx-border-radius: 10;-fx-background-radius: 10");
+        setMenuButtonDefault(btnDatBan);
+        setMenuButtonDefault(btnThanhToan);
+        setMenuButtonDefault(btnThongKe);
+        setMenuButtonDefault(btnNhanVien);
+        setMenuButtonDefault(btnMonAn);
+        setMenuButtonActive(btnDatBan);
+        selectedButton = btnDatBan;
         nv = SessionManager.getInstance().getCurrentNhanVien();
         if(nv != null){
             System.out.println("Tên nhân viên là: " + nv.getTenNV());
@@ -223,7 +233,7 @@ public class TrangChu_Control implements Initializable {
     }
     @FXML
     private void handleMouseEntered(MouseEvent event) {
-        ((Button) event.getSource()).setStyle("-fx-background-color: #ffffff; -fx-border-color:#FFFFFF; -fx-text-fill: #00b6f3; -fx-border-radius: 10; -fx-background-radius: 10");
+        setMenuButtonActive((Button) event.getSource());
     }
 
     @FXML
@@ -232,7 +242,7 @@ public class TrangChu_Control implements Initializable {
 
         // Chỉ quay về màu mặc định nếu nút không phải là nút đã chọn
         if (button != selectedButton) {
-            button.setStyle("-fx-background-color: #00BFFF; -fx-border-color: #ffffff; -fx-text-fill: #ffffff; -fx-border-radius: 10;-fx-background-radius: 10");
+            setMenuButtonDefault(button);
         }
     }
     @FXML
@@ -240,11 +250,11 @@ public class TrangChu_Control implements Initializable {
         Button clickedButton = (Button) actionEvent.getSource();
 
         if (selectedButton != null) {
-            selectedButton.setStyle("-fx-background-color: #00bfff; -fx-border-color: #ffffff; -fx-text-fill: #fafafa;-fx-border-radius: 10;-fx-background-radius: 10"); // Màu mặc định
+            setMenuButtonDefault(selectedButton);
         }
 
         // Đặt màu cho nút hiện tại và gán nó làm `selectedButton`
-        clickedButton.setStyle("-fx-background-color: #ffffff; -fx-border-color: #ffffff; -fx-text-fill: #00b6f3;-fx-border-radius: 10;-fx-background-radius: 10");
+        setMenuButtonActive(clickedButton);
         selectedButton = clickedButton;
 
         if (clickedButton == btnMonAn) {
@@ -258,5 +268,13 @@ public class TrangChu_Control implements Initializable {
         } else if (clickedButton == btnDatBan) {
             handleDatBanClick();
         }
+    }
+
+    private void setMenuButtonDefault(Button button) {
+        button.setStyle(MENU_BUTTON_DEFAULT_STYLE);
+    }
+
+    private void setMenuButtonActive(Button button) {
+        button.setStyle(MENU_BUTTON_ACTIVE_STYLE);
     }
 }

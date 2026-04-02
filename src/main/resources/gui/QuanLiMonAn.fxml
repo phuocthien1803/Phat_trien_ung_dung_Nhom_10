@@ -70,7 +70,7 @@
               </columns>
             </TableView>
             <TextField layoutX="631.0" layoutY="687.0" prefHeight="25.0" prefWidth="245.0" />
-            <Button id="button_find_thanhtoan" contentDisplay="CENTER" layoutX="896.0" layoutY="682.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 20px;">
+            <Button id="button_find_thanhtoan" contentDisplay="CENTER" layoutX="896.0" layoutY="682.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: #8B0000; -fx-background-radius: 20px;">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="70.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -79,12 +79,12 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="969.0" layoutY="682.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 20px;" text="Cập nhật" textFill="WHITE">
+            <Button layoutX="969.0" layoutY="682.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #8B0000; -fx-background-radius: 20px;" text="Cập nhật" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="1108.0" layoutY="682.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 20px;" text="Thêm món mới" textFill="WHITE">
+            <Button layoutX="1108.0" layoutY="682.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #8B0000; -fx-background-radius: 20px;" text="Thêm món mới" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>

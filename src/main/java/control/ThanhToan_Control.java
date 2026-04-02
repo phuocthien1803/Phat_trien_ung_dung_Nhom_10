@@ -45,8 +45,8 @@ public class ThanhToan_Control {
     }
     @FXML
     public void initialize() {
-        btn_find_tt.setOnMouseEntered(e -> btn_find_tt.setStyle("-fx-background-color: #1E88E5; -fx-text-fill: white; -fx-border-radius: 20px; -fx-background-radius: 20px;"));
-        btn_find_tt.setOnMouseExited(e -> btn_find_tt.setStyle("-fx-background-color: #00BBFF; -fx-text-fill: white; -fx-border-radius: 20px; -fx-background-radius: 20px;"));
+        btn_find_tt.setOnMouseEntered(e -> btn_find_tt.setStyle("-fx-background-color: #A11212; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37; -fx-border-radius: 20px; -fx-background-radius: 20px;"));
+        btn_find_tt.setOnMouseExited(e -> btn_find_tt.setStyle("-fx-background-color: #8B0000; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37; -fx-border-radius: 20px; -fx-background-radius: 20px;"));
         ObservableList<HoaDon> hoaDonList = ThanhToan_DAO.getHoaDonList();
         // Tạo cột STT
         TableColumn<HoaDon, Integer> colStt = new TableColumn<>("STT");

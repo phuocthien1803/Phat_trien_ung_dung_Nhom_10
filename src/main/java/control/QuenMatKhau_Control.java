@@ -92,7 +92,7 @@ public class QuenMatKhau_Control implements Initializable {
                 Stage dangNhapStage = new Stage();
                 dangNhapStage.setScene(new Scene(root));
                 dangNhapStage.setTitle("Đăng nhập");
-                dangNhapStage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logoxoanen.png")));
+                dangNhapStage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logo.png")));
                 dangNhapStage.show();
             } catch (Exception e) {
                 lblThongBao.setText("Có lỗi xảy ra khi đổi mật khẩu. Vui lòng thử lại sau.");

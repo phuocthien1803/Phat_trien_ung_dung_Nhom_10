@@ -12,17 +12,17 @@
 
 <AnchorPane prefHeight="708.0" prefWidth="1474.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TrangChu_Control">
    <children>
-      <Pane fx:id="pnMain" prefHeight="796.0" prefWidth="226.0" style="-fx-background-color: rgb(0, 191, 255);">
+      <Pane fx:id="pnMain" prefHeight="796.0" prefWidth="226.0" style="-fx-background-color: #8B0000;">
          <children>
-            <ImageView fitHeight="168.0" fitWidth="266.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="108.0" fitWidth="200.0" layoutX="15.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/kktsno10.png" />
+                  <Image url="@../images/logo.png" />
                </image>
             </ImageView>
-            <Pane layoutX="226.0" prefHeight="70.0" prefWidth="1314.0" style="-fx-background-color: #BBBBBB;" />
-            <VBox alignment="TOP_CENTER" layoutY="216.0" prefHeight="545.0" prefWidth="226.0" spacing="40.0" style="-fx-background-color: #00bfff;">
+            <Pane layoutX="226.0" prefHeight="70.0" prefWidth="1314.0" style="-fx-background-color: #2A1515;" />
+            <VBox alignment="TOP_CENTER" layoutY="216.0" prefHeight="545.0" prefWidth="226.0" spacing="40.0" style="-fx-background-color: #8B0000;">
                <children>
-                  <Button fx:id="btnDatBan"  mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="70.0" prefWidth="194.0" style="-fx-background-color: #00bfff; -fx-border-width: 2; -fx-border-color: #ffffff; -fx-border-radius: 10;" text="ĐẶT BÀN" textFill="#fafafa">
+                  <Button fx:id="btnDatBan"  mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="70.0" prefWidth="194.0" style="-fx-background-color: #8B0000; -fx-border-width: 2; -fx-border-color: #D4AF37; -fx-border-radius: 10;" text="ĐẶT BÀN" textFill="#fafafa">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -37,7 +37,7 @@
 <!--                        </ImageView>-->
 <!--                     </graphic>-->
                   </Button>
-                  <Button fx:id="btnThanhToan" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #00bfff; -fx-border-width: 2; -fx-border-color: #ffffff; -fx-border-radius: 10;" text="THANH TOÁN" textFill="#fafafa">
+                  <Button fx:id="btnThanhToan" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #8B0000; -fx-border-width: 2; -fx-border-color: #D4AF37; -fx-border-radius: 10;" text="THANH TOÁN" textFill="#fafafa">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -45,7 +45,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnThongKe" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #00bfff; -fx-border-width: 2; -fx-border-color: #ffffff; -fx-border-radius: 10;" text="THỐNG KÊ" textFill="#fafafa">
+                  <Button fx:id="btnThongKe" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #8B0000; -fx-border-width: 2; -fx-border-color: #D4AF37; -fx-border-radius: 10;" text="THỐNG KÊ" textFill="#fafafa">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -53,7 +53,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnNhanVien" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #00bfff; -fx-border-width: 2; -fx-border-color: #ffffff; -fx-border-radius: 10;" text="NHÂN VIÊN" textFill="#fafafa">
+                  <Button fx:id="btnNhanVien" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #8B0000; -fx-border-width: 2; -fx-border-color: #D4AF37; -fx-border-radius: 10;" text="NHÂN VIÊN" textFill="#fafafa">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -61,7 +61,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnMonAn" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #00bfff; -fx-border-width: 2; -fx-border-color: #ffffff; -fx-border-radius: 10;" text="MÓN ĂN" textFill="#fafafa">
+                  <Button fx:id="btnMonAn" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #8B0000; -fx-border-width: 2; -fx-border-color: #D4AF37; -fx-border-radius: 10;" text="MÓN ĂN" textFill="#fafafa">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -73,7 +73,7 @@
             </VBox>
          </children>
       </Pane>
-      <Pane layoutX="226.0" prefHeight="70.0" prefWidth="1314.0" style="-fx-background-color: rgb(0, 191, 255);">
+      <Pane layoutX="226.0" prefHeight="70.0" prefWidth="1314.0" style="-fx-background-color: #8B0000;">
          <children>
             <Label layoutX="224.0" layoutY="-2.0" text="NHÀ HÀNG KKTS No10" textFill="WHITE">
                <font>

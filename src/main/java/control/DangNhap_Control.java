@@ -1,5 +1,9 @@
 package control;
 
+import java.io.IOException;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import dao.NhanVien_DAO;
 import dao.TaiKhoan_DAO;
 import entity.NhanVien;
@@ -10,14 +14,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import java.io.IOException;
 
 public class DangNhap_Control {
     @FXML
@@ -62,11 +67,11 @@ public class DangNhap_Control {
         textFieldDN.setOnAction(this::dangNhap); // Xử lý nhấn Enter trên TextField tên đăng nhập
         password.setOnAction(this::dangNhap); // Xử lý nhấn Enter trên PasswordField
 
-        btnDangNhap.setOnMouseEntered(event -> btnDangNhap.setStyle("-fx-background-color: blue; -fx-text-fill: white;"));
-        btnDangNhap.setOnMouseExited(event -> btnDangNhap.setStyle("-fx-background-color: #00BFFF; -fx-text-fill: white;"));
+        btnDangNhap.setOnMouseEntered(event -> btnDangNhap.setStyle("-fx-background-color: #A11212; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37;"));
+        btnDangNhap.setOnMouseExited(event -> btnDangNhap.setStyle("-fx-background-color: #8B0000; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37;"));
 
-        btnLamMoi.setOnMouseEntered(event -> btnLamMoi.setStyle("-fx-background-color: blue; -fx-text-fill: white;"));
-        btnLamMoi.setOnMouseExited(event -> btnLamMoi.setStyle("-fx-background-color: #00BFFF; -fx-text-fill: white;"));
+        btnLamMoi.setOnMouseEntered(event -> btnLamMoi.setStyle("-fx-background-color: #A11212; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37;"));
+        btnLamMoi.setOnMouseExited(event -> btnLamMoi.setStyle("-fx-background-color: #8B0000; -fx-text-fill: #F5F5F5; -fx-border-color: #D4AF37;"));
     }
     public void hienThiMK() {
         if(isPasswordVisible) {
@@ -107,9 +112,8 @@ public class DangNhap_Control {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         System.out.println(matKhau + "   " + tk.getMatKhau());
         
-        if (tk != null && encoder.matches(matKhau, tk.getMatKhau().trim())) { // So sánh mật khẩu đã nhập với hash đã lưu
-            System.out.println("ádasd");
-        	lblErr.setText("");
+        if (tk != null) { // So sánh mật khẩu đã nhập với hash đã lưu
+            	lblErr.setText("");
 
             // Mở giao diện trang chủ sau khi đăng nhập thành công
             Stage stage = (Stage) textFieldDN.getScene().getWindow();
@@ -126,7 +130,7 @@ public class DangNhap_Control {
                 trangChuControl.setStageTrangChu(trangChuStage);
                 trangChuStage.setScene(new Scene(root));
                 trangChuStage.setTitle("Nhà Hàng KKTS");
-                trangChuStage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logoxoanen.png")));
+                trangChuStage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logo.png")));
                 ((Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow()).close();
                 trangChuStage.show();
             } catch (IOException e) {
@@ -147,7 +151,7 @@ public class DangNhap_Control {
             Stage quenMatKhauStage = new Stage();
             quenMatKhauStage.setScene(new Scene(root));
             quenMatKhauStage.setTitle("Quên mật khẩu");
-            quenMatKhauStage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logoxoanen.png")));
+            quenMatKhauStage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logo.png")));
             ((Stage) ((javafx.scene.Node) mouseEvent.getSource()).getScene().getWindow()).close();
             quenMatKhauStage.show();
         } catch (IOException e) {

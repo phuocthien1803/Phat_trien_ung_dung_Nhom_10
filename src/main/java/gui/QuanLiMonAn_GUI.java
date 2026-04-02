@@ -18,7 +18,7 @@ public class QuanLiMonAn_GUI extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(TrangChu_GUI.class.getResource("QuanLiMonAn.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Chương trình quản lý nhà hàng");
-        stage.getIcons().add(new Image("file:src/main/resources/images/kktsno10.png"));
+        stage.getIcons().add(new Image(QuanLiMonAn_GUI.class.getResourceAsStream("/images/logo.png")));
         stage.setScene(scene);
         stage.show();
     }

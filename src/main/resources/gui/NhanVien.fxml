@@ -19,7 +19,7 @@
    <children>
       <BorderPane prefHeight="726.0" prefWidth="1314.0">
          <top>
-            <Pane prefHeight="80.0" prefWidth="1314.0" style="-fx-background-color: rgb(217, 217, 217);" BorderPane.alignment="CENTER">
+            <Pane prefHeight="80.0" prefWidth="1314.0" style="-fx-background-color: #2A1515;" BorderPane.alignment="CENTER">
                <children>
                   <Label layoutX="503.0" layoutY="19.0" text="QUẢN LÝ NHÂN VIÊN">
                      <font>
@@ -101,19 +101,19 @@
             </Pane>
          </center>
          <bottom>
-            <Pane prefHeight="52.0" prefWidth="1314.0" style="-fx-background-color: rgb(217, 217, 217);" BorderPane.alignment="CENTER">
+            <Pane prefHeight="52.0" prefWidth="1314.0" style="-fx-background-color: #2A1515;" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="txtMaTimKiem" layoutX="657.0" layoutY="12.0" prefHeight="30.0" prefWidth="237.0" style="-fx-background-radius: 20;" /><Button layoutX="1160.0" layoutY="8.0" mnemonicParsing="false" onAction="#themNhanVien" prefHeight="37.0" prefWidth="126.0" style="-fx-background-color: rgb(0, 191, 255); -fx-background-radius: 10;" text="Thêm nhân viên" textFill="WHITE">
+                  <TextField fx:id="txtMaTimKiem" layoutX="657.0" layoutY="12.0" prefHeight="30.0" prefWidth="237.0" style="-fx-background-radius: 20;" /><Button layoutX="1160.0" layoutY="8.0" mnemonicParsing="false" onAction="#themNhanVien" prefHeight="37.0" prefWidth="126.0" style="-fx-background-color: #8B0000; -fx-background-radius: 10;" text="Thêm nhân viên" textFill="WHITE">
                   <font>
                      <Font size="15.0" />
                   </font>
                </Button>
-                  <Button layoutX="1000.0" layoutY="8.0" mnemonicParsing="false" onAction="#capNhatNhanVien" prefHeight="37.0" prefWidth="126.0" style="-fx-background-color: rgb(0, 191, 255); -fx-background-radius: 10;" text="Cập nhật" textFill="WHITE">
+                  <Button layoutX="1000.0" layoutY="8.0" mnemonicParsing="false" onAction="#capNhatNhanVien" prefHeight="37.0" prefWidth="126.0" style="-fx-background-color: #8B0000; -fx-background-radius: 10;" text="Cập nhật" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="914.0" layoutY="8.0" mnemonicParsing="false" onAction="#timKiemNhanVien" prefHeight="37.0" prefWidth="52.0" style="-fx-background-color: rgb(0, 191, 255); -fx-background-radius: 10;" textFill="WHITE">
+                  <Button layoutX="914.0" layoutY="8.0" mnemonicParsing="false" onAction="#timKiemNhanVien" prefHeight="37.0" prefWidth="52.0" style="-fx-background-color: #8B0000; -fx-background-radius: 10;" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="168.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                            <image>

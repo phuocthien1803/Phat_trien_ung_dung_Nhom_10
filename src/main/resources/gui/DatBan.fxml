@@ -19,7 +19,7 @@
    <children>
       <BorderPane fx:id="borderDatBan" prefHeight="200.0" prefWidth="200.0">
          <top>
-            <HBox prefHeight="80.0" prefWidth="1314.0" style="-fx-background-color: rgb(217, 217, 217);" stylesheets="@../css/MainFormDesign.css" BorderPane.alignment="CENTER">
+            <HBox prefHeight="80.0" prefWidth="1314.0" style="-fx-background-color: #2A1515;" stylesheets="@../css/MainFormDesign.css" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="khua" mnemonicParsing="false" onAction="#KhuAClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: rgb(126, 142, 135);" text="Khu A" textFill="WHITE">
                      <HBox.margin>
@@ -51,7 +51,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="khuc" mnemonicParsing="false" onAction="#KhuCClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: rgb(26, 140, 211);" text="Khu C" textFill="WHITE">
+                  <Button fx:id="khuc" mnemonicParsing="false" onAction="#KhuCClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8B0000;" text="Khu C" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
@@ -89,7 +89,7 @@
                         <Insets left="10.0" top="25.0" />
                      </HBox.margin>
                   </ComboBox>
-                  <Button layoutX="1000.0" mnemonicParsing="false" onAction="#locTheoNgay" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: #50A8FA;" text="Kiểm tra" textFill="WHITE">
+                  <Button layoutX="1000.0" mnemonicParsing="false" onAction="#locTheoNgay" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: #A11212;" text="Kiểm tra" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -112,7 +112,7 @@
                <children>
                   <Pane fx:id="b" prefHeight="652.0" prefWidth="1314.0" style="-fx-background-color: white;" stylesheets="@../css/HoverBan.css">
                      <children>
-                        <Pane layoutX="26.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(217, 217, 217);" />
+                        <Pane layoutX="26.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: #2A1515;" />
                         <Label layoutX="78.0" layoutY="612.0" prefHeight="21.0" prefWidth="76.0" text="Bàn trống">
                            <font>
                               <Font name="System Bold Italic" size="15.0" />
@@ -295,7 +295,7 @@
                   </Pane>
                   <Pane fx:id="c" prefHeight="652.0" prefWidth="1314.0" style="-fx-background-color: white;" stylesheets="@../css/HoverBan.css">
                      <children>
-                        <Pane layoutX="26.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(217, 217, 217);" />
+                        <Pane layoutX="26.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: #2A1515;" />
                         <Label layoutX="78.0" layoutY="612.0" prefHeight="21.0" prefWidth="76.0" text="Bàn trống">
                            <font>
                               <Font name="System Bold Italic" size="15.0" />
@@ -484,7 +484,7 @@
                   </Pane>
                   <Pane fx:id="a" prefHeight="652.0" prefWidth="1314.0" style="-fx-background-color: white;" stylesheets="@../css/HoverBan.css">
                      <children>
-                        <Pane layoutX="26.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: rgb(217, 217, 217);" />
+                        <Pane layoutX="26.0" layoutY="612.0" prefHeight="20.0" prefWidth="38.0" style="-fx-background-color: #2A1515;" />
                         <Label layoutX="78.0" layoutY="612.0" prefHeight="21.0" prefWidth="76.0" text="Bàn trống">
                            <font>
                               <Font name="System Bold Italic" size="15.0" />

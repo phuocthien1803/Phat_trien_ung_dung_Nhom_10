@@ -17,7 +17,7 @@
    <children>
       <Pane fx:id="pn_thanhtoan" prefHeight="725.0" prefWidth="1314.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <Pane layoutX="-3.0" layoutY="-1.0" prefHeight="63.0" prefWidth="1321.0" style="-fx-background-color: rgb(26, 140, 211);">
+            <Pane layoutX="-3.0" layoutY="-1.0" prefHeight="63.0" prefWidth="1321.0" style="-fx-background-color: #8B0000;">
                <children>
                   <Label contentDisplay="CENTER" layoutX="576.0" layoutY="4.0" prefHeight="56.0" prefWidth="223.0" text="Danh sách hoá đơn">
                      <font>
@@ -44,7 +44,7 @@
             <TextField fx:id="txt_sdt_tt" layoutX="163.0" layoutY="73.0" prefHeight="25.0" prefWidth="169.0" />
             <TextField fx:id="txt_tenkh_tt" layoutX="517.0" layoutY="73.0" prefHeight="25.0" prefWidth="215.0" />
             <TextField fx:id="txt_ban_tt" layoutX="837.0" layoutY="73.0" prefHeight="25.0" prefWidth="177.0" />
-            <Button id="button_find_thanhtoan" fx:id="btn_find_tt" contentDisplay="CENTER" layoutX="1069.0" layoutY="66.0" mnemonicParsing="false" onAction="#search_tt" prefHeight="21.0" prefWidth="223.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 20px;" text="Search" textFill="WHITE">
+            <Button id="button_find_thanhtoan" fx:id="btn_find_tt" contentDisplay="CENTER" layoutX="1069.0" layoutY="66.0" mnemonicParsing="false" onAction="#search_tt" prefHeight="21.0" prefWidth="223.0" style="-fx-background-color: #8B0000; -fx-background-radius: 20px;" text="Search" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>

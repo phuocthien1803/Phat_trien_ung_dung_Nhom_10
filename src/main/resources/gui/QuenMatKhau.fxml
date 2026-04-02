@@ -14,14 +14,14 @@
    <children>
       <Pane fx:id="paneDMK" layoutY="151.0" prefHeight="342.0" prefWidth="371.0" style="-fx-background-color: white;">
          <children>
-            <TextField fx:id="txtMKM" layoutX="71.0" layoutY="40.0" prefHeight="32.0" prefWidth="230.0" promptText="Nhập mật khẩu mới" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="txtKTMK" layoutX="71.0" layoutY="100.0" prefHeight="32.0" prefWidth="230.0" promptText="Nhập lại mật khẩu" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="btnXN" layoutX="86.0" layoutY="171.0" mnemonicParsing="false" onAction="#xacNhanClicked" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #00bfff;" text="Xác nhận" textFill="WHITE">
+            <TextField fx:id="txtMKM" layoutX="71.0" layoutY="40.0" prefHeight="32.0" prefWidth="230.0" promptText="Nhập mật khẩu mới" style="-fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="txtKTMK" layoutX="71.0" layoutY="100.0" prefHeight="32.0" prefWidth="230.0" promptText="Nhập lại mật khẩu" style="-fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="btnXN" layoutX="86.0" layoutY="171.0" mnemonicParsing="false" onAction="#xacNhanClicked" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #8B0000;" text="Xác nhận" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnTV" layoutX="86.0" layoutY="240.0" mnemonicParsing="false" onAction="#troVeClicked" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #00bfff;" text="Trở về" textFill="WHITE">
+            <Button fx:id="btnTV" layoutX="86.0" layoutY="240.0" mnemonicParsing="false" onAction="#troVeClicked" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #8B0000;" text="Trở về" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -29,7 +29,7 @@
             <Label fx:id="lblTB" layoutX="72.0" layoutY="141.0" textFill="RED" />
          </children>
       </Pane>
-      <Label layoutX="98.0" layoutY="116.0" text="Quên Mật Khẩu" textFill="DEEPSKYBLUE">
+      <Label layoutX="98.0" layoutY="116.0" text="Quên Mật Khẩu" textFill="#D4AF37">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -41,10 +41,10 @@
       </ImageView>
       <Pane fx:id="paneKT" layoutY="151.0" prefHeight="342.0" prefWidth="371.0" style="-fx-background-color: white;">
          <children>
-            <TextField fx:id="txtTenDN" layoutX="71.0" layoutY="30.0" prefHeight="32.0" prefWidth="230.0" promptText="Tên đăng nhập" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="txtCTL" layoutX="71.0" layoutY="150.0" prefHeight="32.0" prefWidth="230.0" promptText="Nhập câu trả lời" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="txtTenDN" layoutX="71.0" layoutY="30.0" prefHeight="32.0" prefWidth="230.0" promptText="Tên đăng nhập" style="-fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="txtCTL" layoutX="71.0" layoutY="150.0" prefHeight="32.0" prefWidth="230.0" promptText="Nhập câu trả lời" style="-fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
             <ComboBox fx:id="comboCH" layoutX="71.0" layoutY="90.0" prefHeight="32.0" prefWidth="230.0" promptText="Vui lòng chọn câu hỏi!" />
-            <Button fx:id="btnTT" layoutX="86.0" layoutY="230.0" mnemonicParsing="false" onAction="#tiepTucClicked" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #00bfff;" text="Tiếp tục" textFill="WHITE">
+            <Button fx:id="btnTT" layoutX="86.0" layoutY="230.0" mnemonicParsing="false" onAction="#tiepTucClicked" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #8B0000;" text="Tiếp tục" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

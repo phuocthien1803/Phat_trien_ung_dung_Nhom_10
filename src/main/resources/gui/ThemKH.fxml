@@ -9,9 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: d7d7d7;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThemKH_Control">
+<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #1B1212;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThemKH_Control">
    <children>
-      <Button layoutX="6.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnDatBan" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: rgb(26, 140, 211);" text="Đặt bàn" textFill="WHITE">
+      <Button layoutX="6.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnDatBan" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Đặt bàn" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -23,7 +23,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="144.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnHoaDon" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: rgb(26, 140, 211);" text="Hóa đơn" textFill="WHITE">
+      <Button layoutX="144.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnHoaDon" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Hóa đơn" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -35,7 +35,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="282.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnThemKH" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: rgb(26, 140, 211);" text="Thêm KH" textFill="WHITE">
+      <Button layoutX="282.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnThemKH" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #8B0000;" text="Thêm KH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -47,7 +47,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="1270.0" layoutY="5.0" mnemonicParsing="false" onAction="#dongPane" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" textFill="WHITE">
+      <Button layoutX="1270.0" layoutY="5.0" mnemonicParsing="false" onAction="#dongPane" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -61,7 +61,7 @@
       </Button>
       <Pane layoutX="434.0" layoutY="56.0" prefHeight="342.0" prefWidth="403.0" style="-fx-background-color: white; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@../css/MainFormDesign.css">
          <children>
-            <Text fill="DEEPSKYBLUE" layoutX="56.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm khách hàng" textAlignment="CENTER" wrappingWidth="332.79997558593743">
+            <Text fill="#D4AF37" layoutX="56.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm khách hàng" textAlignment="CENTER" wrappingWidth="332.79997558593743">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
@@ -71,7 +71,7 @@
                   <Image url="@../images/add-user.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnThem" layoutX="276.0" layoutY="286.0" mnemonicParsing="false" onAction="#chonBtnThem" prefHeight="37.0" prefWidth="105.0" style="-fx-background-color: #50A8FA; -fx-background-radius: 10;" text="Thêm" textFill="WHITE">
+            <Button fx:id="btnThem" layoutX="276.0" layoutY="286.0" mnemonicParsing="false" onAction="#chonBtnThem" prefHeight="37.0" prefWidth="105.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" text="Thêm" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

@@ -1,3 +1,9 @@
 .textDN{
     -fx-background-color: transparent;
+    -fx-text-fill: #795e08;
+    -fx-prompt-text-fill: #D4AF37;
+}
+
+.root {
+    -fx-background-color: linear-gradient(to bottom, #8B0000, #5A0A0A);
 }

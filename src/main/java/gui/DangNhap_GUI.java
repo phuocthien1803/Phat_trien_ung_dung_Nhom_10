@@ -14,7 +14,7 @@ public class DangNhap_GUI extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(DangNhap_GUI.class.getResource("DangNhap.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Đăng nhập");
-        stage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logoxoanen.png")));
+        stage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logo.png")));
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
