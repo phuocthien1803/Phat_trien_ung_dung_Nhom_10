@@ -112,7 +112,7 @@ public class DangNhap_Control {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         System.out.println(matKhau + "   " + tk.getMatKhau());
         
-        if (tk != null) { // So sánh mật khẩu đã nhập với hash đã lưu
+        if (tk != null && encoder.matches(matKhau, tk.getMatKhau().trim())) { // So sánh mật khẩu đã nhập với hash đã lưu
             	lblErr.setText("");
 
             // Mở giao diện trang chủ sau khi đăng nhập thành công
