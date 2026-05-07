@@ -15,7 +15,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -37,6 +36,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 public class QuanLyBan_Control {
 
@@ -96,7 +96,7 @@ public class QuanLyBan_Control {
     @FXML
     private Button btnCoc;
     @FXML
-    private ImageView chuaCoc;
+    private FontIcon chuaCoc;
     @FXML
     private Button btnDatBan;
     @FXML
@@ -623,8 +623,7 @@ public class QuanLyBan_Control {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 btnCoc.setText("Đã cọc");
-                Image newImage = new Image(getClass().getResourceAsStream("/images/check.png"));
-                chuaCoc.setImage(newImage);
+                chuaCoc.setIconLiteral("fas-check");
                 btnDatBan.setDisable(false);
                 gridPaneMenu.setDisable(true);
                 btnVangLai.setDisable(true);

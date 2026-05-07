@@ -15,8 +15,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -24,6 +22,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import javafx.util.converter.IntegerStringConverter;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.File;
 import java.io.IOException;
@@ -134,7 +133,7 @@ public class QuanLyHoaDon_Control {
     @FXML
     private Button btnHuy;
     @FXML
-    private ImageView chuaCheck;
+    private FontIcon chuaCheck;
     @FXML
     private DatePicker timNgayDatBan;
     @FXML
@@ -620,19 +619,16 @@ public class QuanLyHoaDon_Control {
         }
         if(hoaDon.getHinhThuc().name().equals("DAT_BAN")) {
             btnCheckIn.setText("Đã CheckIn");
-            Image newImage = new Image(getClass().getResourceAsStream("/images/check.png"));
-            chuaCheck.setImage(newImage);
+            chuaCheck.setIconLiteral("fas-check");
         } else
         {
             btnCheckIn.setText("Chưa CheckIn");
-            Image newImage = new Image(getClass().getResourceAsStream("/images/close.png"));
-            chuaCheck.setImage(newImage);
+            chuaCheck.setIconLiteral("fas-times");
         }
 
         if(hoaDon.isCheckIn()) {
             btnCheckIn.setText("Đã CheckIn");
-            Image newImage = new Image(getClass().getResourceAsStream("/images/check.png"));
-            chuaCheck.setImage(newImage);
+            chuaCheck.setIconLiteral("fas-check");
         }
         if(btnCheckIn.getText().equals("Đã CheckIn")) {
             ngayDatBan.setDisable(true);
@@ -711,8 +707,7 @@ public class QuanLyHoaDon_Control {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 btnCheckIn.setText("Đã CheckIn");
-                Image newImage = new Image(getClass().getResourceAsStream("/images/check.png"));
-                chuaCheck.setImage(newImage);
+                chuaCheck.setIconLiteral("fas-check");
                 ngayDatBan.setDisable(true);
                 gioDatBan.setDisable(true);
                 phutDatBan.setDisable(true);

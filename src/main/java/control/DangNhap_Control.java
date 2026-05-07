@@ -20,13 +20,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class DangNhap_Control {
     @FXML
-    ImageView hide;
+    FontIcon hide;
     @FXML
     PasswordField password;
     @FXML
@@ -39,8 +38,6 @@ public class DangNhap_Control {
     private Button btnLamMoi;
     @FXML
     private Label lblErr;
-    Image view = new Image(getClass().getResourceAsStream("/images/view.png"));
-    Image hidee = new Image(getClass().getResourceAsStream("/images/hide.png"));
     private boolean isPasswordVisible = false;
     public TrangChu_Control trangChuControl;
     private QuenMatKhau_Control quenMatKhauControl;
@@ -75,14 +72,14 @@ public class DangNhap_Control {
     }
     public void hienThiMK() {
         if(isPasswordVisible) {
-            hide.setImage(hidee);
+            hide.setIconLiteral("fas-eye-slash");
             textFieldMK.setVisible(false);
             textFieldMK.setManaged(false);
             password.setVisible(true);
             password.setManaged(true);
         } else
         {
-            hide.setImage(view);
+            hide.setIconLiteral("fas-eye");
              textFieldMK.setVisible(true);
             textFieldMK.setManaged(true);
             password.setVisible(false);

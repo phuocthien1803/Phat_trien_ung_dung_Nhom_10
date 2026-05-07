@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="726.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MonAn_Conntrol">
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<AnchorPane prefHeight="726.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MonAn_Conntrol">
    <children>
       <BorderPane prefHeight="726.0" prefWidth="1314.0">
          <top>
-            <Pane prefHeight="80.0" prefWidth="1314.0" style="-fx-background-color: #2A1515;" BorderPane.alignment="CENTER">
+            <Pane prefHeight="80.0" prefWidth="1314.0" style="-fx-background-color: #711019;" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="523.0" layoutY="18.0" text="QUẢN LÝ MÓN ĂN">
+                  <Label layoutX="523.0" layoutY="18.0" text="QUẢN LÝ MÓN ĂN" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="30.0" />
                      </font>
@@ -97,11 +97,7 @@
                   </Button>
                   <Button fx:id="timKiem" layoutX="914.0" layoutY="8.0" mnemonicParsing="false" onAction="#timKiemMonAn" prefHeight="37.0" prefWidth="52.0" style="-fx-background-color: #8B0000; -fx-background-radius: 10;" textFill="WHITE">
                      <graphic>
-                        <ImageView fx:id="btnTim" fitHeight="24.0" fitWidth="168.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/search.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon fx:id="btnTim" layoutX="29.0" layoutY="7.0" iconLiteral="fas-search" iconSize="24" iconColor="WHITE" />
                      </graphic>
                      <font>
                         <Font size="15.0" />
@@ -113,3 +109,5 @@
       </BorderPane>
    </children>
 </AnchorPane>
+
+

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThongKe_NV_Control">
+<AnchorPane prefHeight="800.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThongKe_NV_Control">
     <!-- HBox chứa các thông tin thống kê ngắn gọn -->
     <HBox layoutX="20.0" layoutY="20.0" prefHeight="100.0" prefWidth="1300.0" spacing="40.0" style="-fx-background-color: #2A1515; -fx-padding: 15px;">
         <children>

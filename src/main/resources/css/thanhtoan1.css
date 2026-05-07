@@ -7,6 +7,10 @@
     -fx-border-width: 0 0 2px 0;
 }
 
+#table_tt .column-header .label {
+    -fx-text-fill: #FFFFFF;
+}
+
 #table_tt .cell {
     -fx-alignment: CENTER;
     -fx-pref-height: 50px;
@@ -53,12 +57,16 @@
     -fx-border-width: 0 0 2px 0;
 }
 
+#table_monan .column-header .label {
+    -fx-text-fill: #FFFFFF;
+}
+
 #table_monan .cell {
     -fx-alignment: CENTER;
     -fx-pref-height: 50px;
     -fx-font-size: 25px;
-    -fx-text-fill: #F5F5F5;
-    -fx-background-color: #1B1212;
+    -fx-text-fill: #1B1212;
+    -fx-background-color: #FFFFFF;
     -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 0 0;
 }
@@ -70,9 +78,15 @@
 
 /* Đặt viền cho các ô hàng */
 #table_monan .table-row-cell {
-    -fx-background-color: #1B1212;
+    -fx-background-color: #FFFFFF;
     -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 1px 0;
+}
+
+#table_monan .table-row-cell:selected,
+#table_monan .table-row-cell:selected .cell {
+    -fx-background-color: #A11212;
+    -fx-text-fill: #FFFFFF;
 }
 
 #table_nhanvien .column-header {
@@ -83,12 +97,16 @@
     -fx-border-width: 0 0 2px 0;
 }
 
+#table_nhanvien .column-header .label {
+    -fx-text-fill: #FFFFFF;
+}
+
 #table_nhanvien .cell {
     -fx-alignment: CENTER;
     -fx-pref-height: 50px;
     -fx-font-size: 16px;
-    -fx-text-fill: #F5F5F5;
-    -fx-background-color: #1B1212;
+    -fx-text-fill: #1B1212;
+    -fx-background-color: #FFFFFF;
     -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 0 0;
 }
@@ -100,9 +118,13 @@
 
 /* Đặt viền cho các ô hàng */
 #table_nhanvien .table-row-cell {
-    -fx-background-color: #1B1212;
+    -fx-background-color: #FFFFFF;
     -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 1px 0;
 }
 
-
+#table_nhanvien .table-row-cell:selected,
+#table_nhanvien .table-row-cell:selected .cell {
+    -fx-background-color: #A11212;
+    -fx-text-fill: #FFFFFF;
+}

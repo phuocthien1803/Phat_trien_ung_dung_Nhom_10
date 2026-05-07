@@ -6,6 +6,9 @@ module com.example.nhahangkkts_nhom10 {
     requires itextpdf;
     requires datetime.picker.javafx;
     requires spring.security.crypto;
+    requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.ikonli.fontawesome5;
+    requires org.kordamp.ikonli.fontawesome6;
     opens gui to javafx.fxml;
     exports gui;
     exports control;
