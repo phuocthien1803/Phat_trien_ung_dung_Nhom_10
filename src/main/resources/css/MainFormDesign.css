@@ -45,7 +45,7 @@
 }
 
 .table-view .column-header .label {
-    -fx-text-fill: -thv-gold-bright;
+    -fx-text-fill: -thv-text;
 }
 
 .table-row-cell {
@@ -102,4 +102,3 @@
     -fx-scale-x: 1;
     -fx-scale-y: 1;
 }
-

@@ -11,13 +11,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.QuanLimonAn_Control">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.QuanLimonAn_Control">
    <children>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #FFFFFF;">
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #711019;">
          <children>
-            <Label layoutX="497.0" layoutY="23.0" prefHeight="49.0" prefWidth="321.0" text="QUẢN LÍ MÓN ĂN">
+            <Label layoutX="497.0" layoutY="23.0" prefHeight="49.0" prefWidth="321.0" text="QUẢN LÝ MÓN ĂN" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
@@ -72,11 +73,7 @@
             <TextField layoutX="631.0" layoutY="687.0" prefHeight="25.0" prefWidth="245.0" />
             <Button id="button_find_thanhtoan" contentDisplay="CENTER" layoutX="896.0" layoutY="682.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: #8B0000; -fx-background-radius: 20px;">
                <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="70.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/search.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-search" iconSize="20" iconColor="WHITE" />
                </graphic>
             </Button>
             <Button layoutX="969.0" layoutY="682.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #8B0000; -fx-background-radius: 20px;" text="Cập nhật" textFill="WHITE">
@@ -93,3 +90,4 @@
       </Pane>
    </children>
 </AnchorPane>
+

@@ -9,8 +9,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="468.0" prefWidth="371.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.QuenMatKhau_Control">
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<AnchorPane prefHeight="468.0" prefWidth="371.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.QuenMatKhau_Control">
    <children>
       <Pane fx:id="paneDMK" layoutY="151.0" prefHeight="342.0" prefWidth="371.0" style="-fx-background-color: white;">
          <children>
@@ -21,7 +21,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnTV" layoutX="86.0" layoutY="240.0" mnemonicParsing="false" onAction="#troVeClicked" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #8B0000;" text="Trở về" textFill="WHITE">
+            <Button fx:id="btnTV" layoutX="86.0" layoutY="240.0" mnemonicParsing="false" onAction="#troVeClicked" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #8B0000;" text="Trá»Ÿ vá»" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -34,11 +34,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="76.0" fitWidth="85.0" layoutX="148.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/lock.png" />
-         </image>
-      </ImageView>
+      <FontIcon layoutX="148.0" layoutY="14.0" iconLiteral="fas-lock" iconSize="48" iconColor="#D4AF37" />
       <Pane fx:id="paneKT" layoutY="151.0" prefHeight="342.0" prefWidth="371.0" style="-fx-background-color: white;">
          <children>
             <TextField fx:id="txtTenDN" layoutX="71.0" layoutY="30.0" prefHeight="32.0" prefWidth="230.0" promptText="Tên đăng nhập" style="-fx-border-color: #8B0000; -fx-border-width: 0px 0px 2px 0px;" />
@@ -54,3 +50,5 @@
       </Pane>
    </children>
 </AnchorPane>
+
+

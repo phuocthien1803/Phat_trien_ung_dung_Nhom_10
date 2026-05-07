@@ -7,6 +7,10 @@
     -fx-border-width: 0 0 2px 0;
 }
 
+#banghoadon .column-header .label {
+    -fx-text-fill: #FFFFFF;
+}
+
 #banghoadon .cell {
     -fx-alignment: CENTER;
     -fx-pref-height: 50px;

@@ -8,19 +8,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
-<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #1B1212;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThemKH_Control">
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #1B1212;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThemKH_Control">
    <children>
       <Button layoutX="6.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnDatBan" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Đặt bàn" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/bell.png" />
-               </image>
-            </ImageView>
+            <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-bell" iconSize="30" iconColor="WHITE" />
          </graphic>
       </Button>
       <Button layoutX="144.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnHoaDon" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Hóa đơn" textFill="WHITE">
@@ -28,11 +24,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/bill.png" />
-               </image>
-            </ImageView>
+            <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-file-invoice" iconSize="30" iconColor="WHITE" />
          </graphic>
       </Button>
       <Button layoutX="282.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnThemKH" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #8B0000;" text="Thêm KH" textFill="WHITE">
@@ -40,11 +32,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/add.png" />
-               </image>
-            </ImageView>
+            <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-plus" iconSize="20" iconColor="WHITE" />
          </graphic>
       </Button>
       <Button layoutX="1270.0" layoutY="5.0" mnemonicParsing="false" onAction="#dongPane" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" textFill="WHITE">
@@ -52,11 +40,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
          <graphic>
-            <ImageView fx:id="btnDong" fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/close.png" />
-               </image>
-            </ImageView>
+            <FontIcon fx:id="btnDong" layoutX="29.0" layoutY="7.0" iconLiteral="fas-times" iconSize="20" iconColor="WHITE" />
          </graphic>
       </Button>
       <Pane layoutX="434.0" layoutY="56.0" prefHeight="342.0" prefWidth="403.0" style="-fx-background-color: white; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@../css/MainFormDesign.css">
@@ -66,21 +50,13 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Text>
-            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="23.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/add-user.png" />
-               </image>
-            </ImageView>
+            <FontIcon layoutX="23.0" layoutY="16.0" iconLiteral="fas-user-plus" iconSize="48" iconColor="#D4AF37" />
             <Button fx:id="btnThem" layoutX="276.0" layoutY="286.0" mnemonicParsing="false" onAction="#chonBtnThem" prefHeight="37.0" prefWidth="105.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" text="Thêm" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/add.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-plus" iconSize="20" iconColor="WHITE" />
                </graphic>
             </Button>
             <TextField fx:id="txtMaKH" layoutX="107.0" layoutY="91.0" prefHeight="26.0" prefWidth="200.0" promptText="Mã khách hàng" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
@@ -88,16 +64,8 @@
                   <Font size="13.0" />
                </font>
             </TextField>
-            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="75.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/id.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="75.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/name.png" />
-               </image>
-            </ImageView>
+            <FontIcon layoutX="75.0" layoutY="93.0" iconLiteral="fas-id-card" iconSize="25" iconColor="#D4AF37" />
+            <FontIcon layoutX="75.0" layoutY="213.0" iconLiteral="fas-user" iconSize="25" iconColor="#D4AF37" />
             <TextField fx:id="txtHoTen" layoutX="107.0" layoutY="212.0" prefHeight="26.0" prefWidth="200.0" promptText="Nhập họ tên" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
                <font>
                   <Font size="13.0" />
@@ -108,12 +76,10 @@
                   <Font size="13.0" />
                </font>
             </TextField>
-            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="75.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/phone.png" />
-               </image>
-            </ImageView>
+            <FontIcon layoutX="75.0" layoutY="154.0" iconLiteral="fas-phone" iconSize="25" iconColor="#D4AF37" />
          </children>
       </Pane>
    </children>
 </AnchorPane>
+
+

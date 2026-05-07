@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<TabPane prefHeight="800.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThongKe_Control">
+<TabPane prefHeight="800.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThongKe_Control">
     <tabs>
         <!-- Tab 1: Statistics -->
         <Tab closable="false" text="          Tổng quan          ">

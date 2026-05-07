@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThanhToan_Control">
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThanhToan_Control">
    <children>
       <Pane fx:id="pn_thanhtoan" prefHeight="725.0" prefWidth="1314.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <Pane layoutX="-3.0" layoutY="-1.0" prefHeight="63.0" prefWidth="1321.0" style="-fx-background-color: #8B0000;">
+            <Pane layoutX="-3.0" layoutY="-1.0" prefHeight="63.0" prefWidth="1321.0" style="-fx-background-color: #711019;">
                <children>
-                  <Label contentDisplay="CENTER" layoutX="576.0" layoutY="4.0" prefHeight="56.0" prefWidth="223.0" text="Danh sách hoá đơn">
+                  <Label contentDisplay="CENTER" layoutX="576.0" layoutY="4.0" prefHeight="56.0" prefWidth="223.0" text="Danh sách hoá đơn" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
@@ -44,10 +44,13 @@
             <TextField fx:id="txt_sdt_tt" layoutX="163.0" layoutY="73.0" prefHeight="25.0" prefWidth="169.0" />
             <TextField fx:id="txt_tenkh_tt" layoutX="517.0" layoutY="73.0" prefHeight="25.0" prefWidth="215.0" />
             <TextField fx:id="txt_ban_tt" layoutX="837.0" layoutY="73.0" prefHeight="25.0" prefWidth="177.0" />
-            <Button id="button_find_thanhtoan" fx:id="btn_find_tt" contentDisplay="CENTER" layoutX="1069.0" layoutY="66.0" mnemonicParsing="false" onAction="#search_tt" prefHeight="21.0" prefWidth="223.0" style="-fx-background-color: #8B0000; -fx-background-radius: 20px;" text="Search" textFill="WHITE">
+            <Button id="button_find_thanhtoan" fx:id="btn_find_tt" alignment="CENTER" contentDisplay="LEFT" graphicTextGap="8.0" layoutX="1069.0" layoutY="66.0" mnemonicParsing="false" onAction="#search_tt" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #8B0000; -fx-background-radius: 20px;" text="Search" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fas-search" iconSize="20" />
+               </graphic>
             </Button>
             <TableView id="banghoadon" fx:id="thanhtoan_hoadon" layoutX="86.0" layoutY="122.0" prefHeight="603.0" prefWidth="1153.0" stylesheets="@../css/thanhtoan.css">
               <columns>
@@ -72,11 +75,6 @@
                   <Blend />
                </effect>
             </Separator>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="1227.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/search.png" />
-               </image>
-            </ImageView>
             <Separator layoutY="108.0" prefHeight="0.0" prefWidth="1314.0" />
          </children>
       </Pane>

@@ -16,8 +16,8 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
-<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #1B1212;" stylesheets="@../css/MainFormDesign.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.QuanLyHoaDon_Control">
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #1B1212;" stylesheets="@../css/MainFormDesign.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.QuanLyHoaDon_Control">
    <children>
       <BorderPane fx:id="ttHoaDon" layoutX="7.0" layoutY="52.0" prefHeight="662.0" prefWidth="1297.0" style="-fx-background-color: #1B1212;">
          <right>
@@ -28,21 +28,13 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="202.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/menu.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="202.0" layoutY="17.0" iconLiteral="fas-utensils" iconSize="30" iconColor="WHITE" />
                   <Button layoutX="49.0" layoutY="105.0" mnemonicParsing="false" onAction="#chonTrangMonAn" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #D4AF37; -fx-background-radius: 20; -fx-blend-mode: hard-light;" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/food.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-hamburger" iconSize="30" iconColor="WHITE" />
                      </graphic>
                   </Button>
                   <Button layoutX="194.0" layoutY="105.0" mnemonicParsing="false" onAction="#chonTrangDoUong" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #A11212; -fx-background-radius: 20;" textFill="WHITE">
@@ -50,11 +42,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/soda.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-wine-glass" iconSize="30" iconColor="WHITE" />
                      </graphic>
                   </Button>
                   <Button layoutX="339.0" layoutY="105.0" mnemonicParsing="false" onAction="#chonTrangRuouBia" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #D4AF37; -fx-background-radius: 20;" textFill="WHITE">
@@ -62,11 +50,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/alcoholic-drink.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-wine-glass" iconSize="30" iconColor="WHITE" />
                      </graphic>
                   </Button>
                   <TextField fx:id="txtTenMonCanTim" layoutX="56.0" layoutY="64.0" prefHeight="30.0" prefWidth="180.0" promptText="Nhập tên món ăn cần tìm" />
@@ -75,11 +59,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/find.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-search" iconSize="20" iconColor="WHITE" />
                      </graphic>
                   </Button>
                   <Button layoutX="460.0" layoutY="12.0" mnemonicParsing="false" onAction="#quayLai" prefHeight="11.0" prefWidth="52.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" textFill="WHITE">
@@ -87,11 +67,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                      <graphic>
-                        <ImageView fx:id="btnDong1" fitHeight="25.0" fitWidth="25.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/back-arrow.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon fx:id="btnDong1" layoutX="29.0" layoutY="7.0" iconLiteral="fas-arrow-left" iconSize="25" iconColor="WHITE" />
                      </graphic>
                   </Button>
                   <ScrollPane layoutX="9.0" layoutY="156.0" prefHeight="492.0" prefWidth="502.0">
@@ -114,11 +90,7 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="247.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/name.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="247.0" layoutY="117.0" iconLiteral="fas-user" iconSize="25" iconColor="#D4AF37" />
                   <TextField fx:id="txtTenKH" layoutX="279.0" layoutY="116.0" prefHeight="26.0" prefWidth="180.0" promptText="Nhập họ tên" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
                      <font>
                         <Font size="13.0" />
@@ -129,17 +101,9 @@
                         <Font size="13.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="247.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/phone.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="247.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/rewarddaden.png" />
-                     </image>
-                  </ImageView>
-                  <TextField fx:id="txtDiemTL" layoutX="279.0" layoutY="162.0" prefHeight="26.0" prefWidth="180.0" promptText="Điểm tích lũy" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
+                  <FontIcon layoutX="247.0" layoutY="72.0" iconLiteral="fas-phone" iconSize="25" iconColor="#D4AF37" />
+                  <FontIcon layoutX="247.0" layoutY="163.0" iconLiteral="fas-star" iconSize="25" iconColor="#D4AF37" />
+                  <TextField fx:id="txtDiemTL" layoutX="279.0" layoutY="162.0" prefHeight="26.0" prefWidth="180.0" promptText="Äiá»ƒm tÃ­ch lÅ©y" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
                      <font>
                         <Font size="13.0" />
                      </font>
@@ -149,21 +113,13 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="510.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/table.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="510.0" layoutY="72.0" iconLiteral="fas-table" iconSize="25" iconColor="#D4AF37" />
                   <TextField fx:id="txtSoLuongKH" layoutX="542.0" layoutY="116.0" prefHeight="26.0" prefWidth="180.0" promptText="Nhập số lượng khách " style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
                      <font>
                         <Font size="13.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="510.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/customer.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="510.0" layoutY="117.0" iconLiteral="fas-users" iconSize="25" iconColor="#D4AF37" />
                   <Text fill="#D4AF37" layoutX="255.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin đặt món" textAlignment="CENTER" wrappingWidth="269.60002441406243">
                      <font>
                         <Font name="System Bold" size="24.0" />
@@ -174,11 +130,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/refresh.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-rotate" iconSize="20" iconColor="WHITE" />
                      </graphic>
                   </Button>
                   <Button fx:id="btnHuy" layoutX="534.0" layoutY="608.0" mnemonicParsing="false" onAction="#chonHuy" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" text="Hủy" textFill="WHITE">
@@ -186,19 +138,15 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/cancel.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-ban" iconSize="20" iconColor="WHITE" />
                      </graphic>
                   </Button>
-                  <Text fill="#1a8cd3" layoutX="418.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền:" wrappingWidth="98.13671875">
+                  <Text fill="#1a8cd3" layoutX="418.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tá»•ng tiá»n:" wrappingWidth="98.13671875">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
-                  <Text fill="#1a8cd3" layoutX="418.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiền đã cọc:" wrappingWidth="117.33673095703125">
+                  <Text fill="#1a8cd3" layoutX="418.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiá»n Ä‘Ã£ cá»c:" wrappingWidth="117.33673095703125">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -208,11 +156,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <graphic>
-                        <ImageView fx:id="chuaCheck" fitHeight="20.0" fitWidth="15.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/close.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon fx:id="chuaCheck" layoutX="29.0" layoutY="7.0" iconLiteral="fas-times" iconSize="20" iconColor="WHITE" />
                      </graphic>
                   </Button>
                   <TextField fx:id="txtMaHD" layoutX="46.0" layoutY="70.0" prefHeight="26.0" prefWidth="180.0" promptText="Mã hóa đơn" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
@@ -220,31 +164,19 @@
                         <Font size="13.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/id.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="14.0" layoutY="71.0" iconLiteral="fas-id-card" iconSize="25" iconColor="#D4AF37" />
                   <TextField fx:id="txtTrangThaiHD" layoutX="46.0" layoutY="116.0" prefHeight="26.0" prefWidth="180.0" promptText="Trạng thái hóa đơn" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
                      <font>
                         <Font size="13.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/project-status.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="14.0" layoutY="117.0" iconLiteral="fas-circle-info" iconSize="25" iconColor="#D4AF37" />
                   <Text fill="#D4AF37" layoutX="-15.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hóa đơn" textAlignment="CENTER" wrappingWidth="269.60002441406243">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/nvdaden.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="14.0" layoutY="163.0" iconLiteral="fas-user-tie" iconSize="25" iconColor="#D4AF37" />
                   <TextField fx:id="txtNhanVien" layoutX="46.0" layoutY="162.0" prefHeight="26.0" prefWidth="180.0" promptText="Nhân viên" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
                      <font>
                         <Font size="13.0" />
@@ -255,18 +187,10 @@
                         <Font size="13.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="510.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/calendar.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="510.0" layoutY="163.0" iconLiteral="fas-calendar-alt" iconSize="25" iconColor="#D4AF37" />
                   <DatePicker fx:id="ngayDatBan" layoutX="542.0" layoutY="162.0" prefHeight="26.0" prefWidth="180.0" promptText=" Chọn ngày đặt bàn" />
                   <ComboBox fx:id="gioDatBan" layoutX="541.0" layoutY="206.0" prefHeight="26.0" prefWidth="85.0" promptText="Giờ " />
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="510.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/clock.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="510.0" layoutY="207.0" iconLiteral="fas-clock" iconSize="25" iconColor="#D4AF37" />
                   <ComboBox fx:id="phutDatBan" layoutX="634.0" layoutY="206.0" prefHeight="26.0" prefWidth="85.0" promptText="Phút" />
                   <Label fx:id="lblTongTien" layoutX="525.0" layoutY="532.0" text="0 VNĐ" textFill="#1a8cd3">
                      <font>
@@ -312,47 +236,23 @@
                         <Font name="System Bold" size="36.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="391.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/list.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="391.0" layoutY="7.0" iconLiteral="fas-list" iconSize="40" iconColor="WHITE" />
                   <TextField fx:id="txtTimKH" layoutX="424.0" layoutY="70.0" prefHeight="30.0" prefWidth="180.0" promptText="Nhập tên khách hàng" />
                   <Button layoutX="1118.0" layoutY="70.0" mnemonicParsing="false" onAction="#timHoaDon" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #8B0000; -fx-background-radius: 10;" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/find.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-search" iconSize="20" iconColor="WHITE" />
                      </graphic>
                   </Button>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="391.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/userdaden.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="391.0" layoutY="73.0" iconLiteral="fas-user" iconSize="25" iconColor="#D4AF37" />
                   <TextField fx:id="txtTimSDT" layoutX="172.0" layoutY="70.0" prefHeight="30.0" prefWidth="180.0" promptText="Nhập số điện thoại" />
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="139.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/phone.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="139.0" layoutY="73.0" iconLiteral="fas-phone" iconSize="25" iconColor="#D4AF37" />
                   <ComboBox fx:id="trangThaiHD" layoutX="915.0" layoutY="70.0" prefHeight="30.0" prefWidth="180.0" promptText="Chọn trạng thái HĐ" />
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="885.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/check-list.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="885.0" layoutY="73.0" iconLiteral="fas-clipboard-check" iconSize="25" iconColor="#D4AF37" />
                   <DatePicker fx:id="timNgayDatBan" layoutX="672.0" layoutY="70.0" prefHeight="30.0" prefWidth="175.0" promptText="Chọn ngày đặt bàn" />
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="641.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/clock.png" />
-                     </image>
-                  </ImageView>
+                  <FontIcon layoutX="641.0" layoutY="73.0" iconLiteral="fas-clock" iconSize="25" iconColor="#D4AF37" />
                   <Label fx:id="maBan" layoutX="903.0" text="XD" textFill="#D4AF37">
                      <font>
                         <Font name="System Bold" size="36.0" />
@@ -367,11 +267,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/bell.png" />
-               </image>
-            </ImageView>
+            <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-bell" iconSize="30" iconColor="WHITE" />
          </graphic>
       </Button>
       <Button layoutX="144.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnHoaDon" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Hóa đơn" textFill="WHITE">
@@ -379,11 +275,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/bill.png" />
-               </image>
-            </ImageView>
+            <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-file-invoice" iconSize="30" iconColor="WHITE" />
          </graphic>
       </Button>
       <Button layoutX="282.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnThemKH" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #8B0000;" text="Thêm KH" textFill="WHITE">
@@ -391,11 +283,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/add.png" />
-               </image>
-            </ImageView>
+            <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-plus" iconSize="20" iconColor="WHITE" />
          </graphic>
       </Button>
       <Button layoutX="1270.0" layoutY="5.0" mnemonicParsing="false" onAction="#dongPane" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" textFill="WHITE">
@@ -403,12 +291,11 @@
             <Font name="System Bold" size="14.0" />
          </font>
          <graphic>
-            <ImageView fx:id="btnDong" fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/close.png" />
-               </image>
-            </ImageView>
+            <FontIcon fx:id="btnDong" layoutX="29.0" layoutY="7.0" iconLiteral="fas-times" iconSize="20" iconColor="WHITE" />
          </graphic>
       </Button>
    </children>
 </AnchorPane>
+
+
+

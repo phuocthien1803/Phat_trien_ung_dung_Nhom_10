@@ -14,12 +14,12 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
-<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.DatBan_Control">
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.DatBan_Control">
    <children>
       <BorderPane fx:id="borderDatBan" prefHeight="200.0" prefWidth="200.0">
          <top>
-            <HBox prefHeight="80.0" prefWidth="1314.0" style="-fx-background-color: #2A1515;" stylesheets="@../css/MainFormDesign.css" BorderPane.alignment="CENTER">
+            <HBox prefHeight="80.0" prefWidth="1314.0" style="-fx-background-color: #711019;" stylesheets="@../css/MainFormDesign.css" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="khua" mnemonicParsing="false" onAction="#KhuAClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: rgb(126, 142, 135);" text="Khu A" textFill="WHITE">
                      <HBox.margin>
@@ -29,11 +29,7 @@
                         <Font name="System Bold" size="25.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/restaurant.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-utensils" iconSize="40" iconColor="WHITE" />
                      </graphic>
                   </Button>
                   <Button fx:id="khub" mnemonicParsing="false" onAction="#KhuBClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: rgb(19, 95, 60);" text="Khu B" textFill="WHITE">
@@ -44,11 +40,7 @@
                         <Insets left="15.0" top="15.0" />
                      </HBox.margin>
                      <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/restaurant.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-utensils" iconSize="40" iconColor="WHITE" />
                      </graphic>
                   </Button>
                   <Button fx:id="khuc" mnemonicParsing="false" onAction="#KhuCClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8B0000;" text="Khu C" textFill="WHITE">
@@ -59,22 +51,15 @@
                         <Insets left="15.0" top="15.0" />
                      </HBox.margin>
                      <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/restaurant.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-utensils" iconSize="40" iconColor="WHITE" />
                      </graphic>
                   </Button>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/phone.png" />
-                     </image>
+                  <FontIcon iconLiteral="fas-phone" iconSize="25" iconColor="#D4AF37">
                      <HBox.margin>
                         <Insets left="100.0" top="28.0" />
                      </HBox.margin>
-                  </ImageView>
-                  <TextField fx:id="txtSDTKH" prefHeight="30.0" prefWidth="160.0" promptText="Nhập SĐT khách hàng">
+                  </FontIcon>
+                  <TextField fx:id="txtSDTKH" prefHeight="30.0" prefWidth="160.0" promptText="Nhập SĐT khách hàng" style="-fx-border-color: #D4AF37; -fx-border-width: 0px 0px 2px 0px;" styleClass="textSDT" stylesheets="@../css/MainFormDesign.css">
                      <HBox.margin>
                         <Insets left="5.0" top="25.0" />
                      </HBox.margin>
@@ -94,11 +79,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="70.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/find.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-search" iconSize="20" iconColor="WHITE" />
                      </graphic>
                      <HBox.margin>
                         <Insets left="10.0" top="25.0" />
@@ -666,3 +647,6 @@
       <Pane fx:id="pnTTDatBan" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: white;" />
    </children>
 </StackPane>
+
+
+
