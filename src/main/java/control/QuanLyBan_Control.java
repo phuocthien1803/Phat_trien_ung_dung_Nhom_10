@@ -25,10 +25,13 @@ import javafx.stage.Stage;
 import javafx.util.converter.IntegerStringConverter;
 import javafx.scene.image.ImageView;
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.HashMap;
 import java.util.Map;
@@ -39,6 +42,8 @@ import javafx.scene.control.DatePicker;
 import org.kordamp.ikonli.javafx.FontIcon;
 
 public class QuanLyBan_Control {
+
+    private final DecimalFormat currencyFormat = new DecimalFormat("#,##0", DecimalFormatSymbols.getInstance(Locale.US));
 
 
     @FXML
@@ -586,20 +591,29 @@ public class QuanLyBan_Control {
         });
     }
 
+    private double parseCurrency(String value) {
+        if (value == null) {
+            return 0;
+        }
+        String digits = value.replaceAll("[^0-9]", "");
+        return digits.isEmpty() ? 0 : Double.parseDouble(digits);
+    }
+
+    private String formatCurrency(double value) {
+        return currencyFormat.format(Math.round(value)) + " VNĐ";
+    }
+
     private void tinhTongTienVaTienCoc(ChiTietHD_MonAn datMon, int soLuong) {
 
-        // Lấy giá trị từ Label và chuyển đổi thành double
-        String textTT = lblTongTien.getText().replace("VNĐ", "").trim(); // Bỏ "VNĐ" và khoảng trắng
-            double valueTT = Double.parseDouble(textTT);
+        double valueTT = parseCurrency(lblTongTien.getText());
         valueTT = valueTT + (soLuong* datMon.getGia() + soLuong * datMon.getGia() * datMon.getVAT() * 0.01);
-        String textTC = lblTienCoc.getText().replace("VNĐ", "").trim(); // Bỏ "VNĐ" và khoảng trắng
-        double valueTC = Double.parseDouble(textTC);
+        double valueTC = parseCurrency(lblTienCoc.getText());
 
         valueTC = valueTC +  soLuong * datMon.getGia() * 0.5;
 
         // Cập nhật Label
-        lblTongTien.setText(valueTT + " VNĐ");
-        lblTienCoc.setText(valueTC + " VNĐ");
+        lblTongTien.setText(formatCurrency(valueTT));
+        lblTienCoc.setText(formatCurrency(valueTC));
     }
 
     @FXML
@@ -646,9 +660,7 @@ public class QuanLyBan_Control {
         }
     private void updateButtonState() {
         // Lấy giá trị từ lblTienCoc
-
-        String textTC = lblTienCoc.getText().replace("VNĐ", "").trim(); // Xóa phần VNĐ
-        double tienCoc = Double.parseDouble(textTC); // Chuyển đổi sang double
+        double tienCoc = parseCurrency(lblTienCoc.getText());
         // Kiểm tra giá trị và thay đổi trạng thái nút
         if (tienCoc > 0) {
             btnDatBan.setDisable(true); // Khóa nút nếu tiền cọc > 0
@@ -730,10 +742,8 @@ public class QuanLyBan_Control {
         // Các thông tin khác
         LocalDate ngayDat = ngayDatBan.getValue();
         String ban = maBan.getText();
-        String tienCocText = lblTienCoc.getText().replaceAll("[^\\d.]", ""); // Chỉ giữ lại chữ số và dấu thập phân
-        double tienCoc = Double.parseDouble(tienCocText);
-        String tongTienText = lblTongTien.getText().replaceAll("[^\\d.]", ""); // Chỉ giữ lại chữ số và dấu thập phân
-        double tongTien = Double.parseDouble(tongTienText);
+        double tienCoc = parseCurrency(lblTienCoc.getText());
+        double tongTien = parseCurrency(lblTongTien.getText());
         int soLuongKH = Integer.parseInt(txtSoLuongKH.getText());
 
         // Lấy giờ đặt bàn dưới dạng LocalTime

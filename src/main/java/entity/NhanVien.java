@@ -15,13 +15,13 @@ public class NhanVien {
 	private LocalDate ngaySinh;
 	private HoaDon hoaDon;
 	private double doanhThu;
-	private String cauHoi;
-	private String traLoi;
+	private String question;
+	private String answer;
 	private int soHoaDon;
 
 
 	public NhanVien(String maNV, String tenNV, boolean gioiTinh, String sDT, TrangThaiNhanVien trangThai, String chucVu, LocalDate ngayVaoLam,
-					LocalDate ngayNghiLam, LocalDate ngaySinh, String cauHoi ,String traLoi) {
+					LocalDate ngayNghiLam, LocalDate ngaySinh, String question ,String answer) {
 		super();
 		this.maNV = maNV;
 		this.tenNV = tenNV;
@@ -32,8 +32,8 @@ public class NhanVien {
 		this.ngayVaoLam = ngayVaoLam;
 		this.ngayNghiLam = ngayNghiLam;
 		this.ngaySinh = ngaySinh;
-		this.cauHoi = cauHoi;
-		this.traLoi = traLoi;
+		this.question = question;
+		this.answer = answer;
 
 	}
 
@@ -132,19 +132,19 @@ public class NhanVien {
 	}
 
 	public String getCauHoi(){
-		return cauHoi;
+		return question;
 	}
 
-	public void setQuestion(String cauHoi){
-		this.cauHoi = cauHoi;
+	public void setQuestion(String question){
+		this.question = question;
 	}
 
 	public String getTraLoi() {
-		return traLoi;
+		return answer;
 	}
 
-	public void setTraLoi(String traLoi) {
-		this.traLoi = traLoi;
+	public void setTraLoi(String answer) {
+		this.answer = answer;
 	}
 
 	@Override

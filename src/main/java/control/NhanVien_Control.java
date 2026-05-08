@@ -1,5 +1,13 @@
 package control;
 
+import java.net.URL;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Date;
+import java.util.ResourceBundle;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import dao.NhanVien_DAO;
 import dao.TaiKhoan_DAO;
 import entity.NhanVien;
@@ -11,16 +19,16 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import java.net.URL;
-import java.time.LocalDate;
-import java.time.Period;
-import java.util.Date;
-import java.util.ResourceBundle;
 
 public class NhanVien_Control implements Initializable {
     @FXML
@@ -83,8 +91,8 @@ public class NhanVien_Control implements Initializable {
         String trangThaiNV[] = {"NGHI", "DANG_LAM", "NGHI_DAI_HAN"};
         comboTrangThai.setItems(FXCollections.observableArrayList(trangThaiNV));
         comboTrangThai.setValue("DANG_LAM");
-        String cauHoi[] = {"Màu sắc yêu thích của bạn là gì?", "Món ăn yêu thích của bạn là gì?", "Món uống yêu thích của bạn là gì?"};
-        comboCauHoi.setItems(FXCollections.observableArrayList(cauHoi));
+        String question[] = {"Màu sắc yêu thích của bạn là gì?", "Món ăn yêu thích của bạn là gì?", "Món uống yêu thích của bạn là gì?"};
+        comboCauHoi.setItems(FXCollections.observableArrayList(question));
         ObservableList<NhanVien> nhanVienList = NhanVien_DAO.getNhanVienList();
         cellMaNV.setCellValueFactory(new PropertyValueFactory<>("maNV"));
         cellTenNV.setCellValueFactory(new PropertyValueFactory<>("tenNV"));

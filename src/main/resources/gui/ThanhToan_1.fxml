@@ -159,39 +159,39 @@
                   <Font size="24.0" />
                </font>
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="44.0" />
                </padding>
             </Button>
-            <Button fx:id="btn_Xuathd_tt" layoutX="1044.0" layoutY="563.0" mnemonicParsing="false" onAction="#handleXuatHD" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: #ffe500; -fx-background-radius: 10px;" text="Xuất hoá đơn (F2)" textFill="WHITE">
+            <Button fx:id="btn_Xuathd_tt" layoutX="1044.0" layoutY="563.0" mnemonicParsing="false" onAction="#handleXuatHD" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: #D4AF37; -fx-background-radius: 10px;" text="Xuất hoá đơn (F2)" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
                <padding>
-                  <Insets left="40.0" />
+                  <Insets left="58.0" />
                </padding>
             </Button>
-            <FontIcon layoutX="791.0" layoutY="572.0" iconLiteral="fas-rotate-left" iconSize="40" iconColor="WHITE" />
-            <FontIcon layoutX="1049.0" layoutY="572.0" iconLiteral="fas-print" iconSize="40" iconColor="WHITE" />
+            <FontIcon layoutX="799.0" layoutY="604.0" iconLiteral="fas-sync" iconSize="32" iconColor="WHITE" />
+            <FontIcon layoutX="1061.0" layoutY="604.0" iconLiteral="fas-print" iconSize="32" iconColor="WHITE" />
             <Separator layoutX="-3.0" layoutY="481.0" prefHeight="2.0" prefWidth="1322.0" />
             <Label layoutX="24.0" layoutY="678.0" prefHeight="36.0" prefWidth="120.0" text="Khách trả:">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label layoutX="20.0" layoutY="562.0" prefHeight="49.0" prefWidth="120.0" text="Tá»•ng tiá»n:">
+            <Label layoutX="20.0" layoutY="562.0" prefHeight="49.0" prefWidth="120.0" text="Tổng tiền:">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
             <TextField id="txt_tongtien" fx:id="txt_tongtien" editable="false" layoutX="171.0" layoutY="564.0" prefHeight="44.0" prefWidth="579.0" styleClass="txt_decor" stylesheets="@../css/thanhtoan1.css" />
             <TextField id="txt_tientralai" fx:id="txt_tralai" editable="false" layoutX="537.0" layoutY="677.0" prefHeight="36.0" prefWidth="215.0" styleClass="txt_decor" stylesheets="@../css/thanhtoan1.css" />
-            <FontIcon layoutX="14.0" layoutY="498.0" iconLiteral="fas-list" iconSize="48" iconColor="WHITE" />
+            <FontIcon layoutX="30.0" layoutY="534.0" iconLiteral="fas-list" iconSize="32" iconColor="#D4AF37" />
             <TextField id="txt_khachtra" fx:id="txt_khachtra" layoutX="171.0" layoutY="677.0" prefHeight="36.0" prefWidth="226.0" styleClass="txt_decor" stylesheets="@../css/thanhtoan1.css" />
             <Label fx:id="txt_giamgia" alignment="CENTER_RIGHT" layoutX="655.0" layoutY="573.0" prefHeight="27.0" prefWidth="51.0" text="Label" textFill="#1bb547">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Label layoutX="476.0" layoutY="499.0" prefHeight="49.0" prefWidth="163.0" text="Äiá»ƒm tÃ­ch luá»¹: ">
+            <Label layoutX="476.0" layoutY="499.0" prefHeight="49.0" prefWidth="163.0" text="Điểm tích lũy: ">
                <font>
                   <Font size="26.0" />
                </font>
@@ -203,7 +203,7 @@
             </Label>
             <Button fx:id="btn_apdung" contentDisplay="CENTER" layoutX="717.0" layoutY="510.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20px;">
             <graphic>
-               <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-exchange-alt" iconSize="20" iconColor="WHITE" />
+               <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-exchange-alt" iconSize="18" iconColor="#8B0000" />
             </graphic>
          </Button>
             <Button fx:id="btn_equal" alignment="CENTER" layoutX="781.0" layoutY="503.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #4460cc; -fx-background-radius: 15;" text="1,000" textFill="WHITE">
@@ -230,7 +230,7 @@
             <Separator layoutX="760.0" layoutY="481.0" orientation="VERTICAL" prefHeight="245.0" prefWidth="13.0" />
             <Button fx:id="btn_apdungkm" contentDisplay="CENTER" layoutX="709.0" layoutY="572.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="29.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20px;">
             <graphic>
-            <FontIcon layoutX="725.0" layoutY="577.0" iconLiteral="fas-circle-question" iconSize="20" iconColor="WHITE" />
+            <!-- <FontIcon layoutX="725.0" layoutY="577.0" iconLiteral="fas-circ le-question" iconSize="20" iconColor="WHITE" /> -->
             </graphic>
             </Button>
             <Label layoutX="33.0" layoutY="614.0" prefHeight="49.0" prefWidth="120.0" text="Tiền cọc:">
@@ -249,5 +249,3 @@
       </Pane>
    </children>
 </AnchorPane>
-
-

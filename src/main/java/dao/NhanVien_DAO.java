@@ -1,13 +1,19 @@
 package dao;
 
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Types;
+import java.time.LocalDate;
+
 import connectDB.ConnectDB;
 import entity.NhanVien;
 import entity.TrangThaiNhanVien;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
-import java.sql.*;
-import java.time.LocalDate;
 
 public class NhanVien_DAO {
     public static ObservableList<NhanVien> getNhanVienList() {
@@ -68,7 +74,7 @@ public class NhanVien_DAO {
         try {
             conn = ConnectDB.connect();
             PreparedStatement statement = null;
-            String sql = "INSERT INTO NhanVien (maNV, tenNV, gioiTinh, ngaySinh, sDT, ngayVaoLam, ngayNghiLam, chucVu, trangThai, cauHoi, traLoi) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO NhanVien (maNV, tenNV, gioiTinh, ngaySinh, sDT, ngayVaoLam, ngayNghiLam, chucVu, trangThai, question, answer) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
             statement = conn.prepareStatement(sql);
             statement.setString(1, nv.getMaNV());
             statement.setString(2, nv.getTenNV());
@@ -129,7 +135,7 @@ public class NhanVien_DAO {
         return soThuTu;
     }
     public void capNhatNhanVien(NhanVien nv){
-        String sql = "UPDATE NhanVien SET maNV = ?, tenNV = ?, gioiTinh = ?, ngaySinh = ?, sDT = ?, ngayVaoLam = ?, ngayNghiLam = ?, chucVu = ?, trangThai = ?, cauHoi = ?, traLoi = ? WHERE maNV = ?";
+        String sql = "UPDATE NhanVien SET maNV = ?, tenNV = ?, gioiTinh = ?, ngaySinh = ?, sDT = ?, ngayVaoLam = ?, ngayNghiLam = ?, chucVu = ?, trangThai = ?, question = ?, answer = ? WHERE maNV = ?";
         try(Connection conn = ConnectDB.connect();
             PreparedStatement statement = conn.prepareStatement(sql)){
             statement.setString(1, nv.getMaNV());
@@ -240,8 +246,8 @@ public class NhanVien_DAO {
                 Date ngayNghiLam = rs.getDate("ngayNghiLam");
                 String chucVu = rs.getString("chucVu");
                 String trangThai = rs.getString("trangThai");
-                String cauHoi = rs.getString("question");
-                String traLoi = rs.getString("answer");
+                String question = rs.getString("question");
+                String answer = rs.getString("answer");
                 TrangThaiNhanVien ttnv = null;
                 if(trangThai != null){
                     ttnv = TrangThaiNhanVien.valueOf(trangThai);
@@ -255,7 +261,7 @@ public class NhanVien_DAO {
                 if (ngaySinh != null) {
                     localNgaySinh = ngaySinh.toLocalDate();
                 }
-                nv = new NhanVien(maNV, tenNV, gioiTinh, sDT, ttnv, chucVu,ngayVaoLam.toLocalDate(), localNgayNghiLam, localNgaySinh, cauHoi, traLoi);
+                nv = new NhanVien(maNV, tenNV, gioiTinh, sDT, ttnv, chucVu,ngayVaoLam.toLocalDate(), localNgayNghiLam, localNgaySinh, question, answer);
             }
         } catch (SQLException e) {
             e.printStackTrace();

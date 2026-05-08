@@ -1,5 +1,10 @@
 package control;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import dao.NhanVien_DAO;
 import dao.TaiKhoan_DAO;
 import entity.NhanVien;
@@ -12,14 +17,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class QuenMatKhau_Control implements Initializable {
     @FXML
@@ -49,8 +54,8 @@ public class QuenMatKhau_Control implements Initializable {
     NhanVien nv;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        String cauHoi[] = {"Màu sắc yêu thích của bạn là gì?", "Món ăn yêu thích của bạn là gì?", "Món uống yêu thích của bạn là gì?"};
-        comboCH.setItems(FXCollections.observableArrayList(cauHoi));
+        String question[] = {"Màu sắc yêu thích của bạn là gì?", "Món ăn yêu thích của bạn là gì?", "Món uống yêu thích của bạn là gì?"};
+        comboCH.setItems(FXCollections.observableArrayList(question));
     }
 
     public void xacNhanClicked(ActionEvent actionEvent) {

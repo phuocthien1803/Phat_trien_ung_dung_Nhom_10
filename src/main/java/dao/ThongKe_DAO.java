@@ -1,15 +1,19 @@
 package dao;
 
-import entity.*;
-import javafx.collections.ObservableList;
-
-import java.sql.Connection;import connectDB.ConnectDB;
-import javafx.collections.FXCollections;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
+
+import connectDB.ConnectDB;
+import entity.ChiTietHD_MonAn;
+import entity.HoaDon;
+import entity.NhanVien;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 
 public class ThongKe_DAO {
