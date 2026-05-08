@@ -1,6 +1,12 @@
 package control;
 
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 import dao.ThongKe_NV_DAO;
+import static dao.ThongKe_NV_DAO.getListDoanhThu7Day;
+import static dao.ThongKe_NV_DAO.getMonAnList1;
 import entity.ChiTietHD_MonAn;
 import entity.HoaDon;
 import entity.NhanVien;
@@ -8,16 +14,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.Label;
-
-import java.text.DecimalFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 import javafx.scene.chart.XYChart;
-
-import static dao.ThongKe_NV_DAO.getListDoanhThu7Day;
-import static dao.ThongKe_NV_DAO.getMonAnList1;
+import javafx.scene.control.Label;
 
 public class ThongKe_NV_Control {
     public Label revenueTodayLabel;
@@ -93,9 +91,9 @@ public class ThongKe_NV_Control {
             }
         }
 
-        // Thêm mục "Others" nếu có doanh thu từ các món khác
+        // Thêm mục "Khác" nếu có doanh thu từ các món khác
         if (othersTotal > 0) {
-            pieChartData.add(new PieChart.Data("Others", othersTotal));
+            pieChartData.add(new PieChart.Data("Khác", othersTotal));
         }
 
         // Gán dữ liệu vào PieChart

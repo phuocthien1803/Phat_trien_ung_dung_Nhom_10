@@ -1,26 +1,35 @@
 package control;
 
-import dao.ThongKe_DAO;
-import entity.ChiTietHD_MonAn;
-import entity.HoaDon;
-import entity.NhanVien;
-import javafx.collections.FXCollections;
-import javafx.scene.chart.*;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static dao.ThongKe_DAO.*;
+import dao.ThongKe_DAO;
+import static dao.ThongKe_DAO.getListDoanhThu7Day;
+import static dao.ThongKe_DAO.getListDoanhThuNam;
+import static dao.ThongKe_DAO.getListNhanVien;
+import static dao.ThongKe_DAO.getMonAnList;
+import static dao.ThongKe_DAO.getMonAnList1;
+import entity.ChiTietHD_MonAn;
+import entity.HoaDon;
+import entity.NhanVien;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 public class ThongKe_Control {
 
@@ -85,9 +94,9 @@ public class ThongKe_Control {
             }
         }
 
-        // Nếu có doanh thu từ "Others", thêm vào PieChart
+        // Nếu có doanh thu từ "Khác", thêm vào PieChart
         if (othersTotal > 0) {
-            pieChartData.add(new PieChart.Data("Others", othersTotal));
+            pieChartData.add(new PieChart.Data("Khác", othersTotal));
         }
 
         // Gán dữ liệu vào PieChart
@@ -127,9 +136,9 @@ public class ThongKe_Control {
             }
         }
 
-        // Nếu có doanh thu "Others", thêm vào PieChart
+        // Nếu có doanh thu "Khác", thêm vào PieChart
         if (othersRevenue > 0) {
-            pieChartData.add(new PieChart.Data("Others", othersRevenue));
+            pieChartData.add(new PieChart.Data("Khác", othersRevenue));
         }
 
         // Gán dữ liệu cho PieChart

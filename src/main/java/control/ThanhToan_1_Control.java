@@ -30,9 +30,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.Normalizer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.regex.Pattern;
@@ -106,7 +108,7 @@ public class ThanhToan_1_Control {
     private Label txt_diemtichluy;
     private String maHoaDon;
     private NhanVien nv;
-    private DecimalFormat decimalFormat = new DecimalFormat("#,##0");
+    private DecimalFormat decimalFormat = new DecimalFormat("#,##0", DecimalFormatSymbols.getInstance(Locale.US));
     //bang 0 la chua ap dung =1 la dang ap dung
     int checkgiamgiatichluy=0;
     public void setThanhToanControl(ThanhToan_Control thanhToanControl) {
@@ -114,7 +116,19 @@ public class ThanhToan_1_Control {
     }
     //ham xoa dinh dang viet trong in hoa don xai cho tien
     private double parseDouble(String value) {
-        return Double.parseDouble(value.replace(",", ""));
+        return parseCurrency(value);
+    }
+
+    private double parseCurrency(String value) {
+        if (value == null) {
+            return 0;
+        }
+        String digits = value.replaceAll("[^0-9]", "");
+        return digits.isEmpty() ? 0 : Double.parseDouble(digits);
+    }
+
+    private long parseCurrencyLong(String value) {
+        return Math.round(parseCurrency(value));
     }
     //hoa don truyen tu giao dien truoc qua
     public void setMaHoaDon(String maHoaDon) {
@@ -125,7 +139,7 @@ public class ThanhToan_1_Control {
     }
     // dinh dang 1,000,000 VND
     private String formatNumber(double number) {
-        return decimalFormat.format(number) + " VNĐ";
+        return decimalFormat.format(Math.round(number)) + " VNĐ";
     }
     //main
     public void loadData() {
@@ -242,8 +256,8 @@ public class ThanhToan_1_Control {
         btn_equal.setOnAction(event -> {
             String tongTienText = txt_phaitra.getText();
             if (tongTienText != null && !tongTienText.isEmpty()) {
-                String formattedTongTien = tongTienText.replace(" VNĐ", "").replace(",", "").trim();
-                long tongTien = Long.parseLong(formattedTongTien);
+                long currentPhaiTra = parseCurrencyLong(tongTienText);
+                long tongTien = currentPhaiTra;
                 if (tongTien < 1000) {
                     tongTien = 1000;
                 } else {
@@ -253,10 +267,9 @@ public class ThanhToan_1_Control {
                 }
                 String formattedTongTienVND = decimalFormat.format(tongTien) + " VNĐ";
                 txt_khachtra.setText(formattedTongTienVND);
-                double currenttongTien = Double.parseDouble(formattedTongTien);
+                double currenttongTien = currentPhaiTra;
                 double traLai = tongTien-currenttongTien;
-                String currentTraLaiText = txt_tralai.getText().replace(" VNĐ", "").replace(",", "").trim();
-                double currentTraLai = currentTraLaiText.isEmpty() ? 0 : Double.parseDouble(currentTraLaiText);
+                double currentTraLai = parseCurrency(txt_tralai.getText());
                 double updatedTraLai = Math.max(0, currentTraLai + traLai);
                 txt_tralai.setText(formatNumber(Math.max(0, updatedTraLai)));
                 String formattedTongTienForBtn = decimalFormat.format(tongTien);
@@ -266,8 +279,8 @@ public class ThanhToan_1_Control {
         btn_10k.setOnAction(event -> {
             String tongTienText = txt_phaitra.getText();
             if (tongTienText != null && !tongTienText.isEmpty()) {
-                String formattedTongTien = tongTienText.replace(" VNĐ", "").replace(",", "").trim();
-                    long tongTien = Long.parseLong(formattedTongTien);
+                    long currentPhaiTra = parseCurrencyLong(tongTienText);
+                    long tongTien = currentPhaiTra;
                     // Nếu giá trị nhỏ hơn 10,000, hiển thị 10,000
                     if (tongTien < 10000) {
                         tongTien = 10000;
@@ -282,10 +295,9 @@ public class ThanhToan_1_Control {
                     String formattedTongTienVND = decimalFormat.format(tongTien) + " VNĐ";
                     txt_khachtra.setText(formattedTongTienVND);
                     // Tính tiền thối lại: txt_khachtra - txt_tongtien
-                    double currenttongTien = Double.parseDouble(formattedTongTien);
+                    double currenttongTien = currentPhaiTra;
                     double traLai = tongTien-currenttongTien;
-                    String currentTraLaiText = txt_tralai.getText().replace(" VNĐ", "").replace(",", "").trim();
-                    double currentTraLai = currentTraLaiText.isEmpty() ? 0 : Double.parseDouble(currentTraLaiText);
+                    double currentTraLai = parseCurrency(txt_tralai.getText());
                     double updatedTraLai = Math.max(0, currentTraLai + traLai);
                     txt_tralai.setText(formatNumber(Math.max(0, updatedTraLai)));
                     // Cập nhật giá trị vào btn_10k
@@ -297,8 +309,8 @@ public class ThanhToan_1_Control {
         btn_100k.setOnAction(event -> {
             String tongTienText = txt_phaitra.getText();
             if (tongTienText != null && !tongTienText.isEmpty()) {
-                String formattedTongTien = tongTienText.replace(" VNĐ", "").replace(",", "").trim();
-                    long tongTien = Long.parseLong(formattedTongTien);
+                    long currentPhaiTra = parseCurrencyLong(tongTienText);
+                    long tongTien = currentPhaiTra;
                     if (tongTien < 100000) {
                         tongTien = 100000;
                     } else {
@@ -310,10 +322,9 @@ public class ThanhToan_1_Control {
                     }
                     String formattedTongTienVND = decimalFormat.format(tongTien) + " VNĐ";
                     txt_khachtra.setText(formattedTongTienVND);
-                    double currenttongTien = Double.parseDouble(formattedTongTien);
+                    double currenttongTien = currentPhaiTra;
                     double traLai = tongTien-currenttongTien;  // Sửa phép tính ở đây (txt_khachtra - txt_tongtien)
-                    String currentTraLaiText = txt_tralai.getText().replace(" VNĐ", "").replace(",", "").trim();
-                    double currentTraLai = currentTraLaiText.isEmpty() ? 0 : Double.parseDouble(currentTraLaiText);
+                    double currentTraLai = parseCurrency(txt_tralai.getText());
                     double updatedTraLai = Math.max(0, currentTraLai + traLai);
                     txt_tralai.setText(formatNumber(Math.max(0, updatedTraLai)));
                     String formattedTongTienForBtn = decimalFormat.format(tongTien);  // Định dạng cho btn_10k
@@ -323,8 +334,8 @@ public class ThanhToan_1_Control {
         btn_500k.setOnAction(event -> {
             String tongTienText = txt_phaitra.getText();
             if (tongTienText != null && !tongTienText.isEmpty()) {
-                String formattedTongTien = tongTienText.replace(" VNĐ", "").replace(",", "").trim();
-                    long tongTien = Long.parseLong(formattedTongTien);
+                    long currentPhaiTra = parseCurrencyLong(tongTienText);
+                    long tongTien = currentPhaiTra;
                     if (tongTien < 500000) {
                         tongTien = 500000;
                     } else {
@@ -336,10 +347,9 @@ public class ThanhToan_1_Control {
                     }
                     String formattedTongTienVND = decimalFormat.format(tongTien) + " VNĐ";
                     txt_khachtra.setText(formattedTongTienVND);
-                    double currenttongTien = Double.parseDouble(formattedTongTien);
+                    double currenttongTien = currentPhaiTra;
                     double traLai = tongTien-currenttongTien;  // Sửa phép tính ở đây (txt_khachtra - txt_tongtien)
-                    String currentTraLaiText = txt_tralai.getText().replace(" VNĐ", "").replace(",", "").trim();
-                    double currentTraLai = currentTraLaiText.isEmpty() ? 0 : Double.parseDouble(currentTraLaiText);
+                    double currentTraLai = parseCurrency(txt_tralai.getText());
                     double updatedTraLai = Math.max(0, currentTraLai + traLai);
                     txt_tralai.setText(formatNumber(Math.max(0, updatedTraLai)));
                     String formattedTongTienForBtn = decimalFormat.format(tongTien);  // Định dạng cho btn_10k
@@ -389,8 +399,7 @@ public class ThanhToan_1_Control {
     //ham cap nhat cac nut goi y tien mat
     private void updateSuggestMoney(String tongTienText, long stepValue, Button button) {
         if (tongTienText != null && !tongTienText.isEmpty()) {
-            String formattedTongTien = tongTienText.replace(" VNĐ", "").replace(",", "").trim();
-                long tongTien = Long.parseLong(formattedTongTien);
+                long tongTien = parseCurrencyLong(tongTienText);
                 if (tongTien < stepValue) {
                     tongTien = stepValue;
                 } else {
@@ -407,8 +416,7 @@ public class ThanhToan_1_Control {
     }
     private void updateSuggestMoneyEqual(String tongTienText, long stepValue, Button button) {
         if (tongTienText != null && !tongTienText.isEmpty()) {
-            String formattedTongTien = tongTienText.replace(" VNĐ", "").replace(",", "").trim();
-            long tongTien = Long.parseLong(formattedTongTien);
+            long tongTien = parseCurrencyLong(tongTienText);
             if (tongTien < stepValue) {
                 tongTien = stepValue;
             } else if (tongTien % stepValue != 0) {
@@ -440,8 +448,7 @@ public class ThanhToan_1_Control {
                 String maBan=null;
                 int diemTichLuy = 0;
                 //lay tong ten
-                String totalText = txt_tongtien.getText().replace(" VNĐ", "").replace(",", "").trim();
-                double currentTotal = Double.parseDouble(totalText);
+                double currentTotal = parseCurrency(txt_tongtien.getText());
                 //lay ma ban
                 HoaDon hoaDonDetails = ThanhToan_1_DAO.getHoaDonDetailsByMa(maHoaDon);
                 if (hoaDonDetails != null) {
@@ -514,8 +521,7 @@ public class ThanhToan_1_Control {
                     String giamGiaValue = giamGiaText.replace("%", "");
                     int giamGia = Integer.parseInt(giamGiaValue);
                     // Lấy giá trị tổng tiền và loại bỏ " VNĐ"
-                    String totalText = txt_phaitra.getText().replace(" VNĐ", "").replace(",", "").trim();
-                    double currentTotal = Double.parseDouble(totalText);
+                    double currentTotal = parseCurrency(txt_phaitra.getText());
                     double discount = giamGia-phanTramGiam;
                     String tongCongText = txt_tongtien.getText().replaceAll("[^\\d]", ""); //
                     double tongCong = Double.parseDouble(tongCongText);
@@ -612,7 +618,7 @@ public class ThanhToan_1_Control {
                         giamGia = 0.03;
                     }
                     // Tính toán giá trị giảm giá
-                    double tongTienGoc = Double.parseDouble(txt_tongtien.getText().replace(",", "").replace(" VNĐ", ""));
+                    double tongTienGoc = parseCurrency(txt_tongtien.getText());
                     double tienGiam = tongTienGoc * giamGia;
                     // Cập nhật điểm tích lũy mới
                     int diemMoi = diemHienTai - diemNhap;
@@ -632,7 +638,7 @@ public class ThanhToan_1_Control {
                     int currentDiscount = (currentText.equals("Label") || currentText.isEmpty()) ? 0 : Integer.parseInt(currentText);
                     int newDiscount = currentDiscount + (int) (giamGia * 100);
                     txt_giamgia.setText(newDiscount + "%");
-                    double currentPhaiTra = Double.parseDouble(txt_phaitra.getText().replace(",", "").replace(" VNĐ", ""));
+                    double currentPhaiTra = parseCurrency(txt_phaitra.getText());
                     double newPhaiTra = currentPhaiTra - tienGiam;
                     txt_phaitra.setText(formatNumber(newPhaiTra)); // Cập nhật tổng tiền sau giảm
                     txt_khachtra.setText("");
@@ -677,10 +683,8 @@ public class ThanhToan_1_Control {
 
     private void tinhTienPhaiTra() {
         try {
-            String tongTienStr = txt_tongtien.getText().replaceAll("[^\\d.]", "");
-            double tongTien = Double.parseDouble(tongTienStr);
-            String tienCocStr = txt_tiencoc.getText().replaceAll("[^\\d.]", "");
-            double tienCoc = Double.parseDouble(tienCocStr);
+            double tongTien = parseCurrency(txt_tongtien.getText());
+            double tienCoc = parseCurrency(txt_tiencoc.getText());
             // Tính tiền phải trả
             double tienPhaiTra = tongTien - tienCoc;
             // Định dạng và gán kết quả vào txt_phaitra
@@ -749,8 +753,7 @@ public class ThanhToan_1_Control {
         txt_khachtra.requestFocus();
     }
     private void ApplyKhuyenMai(){
-        String tongTienStr = txt_tongtien.getText().replaceAll("[^\\d.]", "");
-        double tongTien = Double.parseDouble(tongTienStr);
+        double tongTien = parseCurrency(txt_tongtien.getText());
         ObservableList<KhuyenMai> khuyenMaiListBest = KhuyenMai_DAO.getKhuyenMaiListBest();
         if (khuyenMaiListBest.isEmpty()) {
             return;
@@ -760,8 +763,7 @@ public class ThanhToan_1_Control {
         System.out.println(phanTramGiam+"phan tram giam la");
         double tongTienSauGiam = tongTien * phanTramGiam;
         System.out.println(tongTienSauGiam+"tong tien sau giam la");
-        String tienCocStr = txt_tiencoc.getText().replaceAll("[^\\d.]", "");
-        double tienCoc = Double.parseDouble(tienCocStr);
+        double tienCoc = parseCurrency(txt_tiencoc.getText());
         double tienPhaiTra = tongTien - tienCoc - tongTienSauGiam;
         System.out.println(tienPhaiTra + " tien phai tra la");
         txt_phaitra.setText(formatNumber(tienPhaiTra));

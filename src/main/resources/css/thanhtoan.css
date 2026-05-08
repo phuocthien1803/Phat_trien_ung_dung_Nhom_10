@@ -16,7 +16,7 @@
     -fx-pref-height: 50px;
     -fx-font-size: 25px;
     -fx-text-fill: #F5F5F5;
-    -fx-background-color: #1B1212;
+    -fx-background-color: #711019;
     -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 0 0;
 }
@@ -28,7 +28,7 @@
 
 /* Đặt viền cho các ô hàng */
 #banghoadon .table-row-cell {
-    -fx-background-color: #1B1212;
+    -fx-background-color: #711019;
     -fx-border-color: #D4AF37;
     -fx-border-width: 0 1px 1px 0;
 }

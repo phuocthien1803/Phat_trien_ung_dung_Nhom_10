@@ -1,12 +1,12 @@
 package gui;
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class TrangChu_GUI extends Application {
 
@@ -19,7 +19,7 @@ public class TrangChu_GUI extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(TrangChu_GUI.class.getResource("TrangChu.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Chương trình quản lý nhà hàng");
-        stage.getIcons().add(new Image(TrangChu_GUI.class.getResourceAskktsno10.pngimages/logo.png")));
+        stage.getIcons().add(new Image(TrangChu_GUI.class.getResource("images/logo.png").toString()));
         stage.setScene(scene);
         stage.show();
     }

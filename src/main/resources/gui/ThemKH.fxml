@@ -2,14 +2,12 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
-<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #1B1212;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThemKH_Control">
+<AnchorPane fx:id="paneDatBan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1314.0" style="-fx-background-color: #F7F1E3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ThemKH_Control">
    <children>
       <Button layoutX="6.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickBtnDatBan" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #8B0000;" text="Đặt bàn" textFill="WHITE">
          <font>
@@ -43,15 +41,15 @@
             <FontIcon fx:id="btnDong" layoutX="29.0" layoutY="7.0" iconLiteral="fas-times" iconSize="20" iconColor="WHITE" />
          </graphic>
       </Button>
-      <Pane layoutX="434.0" layoutY="56.0" prefHeight="342.0" prefWidth="403.0" style="-fx-background-color: white; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@../css/MainFormDesign.css">
+      <Pane layoutX="434.0" layoutY="82.0" prefHeight="360.0" prefWidth="440.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-color: #E6D3A3; -fx-border-radius: 18; -fx-border-width: 1;" styleClass="shadow" stylesheets="@../css/MainFormDesign.css">
          <children>
-            <Text fill="#D4AF37" layoutX="56.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm khách hàng" textAlignment="CENTER" wrappingWidth="332.79997558593743">
+            <Text fill="#8B0000" layoutX="98.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm khách hàng" textAlignment="CENTER" wrappingWidth="292.0">
                <font>
-                  <Font name="System Bold" size="36.0" />
+                  <Font name="System Bold" size="32.0" />
                </font>
             </Text>
-            <FontIcon layoutX="23.0" layoutY="16.0" iconLiteral="fas-user-plus" iconSize="48" iconColor="#D4AF37" />
-            <Button fx:id="btnThem" layoutX="276.0" layoutY="286.0" mnemonicParsing="false" onAction="#chonBtnThem" prefHeight="37.0" prefWidth="105.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" text="Thêm" textFill="WHITE">
+            <!-- <FontIcon layoutX="54.0" layoutY="64.0" iconLiteral="fas-user-plus" iconSize="42" iconColor="#D4AF37" /> -->
+            <Button fx:id="btnThem" layoutX="288.0" layoutY="292.0" mnemonicParsing="false" onAction="#chonBtnThem" prefHeight="40.0" prefWidth="112.0" style="-fx-background-color: #A11212; -fx-background-radius: 10;" text="Thêm" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -59,27 +57,25 @@
                   <FontIcon layoutX="29.0" layoutY="7.0" iconLiteral="fas-plus" iconSize="20" iconColor="WHITE" />
                </graphic>
             </Button>
-            <TextField fx:id="txtMaKH" layoutX="107.0" layoutY="91.0" prefHeight="26.0" prefWidth="200.0" promptText="Mã khách hàng" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
+            <TextField fx:id="txtMaKH" layoutX="112.0" layoutY="108.0" prefHeight="34.0" prefWidth="270.0" promptText="Mã khách hàng" style="-fx-background-color: transparent; -fx-border-color: #7A4D24; -fx-border-width: 0px 0px 1px 0px;">
                <font>
-                  <Font size="13.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
-            <FontIcon layoutX="75.0" layoutY="93.0" iconLiteral="fas-id-card" iconSize="25" iconColor="#D4AF37" />
-            <FontIcon layoutX="75.0" layoutY="213.0" iconLiteral="fas-user" iconSize="25" iconColor="#D4AF37" />
-            <TextField fx:id="txtHoTen" layoutX="107.0" layoutY="212.0" prefHeight="26.0" prefWidth="200.0" promptText="Nhập họ tên" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
+            <FontIcon layoutX="70.0" layoutY="132.0" iconLiteral="fas-id-card" iconSize="25" iconColor="#D4AF37" />
+            <FontIcon layoutX="70.0" layoutY="246.0" iconLiteral="fas-user" iconSize="25" iconColor="#D4AF37" />
+            <TextField fx:id="txtHoTen" layoutX="112.0" layoutY="222.0" prefHeight="34.0" prefWidth="270.0" promptText="Nhập họ tên" style="-fx-background-color: transparent; -fx-border-color: #7A4D24; -fx-border-width: 0px 0px 1px 0px;">
                <font>
-                  <Font size="13.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="txtSDT" layoutX="107.0" layoutY="152.0" prefHeight="26.0" prefWidth="200.0" promptText="Nhập số điện thoại" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 1px 0px;">
+            <TextField fx:id="txtSDT" layoutX="112.0" layoutY="165.0" prefHeight="34.0" prefWidth="270.0" promptText="Nhập số điện thoại" style="-fx-background-color: transparent; -fx-border-color: #7A4D24; -fx-border-width: 0px 0px 1px 0px;">
                <font>
-                  <Font size="13.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
-            <FontIcon layoutX="75.0" layoutY="154.0" iconLiteral="fas-phone" iconSize="25" iconColor="#D4AF37" />
+            <FontIcon layoutX="70.0" layoutY="189.0" iconLiteral="fas-phone" iconSize="25" iconColor="#D4AF37" />
          </children>
       </Pane>
    </children>
 </AnchorPane>
-
-

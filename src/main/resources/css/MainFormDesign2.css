@@ -2,8 +2,8 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.65), 12, 0.25, 0, 3);
 }
 .table-view{
-    -fx-background-color: #1B1212;
-    -fx-control-inner-background: #1B1212;
+    -fx-background-color: #711019;
+    -fx-control-inner-background: #711019;
     -fx-padding: 0;
     -fx-border-color: #D4AF37;
     -fx-border-radius: 8px;
@@ -36,6 +36,28 @@
 }
 
 .table-row-cell{
-    -fx-background-color: #1B1212;
+    -fx-background-color: #711019;
     -fx-text-background-color: #F5F5F5;
+}
+
+.hoa-don-table,
+.hoa-don-table .virtual-flow,
+.hoa-don-table .clipped-container,
+.hoa-don-table .sheet,
+.hoa-don-table .table-row-cell,
+.hoa-don-table .table-row-cell:odd,
+.hoa-don-table .table-row-cell:even,
+.hoa-don-table .table-row-cell:empty {
+    -fx-background-color: white;
+}
+
+.hoa-don-table .table-row-cell .table-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #1B1212;
+}
+
+.hoa-don-table .table-row-cell:selected,
+.hoa-don-table .table-row-cell:selected .table-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #711019;
 }
