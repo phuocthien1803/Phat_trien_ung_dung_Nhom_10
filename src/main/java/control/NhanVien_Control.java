@@ -31,74 +31,59 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
 public class NhanVien_Control implements Initializable {
-    @FXML
-    private TextField txtMaNV;
-    @FXML
-    private TextField txtSDT;
-    @FXML
-    private TextField txtTenNV;
-    @FXML
-    private TextField txtEmail;
-    @FXML
-    private ComboBox comboChucVu;
-    @FXML
-    private ComboBox comboTrangThai;
-    @FXML
-    private DatePicker ngaySinh;
-    @FXML
-    private RadioButton radNam;
-    @FXML
-    private RadioButton radNu;
-    @FXML
-    private ToggleGroup genderGroup;
-    @FXML
-    private TableView<NhanVien> tblNhanVien;
-    @FXML
-    private TableColumn<NhanVien, String> cellMaNV;
-    @FXML
-    private TableColumn<NhanVien, String> cellTenNV;
-    @FXML
-    private TableColumn<NhanVien, String> cellGioiTinh;
-    @FXML
-    private TableColumn<NhanVien, String> cellSDT;
-    @FXML
-    private TableColumn<NhanVien, Date> cellNgaySinh;
-    @FXML
-    private TableColumn<NhanVien, Date> cellNgayVaoLam;
-    @FXML
-    private TableColumn<NhanVien, Date> cellNgayNghiLam;
-    @FXML
-    private TableColumn<NhanVien, String> cellChucVu;
-    @FXML
-    private TableColumn<NhanVien, String> cellTrangThai;
-    @FXML
-    private TableColumn<NhanVien, String> cellEmail;
-    @FXML
-    private TextField txtMaTimKiem;
-    @FXML
-    private ComboBox comboCauHoi;
-    @FXML
-    private TextField txtCauHoi;
+
+    @FXML private TextField  txtMaNV;
+    @FXML private TextField  txtSDT;
+    @FXML private TextField  txtTenNV;
+    @FXML private TextField  txtEmail;
+    @FXML private ComboBox   comboChucVu;
+    @FXML private ComboBox   comboTrangThai;
+    @FXML private DatePicker ngaySinh;
+    @FXML private RadioButton radNam;
+    @FXML private RadioButton radNu;
+    @FXML private ToggleGroup genderGroup;
+    @FXML private TableView<NhanVien>             tblNhanVien;
+    @FXML private TableColumn<NhanVien, String>   cellMaNV;
+    @FXML private TableColumn<NhanVien, String>   cellTenNV;
+    @FXML private TableColumn<NhanVien, String>   cellGioiTinh;
+    @FXML private TableColumn<NhanVien, String>   cellSDT;
+    @FXML private TableColumn<NhanVien, Date>     cellNgaySinh;
+    @FXML private TableColumn<NhanVien, Date>     cellNgayVaoLam;
+    @FXML private TableColumn<NhanVien, Date>     cellNgayNghiLam;
+    @FXML private TableColumn<NhanVien, String>   cellChucVu;
+    @FXML private TableColumn<NhanVien, String>   cellTrangThai;
+    @FXML private TableColumn<NhanVien, String>   cellEmail;
+    @FXML private TextField  txtMaTimKiem;
+    @FXML private ComboBox   comboCauHoi;
+    @FXML private TextField  txtCauHoi;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         genderGroup = new ToggleGroup();
         radNam.setSelected(true);
         radNam.setToggleGroup(genderGroup);
         radNu.setToggleGroup(genderGroup);
-        String chucVuNV[] = {"Nhân viên", "Quản lý"};
+
+        String[] chucVuNV = {"Nhân viên", "Quản lý"};
         comboChucVu.setItems(FXCollections.observableArrayList(chucVuNV));
         comboChucVu.setValue("Nhân viên");
-        String trangThaiNV[] = {"NGHI", "DANG_LAM", "NGHI_DAI_HAN"};
+
+        String[] trangThaiNV = {"NGHI", "DANG_LAM", "NGHI_DAI_HAN"};
         comboTrangThai.setItems(FXCollections.observableArrayList(trangThaiNV));
         comboTrangThai.setValue("DANG_LAM");
-        String question[] = {"Màu sắc yêu thích của bạn là gì?", "Món ăn yêu thích của bạn là gì?", "Món uống yêu thích của bạn là gì?"};
+
+        String[] question = {
+            "Màu sắc yêu thích của bạn là gì?",
+            "Món ăn yêu thích của bạn là gì?",
+            "Món uống yêu thích của bạn là gì?"
+        };
         comboCauHoi.setItems(FXCollections.observableArrayList(question));
+
         ObservableList<NhanVien> nhanVienList = NhanVien_DAO.getNhanVienList();
         cellMaNV.setCellValueFactory(new PropertyValueFactory<>("maNV"));
         cellTenNV.setCellValueFactory(new PropertyValueFactory<>("tenNV"));
         cellGioiTinh.setCellValueFactory(cellData ->
-                new SimpleStringProperty(cellData.getValue().isGioiTinh() ? "Nam" : "Nữ")
-        );
+                new SimpleStringProperty(cellData.getValue().isGioiTinh() ? "Nam" : "Nữ"));
         cellNgaySinh.setCellValueFactory(new PropertyValueFactory<>("ngaySinh"));
         cellSDT.setCellValueFactory(new PropertyValueFactory<>("sDT"));
         cellNgayVaoLam.setCellValueFactory(new PropertyValueFactory<>("ngayVaoLam"));
@@ -106,69 +91,101 @@ public class NhanVien_Control implements Initializable {
         cellChucVu.setCellValueFactory(new PropertyValueFactory<>("chucVu"));
         cellTrangThai.setCellValueFactory(new PropertyValueFactory<>("trangThai"));
 
-        // Gắn dữ liệu vào TableView
         tblNhanVien.setItems(nhanVienList);
     }
-    public NhanVien RevertNhanVien(){
 
-        String ma = txtMaNV.getText();
-        String ten = txtTenNV.getText();
-        String sdt = txtSDT.getText();
-        LocalDate ngaySinhSelected = ngaySinh.getValue();
-        boolean gt = true;
-        if(genderGroup.getSelectedToggle() != null){
-            RadioButton SelectedGender = (RadioButton) genderGroup.getSelectedToggle();
-            gt = SelectedGender.getText().equals("Nam");
-        }
-        LocalDate ngayVaoLamSelected = LocalDate.now();
-        LocalDate ngayNghiLamSelected = null;
-        String cv = (String) comboChucVu.getValue();
-        TrangThaiNhanVien tTNV = null;
-        String tt = (String) comboTrangThai.getValue();
-        if(tt != null){
-            tTNV = TrangThaiNhanVien.valueOf(tt);
-        }
-        NhanVien nv = new NhanVien(ma, ten, gt, sdt, tTNV, cv, ngayVaoLamSelected, ngayNghiLamSelected, ngaySinhSelected);
-        return nv;
-    }
-    public void themNhanVien(ActionEvent actionEvent) {
+    // rowClicked 
+    public void rowClicked(MouseEvent mouseEvent) {
+        NhanVien selectedNhanVien = tblNhanVien.getSelectionModel().getSelectedItem();
+
+        // [SỬA LỖI 1] Kiểm tra null TRƯỚC khi làm bất cứ điều gì
+        // Người dùng có thể click vào vùng trống trong bảng → getSelectedItem() = null
+        if (selectedNhanVien == null) return;
+
+        // Bây giờ an toàn để gọi DAO
         NhanVien_DAO dao = new NhanVien_DAO();
-        String ten = txtTenNV.getText();
-        String sdt = txtSDT.getText();
+        NhanVien nv = dao.timKiemNhanVien1(selectedNhanVien.getMaNV());
+
+        txtMaNV.setText(selectedNhanVien.getMaNV());
+        txtTenNV.setText(selectedNhanVien.getTenNV());
+        txtSDT.setText(selectedNhanVien.getSDT());
+
+        if (selectedNhanVien.isGioiTinh()) {
+            radNam.setSelected(true);
+        } else {
+            radNu.setSelected(true);
+        }
+
+        if (selectedNhanVien.getNgaySinh() != null) {
+            ngaySinh.setValue(selectedNhanVien.getNgaySinh());
+        } else {
+            ngaySinh.setValue(null);
+        }
+
+        comboChucVu.setValue(selectedNhanVien.getChucVu().toString());
+        comboTrangThai.setValue(selectedNhanVien.getTrangThai().toString());
+
+        // nv có thể null nếu timKiemNhanVien1 không tìm thấy — guard an toàn
+        if (nv != null) {
+            comboCauHoi.setValue(nv.getCauHoi() != null ? nv.getCauHoi() : null);
+            txtCauHoi.setText(nv.getTraLoi() != null ? nv.getTraLoi() : "");
+        }
+    }
+
+    // Thêm nhân viên
+    public NhanVien RevertNhanVien() {
+        String ma   = txtMaNV.getText();
+        String ten  = txtTenNV.getText();
+        String sdt  = txtSDT.getText();
         LocalDate ngaySinhSelected = ngaySinh.getValue();
         boolean gt = true;
         if (genderGroup.getSelectedToggle() != null) {
-            RadioButton selectedGender = (RadioButton) genderGroup.getSelectedToggle();
-            gt = selectedGender.getText().equals("Nam");
+            gt = ((RadioButton) genderGroup.getSelectedToggle()).getText().equals("Nam");
         }
-        LocalDate ngayVaoLamSelected = LocalDate.now();
+        LocalDate ngayVaoLamSelected  = LocalDate.now();
         LocalDate ngayNghiLamSelected = null;
         String cv = (String) comboChucVu.getValue();
         TrangThaiNhanVien tTNV = null;
         String tt = (String) comboTrangThai.getValue();
-        String question = (String) comboCauHoi.getValue();
-        String answer = txtCauHoi.getText();
-        if (tt != null) {
-            tTNV = TrangThaiNhanVien.valueOf(tt);
+        if (tt != null) tTNV = TrangThaiNhanVien.valueOf(tt);
+        return new NhanVien(ma, ten, gt, sdt, tTNV, cv, ngayVaoLamSelected, ngayNghiLamSelected, ngaySinhSelected);
+    }
+
+    public void themNhanVien(ActionEvent actionEvent) {
+        NhanVien_DAO dao = new NhanVien_DAO();
+        String ten  = txtTenNV.getText();
+        String sdt  = txtSDT.getText();
+        LocalDate ngaySinhSelected = ngaySinh.getValue();
+        boolean gt = true;
+        if (genderGroup.getSelectedToggle() != null) {
+            gt = ((RadioButton) genderGroup.getSelectedToggle()).getText().equals("Nam");
         }
+        LocalDate ngayVaoLamSelected  = LocalDate.now();
+        LocalDate ngayNghiLamSelected = null;
+        String cv       = (String) comboChucVu.getValue();
+        TrangThaiNhanVien tTNV = null;
+        String tt       = (String) comboTrangThai.getValue();
+        String question = (String) comboCauHoi.getValue();
+        String answer   = txtCauHoi.getText();
+        if (tt != null) tTNV = TrangThaiNhanVien.valueOf(tt);
+
         String ma = taoMaNhanVienTuDong(cv, ngayVaoLamSelected, dao.laySoThuTu(ngayVaoLamSelected));
 
         if (kiemTraThongTin(ten, sdt, ngaySinhSelected)) {
-            NhanVien nv = new NhanVien(ma, ten, gt, sdt, tTNV, cv, ngayVaoLamSelected, ngayNghiLamSelected, ngaySinhSelected, question, answer);
+            NhanVien nv = new NhanVien(ma, ten, gt, sdt, tTNV, cv,
+                    ngayVaoLamSelected, ngayNghiLamSelected, ngaySinhSelected, question, answer);
             if (nv.getTenNV().isEmpty() || nv.getNgaySinh() == null) {
                 showAlert("Thông báo", "Vui lòng điền đầy đủ thông tin.");
                 return;
             }
+
             boolean isAdd = dao.themNhanVien(nv);
-            // Hiển thị thông báo cho người dùng
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             if (isAdd) {
-                // Khởi tạo mã hóa mật khẩu
                 BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-                String hashedPassword = encoder.encode("123"); // Hash mật khẩu mặc định "123"
-
+                String hashedPassword = encoder.encode("123");
                 TaiKhoan_DAO tk_Dao = new TaiKhoan_DAO();
-                TaiKhoan tk = new TaiKhoan(nv, hashedPassword); // Sử dụng mật khẩu đã hash
+                TaiKhoan tk = new TaiKhoan(nv, hashedPassword);
                 boolean isAddTK = tk_Dao.taoTaiKhoan(tk);
                 if (isAddTK) {
                     alert.setTitle("Thành công");
@@ -181,97 +198,37 @@ public class NhanVien_Control implements Initializable {
                 alert.setContentText("Đã xảy ra lỗi khi thêm nhân viên. Vui lòng thử lại.");
             }
             alert.showAndWait();
-            // Cập nhật bảng nhân viên nếu cần
-            ObservableList<NhanVien> nhanVienList = NhanVien_DAO.getNhanVienList();
-            tblNhanVien.setItems(nhanVienList);
+            tblNhanVien.setItems(NhanVien_DAO.getNhanVienList());
         }
     }
 
-    private void showAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
-    private String taoMaNhanVienTuDong(String chucVu, LocalDate ngayVaoLam, int soThuTu) {
-        // Định dạng ngày thành chuỗi ddMMyy
-        String ngay = ngayVaoLam.format(java.time.format.DateTimeFormatter.ofPattern("ddMMyy"));
-
-        // Xác định phần CV (TN cho nhân viên thường, QL cho quản lý)
-        String cv;
-        if (chucVu.equalsIgnoreCase("Quản lý")) {
-            cv = "QL";
-        } else {
-            cv = "TN";
-        }
-
-        // Tạo mã số thứ tự với định dạng 2 chữ số
-        String soThuTuFormat = String.format("%02d", soThuTu);
-
-        // Tạo mã nhân viên hoàn chỉnh
-        return "NV" + cv + ngay + soThuTuFormat;
-    }
-
-    public void rowClicked(MouseEvent mouseEvent) {
-        NhanVien SelectedNhanVien = tblNhanVien.getSelectionModel().getSelectedItem();
-        NhanVien_DAO dao = new NhanVien_DAO();
-        NhanVien nv = dao.timKiemNhanVien1(SelectedNhanVien.getMaNV());
-        if(SelectedNhanVien != null){
-            txtMaNV.setText(SelectedNhanVien.getMaNV());
-            txtTenNV.setText(SelectedNhanVien.getTenNV());
-            txtSDT.setText(SelectedNhanVien.getSDT());
-            if(SelectedNhanVien.isGioiTinh()){
-                radNam.setSelected(true);
-            }
-            else {
-                radNu.setSelected(true);
-            }
-            if(SelectedNhanVien.getNgaySinh() != null){
-                ngaySinh.setValue(SelectedNhanVien.getNgaySinh());
-            }
-            else {
-                ngaySinh.setValue(null);
-            }
-            comboChucVu.setValue(SelectedNhanVien.getChucVu().toString());
-            comboTrangThai.setValue(SelectedNhanVien.getTrangThai().toString());
-            if (nv.getCauHoi() != null) {
-                comboCauHoi.setValue(nv.getCauHoi().toString());
-            } else {
-                comboCauHoi.setValue(null);
-            }
-            txtCauHoi.setText(nv.getTraLoi() != null ? nv.getTraLoi() : "");
-        }
-    }
-
+    // Cập nhật nhân viên
     public void capNhatNhanVien(ActionEvent actionEvent) {
         NhanVien_DAO dao = new NhanVien_DAO();
-        String ma = txtMaNV.getText();
+        String ma  = txtMaNV.getText();
         String ten = txtTenNV.getText();
         String sdt = txtSDT.getText();
         LocalDate ngaySinhSelected = ngaySinh.getValue();
         boolean gt = true;
-        if(genderGroup.getSelectedToggle() != null){
-            RadioButton SelectedGender = (RadioButton) genderGroup.getSelectedToggle();
-            gt = SelectedGender.getText().equals("Nam");
+        if (genderGroup.getSelectedToggle() != null) {
+            gt = ((RadioButton) genderGroup.getSelectedToggle()).getText().equals("Nam");
         }
+
         NhanVien nv1 = dao.timKiemNhanVien1(ma);
-        LocalDate ngayVaoLamSelected = nv1.getNgayVaoLam();
+        LocalDate ngayVaoLamSelected  = nv1.getNgayVaoLam();
         LocalDate ngayNghiLamSelected = null;
-        String cv = (String) comboChucVu.getValue();
+        String cv       = (String) comboChucVu.getValue();
         String question = (String) comboCauHoi.getValue();
-        String answer = txtCauHoi.getText();
+        String answer   = txtCauHoi.getText();
         TrangThaiNhanVien tTNV = null;
         String tt = (String) comboTrangThai.getValue();
-        if(tt != null){
-            tTNV = TrangThaiNhanVien.valueOf(tt);
-        }
-        if(tt.equalsIgnoreCase("NGHI")){
-            ngayNghiLamSelected = LocalDate.now();
-        }
-        if(kiemTraThongTin(ten, sdt, ngaySinhSelected)){
-            NhanVien nv = new NhanVien(ma, ten, gt, sdt, tTNV, cv, ngayVaoLamSelected, ngayNghiLamSelected, ngaySinhSelected, question, answer);
-            if(nv.getTenNV().isEmpty() || nv.getNgaySinh() == null){
+        if (tt != null) tTNV = TrangThaiNhanVien.valueOf(tt);
+        if (tt.equalsIgnoreCase("NGHI")) ngayNghiLamSelected = LocalDate.now();
+
+        if (kiemTraThongTin(ten, sdt, ngaySinhSelected)) {
+            NhanVien nv = new NhanVien(ma, ten, gt, sdt, tTNV, cv,
+                    ngayVaoLamSelected, ngayNghiLamSelected, ngaySinhSelected, question, answer);
+            if (nv.getTenNV().isEmpty() || nv.getNgaySinh() == null) {
                 showAlert("Thông báo", "Vui lòng điền đầy đủ thông tin.");
                 return;
             }
@@ -279,77 +236,80 @@ public class NhanVien_Control implements Initializable {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Thành công");
             alert.setHeaderText("Cập nhật nhân viên thành công");
-            alert.setContentText("Thông tin nhân viên " + nv.getTenNV() + " đã được cập nhật vào hệ thống.");
+            alert.setContentText("Thông tin nhân viên " + nv.getTenNV() + " đã được cập nhật.");
             alert.showAndWait();
             tblNhanVien.getItems().clear();
-            // Cập nhật bảng nhân viên nếu cần
-            ObservableList<NhanVien> nhanVienList = NhanVien_DAO.getNhanVienList();
-            tblNhanVien.setItems(nhanVienList);
+            tblNhanVien.setItems(NhanVien_DAO.getNhanVienList());
         }
     }
 
+    // Tìm kiếm
     public void timKiemNhanVien(ActionEvent actionEvent) {
         String ma = txtMaTimKiem.getText();
         NhanVien_DAO dao = new NhanVien_DAO();
-        if(ma.equalsIgnoreCase("")){
-            ObservableList<NhanVien> nhanVienList = NhanVien_DAO.getNhanVienList();
+        if (ma.equalsIgnoreCase("")) {
             tblNhanVien.getItems().clear();
-            tblNhanVien.setItems(nhanVienList);
-        }else {
+            tblNhanVien.setItems(NhanVien_DAO.getNhanVienList());
+        } else {
             ObservableList<NhanVien> nhanVienList = dao.timKiemNhanVien(ma);
-            if(nhanVienList == null){
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Thất bại");
-                alert.setHeaderText("Tìm kiếm không thành công");
-                alert.setContentText("Không tìm thấy nhân viên với ma" + ma);
-                alert.showAndWait();
-            }else{
+            if (nhanVienList == null) {
+                showAlert("Thất bại", "Không tìm thấy nhân viên với mã: " + ma);
+            } else {
                 tblNhanVien.getItems().clear();
                 tblNhanVien.setItems(nhanVienList);
             }
         }
     }
+
+    // Helpers
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private String taoMaNhanVienTuDong(String chucVu, LocalDate ngayVaoLam, int soThuTu) {
+        String ngay = ngayVaoLam.format(java.time.format.DateTimeFormatter.ofPattern("ddMMyy"));
+        String cv   = chucVu.equalsIgnoreCase("Quản lý") ? "QL" : "TN";
+        return "NV" + cv + ngay + String.format("%02d", soThuTu);
+    }
+
     public boolean kiemTraThongTin(String tenNV, String sDT, LocalDate ngaySinh) {
-        // Kiểm tra tên nhân viên
         if (tenNV == null || tenNV.trim().isEmpty()) {
             showAlert("Lỗi", "Tên nhân viên không được để trống.");
             return false;
         }
-        // Tên không chứa ký tự đặc biệt hoặc số
-        if (!tenNV.matches("[\\p{L} ]+")) {  // Chỉ cho phép ký tự chữ và khoảng trắng
+        if (!tenNV.matches("[\\p{L} ]+")) {
             showAlert("Lỗi", "Tên nhân viên không được chứa ký tự đặc biệt hoặc số.");
             return false;
         }
-        // Tên phải viết hoa chữ cái đầu của mỗi từ và có khoảng trắng giữa các từ
         if (!tenNV.matches("([A-ZÀ-Ỷ][a-zà-ỹ]+\\s?)+")) {
             showAlert("Lỗi", "Tên nhân viên phải viết hoa chữ cái đầu của mỗi từ và có khoảng trắng giữa các từ.");
             return false;
         }
-        // Kiểm tra số điện thoại
         if (sDT == null || sDT.trim().isEmpty()) {
             showAlert("Lỗi", "Số điện thoại không được để trống.");
             return false;
         }
-        // Số điện thoại phải có 10 chữ số và bắt đầu bằng các cặp số [03, 05, 07, 08, 09]
         if (!sDT.matches("^(03|05|07|08|09)\\d{8}$")) {
-            showAlert("Lỗi", "Số điện thoại phải có 10 chữ số và bắt đầu bằng các cặp số 03, 05, 07, 08, 09.");
+            showAlert("Lỗi", "Số điện thoại phải có 10 chữ số và bắt đầu bằng 03, 05, 07, 08, 09.");
             return false;
         }
-        // Kiểm tra ngày sinh: phải từ 18 đến dưới 60 tuổi
         if (ngaySinh == null) {
             showAlert("Lỗi", "Ngày sinh không được để trống.");
             return false;
         }
-        LocalDate now = LocalDate.now();
-        int tuoi = Period.between(ngaySinh, now).getYears();
+        int tuoi = Period.between(ngaySinh, LocalDate.now()).getYears();
         if (tuoi < 18) {
             showAlert("Lỗi", "Nhân viên phải từ 18 tuổi trở lên.");
             return false;
-        } else if (tuoi >= 60) {
+        }
+        if (tuoi >= 60) {
             showAlert("Lỗi", "Nhân viên phải nhỏ hơn 60 tuổi.");
             return false;
         }
-        return true;// Nếu mọi thứ đều hợp lệ
+        return true;
     }
-
 }
