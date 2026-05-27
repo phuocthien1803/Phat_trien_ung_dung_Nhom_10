@@ -9,6 +9,8 @@ module com.example.nhahangkkts_nhom10 {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.ikonli.fontawesome5;
     requires org.kordamp.ikonli.fontawesome6;
+    requires org.json;
+    requires java.net.http;
     opens gui to javafx.fxml;
     exports gui;
     exports control;

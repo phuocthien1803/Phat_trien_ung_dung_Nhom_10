@@ -20,7 +20,8 @@
                </image>
             </ImageView>
             <Pane layoutX="226.0" prefHeight="70.0" prefWidth="1314.0" style="-fx-background-color: #2A1515;" />
-            <VBox alignment="TOP_CENTER" layoutY="216.0" prefHeight="545.0" prefWidth="226.0" spacing="40.0" style="-fx-background-color: #8B0000;">
+            
+            <VBox alignment="TOP_CENTER" layoutY="150.0" prefHeight="646.0" prefWidth="226.0" spacing="25.0" style="-fx-background-color: #8B0000;">
                <children>
                   <Button fx:id="btnDatBan"  mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="70.0" prefWidth="194.0" style="-fx-background-color: #8B0000; -fx-border-width: 2; -fx-border-color: #D4AF37; -fx-border-radius: 10;" text="ĐẶT BÀN" textFill="#fafafa">
                      <font>
@@ -29,13 +30,6 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
-<!--                     <graphic>-->
-<!--                        <ImageView fx:id="hinhDatBan" fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">-->
-<!--                           <image>-->
-<!--                              <Image url="@../images/find.png" />-->
-<!--                           </image>-->
-<!--                        </ImageView>-->
-<!--                     </graphic>-->
                   </Button>
                   <Button fx:id="btnThanhToan" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #8B0000; -fx-border-width: 2; -fx-border-color: #D4AF37; -fx-border-radius: 10;" text="THANH TOÁN" textFill="#fafafa">
                      <font>
@@ -69,13 +63,29 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                  <Button fx:id="btnHoTro" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #8B0000; -fx-border-width: 2; -fx-border-color: #D4AF37; -fx-border-radius: 10;" text="HỖ TRỢ" textFill="#fafafa">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnChatBot" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#handleMouseEntered" onMouseExited="#handleMouseExited" prefHeight="73.0" prefWidth="193.0" style="-fx-background-color: #8B0000; -fx-border-width: 2; -fx-border-color: #D4AF37; -fx-border-radius: 10;" text="CHAT BOT" textFill="#fafafa">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </VBox>
          </children>
       </Pane>
       <Pane layoutX="226.0" prefHeight="70.0" prefWidth="1314.0" style="-fx-background-color: #8B0000;">
          <children>
-            <Label layoutX="224.0" layoutY="-2.0" text="NHÀ HÀNG Tân Hải Vân" textFill="WHITE">
+            <Label layoutX="224.0" layoutY="-2.0" text="NHÀ HÀNG TÂN HẢI VÂN" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="52.0" />
                </font>

@@ -1,14 +1,15 @@
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
     <artifactId>NhaHangKKTS_Nhom10</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>NhaHangKKTS_Nhom10</name>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.8.2</junit.version>
     </properties>
+    
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -51,8 +52,7 @@
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
             <version>12.8.1.jre11</version>
-            <!--  Chọn phiên bản theo yêu cầu  -->
-        </dependency>
+            </dependency>
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>itextpdf</artifactId>
@@ -73,7 +73,14 @@
             <artifactId>spring-security-core</artifactId>
             <version>6.3.4</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20231013</version>
+        </dependency>
     </dependencies>
+    
     <build>
         <finalName>NhaHangKKTS</finalName>
         <plugins>
@@ -92,7 +99,6 @@
                 <version>0.0.8</version>
                 <executions>
                     <execution>
-                        <!--  Default configuration for running with: mvn clean javafx:run  -->
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>com.example.nhahangkkts_nhom10/gui.Main</mainClass>

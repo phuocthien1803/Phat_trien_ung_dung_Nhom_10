@@ -26,6 +26,7 @@ public class TrangChu_Control implements Initializable {
             "-fx-background-color: #8B0000; -fx-border-color: #D4AF37; -fx-text-fill: #F5F5F5; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10";
     private static final String MENU_BUTTON_ACTIVE_STYLE =
             "-fx-background-color: #F5F5F5; -fx-border-color: #D4AF37; -fx-text-fill: #8B0000; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10";
+    
     @FXML
     private Button btnDatBan;
     @FXML
@@ -36,6 +37,13 @@ public class TrangChu_Control implements Initializable {
     private Button btnMonAn;
     @FXML
     private  Button btnThongKe;
+    
+    // Khai báo thêm 2 nút mới
+    @FXML
+    private Button btnHoTro;
+    @FXML
+    private Button btnChatBot;
+
     @FXML
     private Pane showPane;
     private Button selectedButton = null;
@@ -45,17 +53,19 @@ public class TrangChu_Control implements Initializable {
     private Stage stageTrangChu;
     private NhanVien nv;
     private ThongTinNhanVien_Control thongTinNhanVienControl;
+    
     public void setStageTrangChu(Stage stage) {
         this.stageTrangChu = stage;
     }
+    
     private DatBan_Control datBanControl;
     private String maNV;
 
     public void setMaNV(String maNV) {
         this.maNV = maNV;
     }
+    
     public void setNhanvien(String tenNV){
-     //   Image view = new Image(getClass().getResourceAsStream("/images/nvdaden.png"));
         Image image = new Image(getClass().getResourceAsStream("/images/nvdaden.png"));
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(35); // Điều chỉnh kích thước ảnh (rộng)
@@ -63,6 +73,7 @@ public class TrangChu_Control implements Initializable {
         btnTenNV.setGraphic(imageView);
         btnTenNV.setText(tenNV);
     }
+    
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setMenuButtonDefault(btnDatBan);
@@ -70,14 +81,21 @@ public class TrangChu_Control implements Initializable {
         setMenuButtonDefault(btnThongKe);
         setMenuButtonDefault(btnNhanVien);
         setMenuButtonDefault(btnMonAn);
+        
+        // Thêm màu mặc định cho 2 nút mới
+        setMenuButtonDefault(btnHoTro);
+        setMenuButtonDefault(btnChatBot);
+
         setMenuButtonActive(btnDatBan);
         selectedButton = btnDatBan;
         nv = SessionManager.getInstance().getCurrentNhanVien();
+        
         if(nv != null){
             System.out.println("Tên nhân viên là: " + nv.getTenNV());
         }else {
             System.out.println("Không tìm thấy nhân viên");
         }
+        
         // Hiển thị panel Thanh Toán và tải nội dung từ ThanhToan.fxml
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/DatBan.fxml"));
@@ -94,6 +112,7 @@ public class TrangChu_Control implements Initializable {
         }
         System.out.println("Ma nhan vien la:" + maNV);
     }
+    
     @FXML
     public void handleDatBanClick() {
         try {
@@ -103,18 +122,16 @@ public class TrangChu_Control implements Initializable {
 
             datBanControl.setMaNV(maNV);
             datBanControl.setTrangChuStage(this.stageTrangChu);
-            // Xóa các phần tử hiện tại trong pnThanhToan và thêm nội dung mới
-            showPane.getChildren().clear();  // Xóa phần tử cũ
-            showPane.getChildren().add(DatBanContent);  // Thêm phần tử mới
+            showPane.getChildren().clear(); 
+            showPane.getChildren().add(DatBanContent); 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-
     //check mã quản lý
     public void handleThongKeClick() {
-        String ma = nv.getMaNV(); // Lấy mã nhân viên trực tiếp từ đối tượng nv
+        String ma = nv.getMaNV(); 
         NhanVien nvien = NhanVien_DAO.timKiemNhanVien1(ma);
 
         if (nvien.getChucVu().equalsIgnoreCase("Quản lý")) {
@@ -147,7 +164,8 @@ public class TrangChu_Control implements Initializable {
     }
 
     public void handleMonAnClick() {
-        if (nv == null) {Alert alert = new Alert(Alert.AlertType.WARNING);
+        if (nv == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Cảnh báo");
             alert.setHeaderText("Không có thông tin nhân viên");
             alert.setContentText("Vui lòng đăng nhập lại để tải thông tin nhân viên.");
@@ -155,7 +173,7 @@ public class TrangChu_Control implements Initializable {
             return;
         }
 
-        String ma = nv.getMaNV(); // Lấy mã nhân viên trực tiếp từ đối tượng nv
+        String ma = nv.getMaNV(); 
         NhanVien nvien = NhanVien_DAO.timKiemNhanVien1(ma);
 
         if (nvien.getChucVu().equalsIgnoreCase("Quản lý")) {
@@ -174,6 +192,7 @@ public class TrangChu_Control implements Initializable {
             alert.showAndWait();
         }
     }
+    
     public void handleNhanVienClick() {
         if (nv == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -184,9 +203,10 @@ public class TrangChu_Control implements Initializable {
             return;
         }
 
-        String ma = nv.getMaNV(); // Lấy mã nhân viên trực tiếp từ đối tượng nv
+        String ma = nv.getMaNV(); 
         NhanVien nvien = NhanVien_DAO.timKiemNhanVien1(ma);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        
         if (nvien.getChucVu().equalsIgnoreCase("Quản lý")) {
             try {
                 Parent ThongKeContent = FXMLLoader.load(getClass().getResource("/gui/NhanVien.fxml"));
@@ -197,8 +217,31 @@ public class TrangChu_Control implements Initializable {
             }
         } else {
             alert.setTitle("Lỗi!");
-            alert.setHeaderText("Không thể chọn mục này!");alert.setContentText("Chỉ quản lý mới cho thể vào mục này");
+            alert.setHeaderText("Không thể chọn mục này!");
+            alert.setContentText("Chỉ quản lý mới cho thể vào mục này");
             alert.showAndWait();
+        }
+    }
+
+    // Xử lý nút Hỗ trợ
+    public void handleHoTroClick() {
+        try {
+            Parent hoTroContent = FXMLLoader.load(getClass().getResource("/gui/HoTro.fxml"));
+            showPane.getChildren().clear();
+            showPane.getChildren().add(hoTroContent);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Xử lý nút Chatbot
+    public void handleChatBotClick() {
+        try {
+            Parent chatBotContent = FXMLLoader.load(getClass().getResource("/gui/ChatBot.fxml"));
+            showPane.getChildren().clear();
+            showPane.getChildren().add(chatBotContent);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -207,12 +250,9 @@ public class TrangChu_Control implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/ThongTinNhanVien.fxml"));
             Parent root = loader.load();
 
-            // Lấy controller của ThongTinNhanVien_Control
             thongTinNhanVienControl = loader.getController();
             thongTinNhanVienControl.setStageTrangChu(this.stageTrangChu);
-
-            // Truyền thông tin nhân viên hiện tại vào ThongTinNhanVien_Control
-            thongTinNhanVienControl.setNhanVien(this.nv); // truyền `nv`
+            thongTinNhanVienControl.setNhanVien(this.nv); 
 
             Stage thongTinNhanVienStage = new Stage();
             thongTinNhanVienStage.setScene(new Scene(root));
@@ -224,13 +264,13 @@ public class TrangChu_Control implements Initializable {
         }
     }
 
-
     public void setNhanvienData(NhanVien nv) {
         this.nv = nv;
         if (thongTinNhanVienControl != null) {
             thongTinNhanVienControl.setNhanVien(nv);
         }
     }
+    
     @FXML
     private void handleMouseEntered(MouseEvent event) {
         setMenuButtonActive((Button) event.getSource());
@@ -239,12 +279,11 @@ public class TrangChu_Control implements Initializable {
     @FXML
     private void handleMouseExited(MouseEvent event) {
         Button button = (Button) event.getSource();
-
-        // Chỉ quay về màu mặc định nếu nút không phải là nút đã chọn
         if (button != selectedButton) {
             setMenuButtonDefault(button);
         }
     }
+    
     @FXML
     private void handleButtonClick(javafx.event.ActionEvent actionEvent) {
         Button clickedButton = (Button) actionEvent.getSource();
@@ -253,7 +292,6 @@ public class TrangChu_Control implements Initializable {
             setMenuButtonDefault(selectedButton);
         }
 
-        // Đặt màu cho nút hiện tại và gán nó làm `selectedButton`
         setMenuButtonActive(clickedButton);
         selectedButton = clickedButton;
 
@@ -267,6 +305,10 @@ public class TrangChu_Control implements Initializable {
             handleThongKeClick();
         } else if (clickedButton == btnDatBan) {
             handleDatBanClick();
+        } else if (clickedButton == btnHoTro) {
+            handleHoTroClick();
+        } else if (clickedButton == btnChatBot) {
+            handleChatBotClick();
         }
     }
 

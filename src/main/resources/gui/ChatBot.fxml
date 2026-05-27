@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+
+<!--
+  ChatBot.fxml  v3.0  —  Tân Hải Vân AI Assistant
+  Layout: [Sidebar | Main]
+  Sidebar có thể đóng/mở giống Gemini
+-->
+<AnchorPane
+    fx:id="rootPane"
+    prefHeight="760.0"
+    prefWidth="1314.0"
+    style="-fx-background-color: #1A1A1A;"
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="control.ChatBot_Control">
+
+    <children>
+
+        <!-- ══════════════════════════════════════════════════════
+             OUTER HBox: [SIDEBAR]  +  [MAIN PANEL]
+             ══════════════════════════════════════════════════════ -->
+        <HBox
+            AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+            AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+            spacing="0">
+
+            <!-- ▌▌▌▌▌  S I D E B A R  ▌▌▌▌▌ -->
+            <VBox
+                fx:id="sidebar"
+                prefWidth="280.0"
+                minWidth="0"
+                spacing="0"
+                style="-fx-background-color: #111111; -fx-border-color: #2A2A2A; -fx-border-width: 0 1 0 0;">
+
+                <!-- Sidebar header -->
+                <HBox alignment="CENTER_LEFT" spacing="10"
+                      style="-fx-padding: 18 14 14 14; -fx-border-color: #D4AF37; -fx-border-width: 0 0 2 0;">
+                    <StackPane prefWidth="32" prefHeight="32">
+                        <Circle radius="16" fill="#8B0000" />
+                        <Label text="🤖" style="-fx-font-size: 14;" />
+                    </StackPane>
+                    <Label text="Lịch sử Chat"
+                           style="-fx-text-fill: #D4AF37; -fx-font-size: 15; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <!-- Close sidebar button -->
+                    <Button fx:id="btnCloseSidebar" text="✕" onAction="#handleToggleSidebar"
+                            style="-fx-background-color: transparent; -fx-text-fill: #888; -fx-font-size: 16; -fx-cursor: hand; -fx-padding: 2 6;" />
+                </HBox>
+
+                <!-- New chat button -->
+                <HBox style="-fx-padding: 12 14;">
+                    <Button fx:id="btnNewChat" text="✚  Cuộc trò chuyện mới"
+                            onAction="#handleNewChat"
+                            prefHeight="40" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308"
+                            style="-fx-background-color: #1E1E1E; -fx-text-fill: #D4AF37;
+                                   -fx-border-color: #8B0000; -fx-border-radius: 8; -fx-background-radius: 8;
+                                   -fx-font-size: 13; -fx-cursor: hand; -fx-font-weight: bold;" />
+                </HBox>
+
+                <!-- Search sessions -->
+                <HBox style="-fx-padding: 0 14 10 14;">
+                    <TextField fx:id="txtSearchHistory"
+                               promptText="🔍  Tìm kiếm..."
+                               prefHeight="34" HBox.hgrow="ALWAYS"
+                               style="-fx-background-color: #1E1E1E; -fx-text-fill: #CCCCCC;
+                                      -fx-prompt-text-fill: #555; -fx-background-radius: 8;
+                                      -fx-border-color: #333; -fx-border-radius: 8;
+                                      -fx-padding: 0 12; -fx-font-size: 13;" />
+                </HBox>
+
+                <!-- Session list -->
+                <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
+                            style="-fx-background-color: transparent; -fx-background: transparent; -fx-border-color: transparent;">
+                    <content>
+                        <VBox fx:id="sessionList" spacing="4"
+                              style="-fx-padding: 0 10 10 10; -fx-background-color: transparent;" />
+                    </content>
+                </ScrollPane>
+
+                <!-- Sidebar footer: delete all -->
+                <HBox alignment="CENTER" style="-fx-padding: 10 14; -fx-border-color: #222; -fx-border-width: 1 0 0 0;">
+                    <Button fx:id="btnDeleteAllSessions" text="🗑  Xóa tất cả lịch sử"
+                            onAction="#handleDeleteAllSessions"
+                            prefHeight="34"
+                            style="-fx-background-color: transparent; -fx-text-fill: #666;
+                                   -fx-border-color: #333; -fx-border-radius: 6; -fx-background-radius: 6;
+                                   -fx-font-size: 12; -fx-cursor: hand;" />
+                </HBox>
+            </VBox>
+
+            <!-- ▌▌▌▌▌  M A I N  P A N E L  ▌▌▌▌▌ -->
+            <VBox HBox.hgrow="ALWAYS" spacing="0">
+
+                <!-- ══════ HEADER BAR ══════ -->
+                <HBox fx:id="headerBar" alignment="CENTER_LEFT" prefHeight="68" spacing="12"
+                      style="-fx-background-color: #111111; -fx-border-color: #D4AF37; -fx-border-width: 0 0 2 0; -fx-padding: 0 20 0 16;">
+
+                    <!-- Toggle sidebar button -->
+                    <Button fx:id="btnOpenSidebar" text="☰" onAction="#handleToggleSidebar"
+                            prefWidth="40" prefHeight="40"
+                            style="-fx-background-color: #1E1E1E; -fx-text-fill: #D4AF37;
+                                   -fx-background-radius: 8; -fx-border-color: #333; -fx-border-radius: 8;
+                                   -fx-font-size: 18; -fx-cursor: hand;" />
+
+                    <!-- Bot avatar + title -->
+                    <StackPane prefWidth="40" prefHeight="40">
+                        <Circle radius="20" fill="#8B0000" />
+                        <Label text="🤖" style="-fx-font-size: 16;" />
+                    </StackPane>
+                    <VBox spacing="1" HBox.hgrow="ALWAYS">
+                        <Label fx:id="lblTitle" text="TRỢ LÝ ẢO TÂN HẢI VÂN"
+                               style="-fx-font-size: 19; -fx-font-weight: bold; -fx-text-fill: #D4AF37; -fx-font-family: 'Georgia';" />
+                        <Label fx:id="lblSessionName" text="Cuộc trò chuyện mới"
+                               style="-fx-font-size: 11; -fx-text-fill: #666;" />
+                    </VBox>
+
+                    <Region HBox.hgrow="ALWAYS" />
+
+                    <!-- Save session button -->
+                    <Button fx:id="btnSaveSession" text="💾  Lưu" onAction="#handleSaveSession"
+                            prefHeight="36" prefWidth="90"
+                            style="-fx-background-color: #1E1E1E; -fx-text-fill: #D4AF37;
+                                   -fx-background-radius: 18; -fx-border-color: #D4AF37;
+                                   -fx-border-radius: 18; -fx-font-size: 13; -fx-cursor: hand;" />
+
+                    <!-- Theme toggle -->
+                    <Button fx:id="btnToggleTheme" text="☀ Sáng" onAction="#handleToggleTheme"
+                            prefHeight="36" prefWidth="100"
+                            style="-fx-background-color: #2A2A2A; -fx-text-fill: #D4AF37;
+                                   -fx-background-radius: 18; -fx-border-color: #D4AF37;
+                                   -fx-border-radius: 18; -fx-font-size: 13; -fx-cursor: hand;" />
+
+                    <!-- Clear current chat -->
+                    <Button fx:id="btnClear" text="🗑 Xóa" onAction="#handleClear"
+                            prefHeight="36" prefWidth="86"
+                            style="-fx-background-color: transparent; -fx-text-fill: #888;
+                                   -fx-background-radius: 18; -fx-border-color: #444;
+                                   -fx-border-radius: 18; -fx-font-size: 13; -fx-cursor: hand;" />
+                </HBox>
+
+                <!-- ══════ QUICK ACTION CHIPS ══════ -->
+                <HBox fx:id="quickActionsBar" spacing="10" alignment="CENTER_LEFT"
+                      style="-fx-background-color: #161616; -fx-padding: 10 20 10 20;
+                             -fx-border-color: #2A2A2A; -fx-border-width: 0 0 1 0;">
+                    <Label text="Hỏi nhanh:" style="-fx-text-fill: #666; -fx-font-size: 13;" />
+                    <Button fx:id="chip1" text="📊 Doanh thu hôm nay" onAction="#handleQuickAction"
+                            style="-fx-background-color: #1E1E1E; -fx-text-fill: #D4AF37; -fx-border-color: #8B0000;
+                                   -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-size: 12; -fx-padding: 6 14; -fx-cursor: hand;" />
+                    <Button fx:id="chip2" text="🍽 Trạng thái bàn" onAction="#handleQuickAction"
+                            style="-fx-background-color: #1E1E1E; -fx-text-fill: #D4AF37; -fx-border-color: #8B0000;
+                                   -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-size: 12; -fx-padding: 6 14; -fx-cursor: hand;" />
+                    <Button fx:id="chip3" text="📅 Thống kê tháng" onAction="#handleQuickAction"
+                            style="-fx-background-color: #1E1E1E; -fx-text-fill: #D4AF37; -fx-border-color: #8B0000;
+                                   -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-size: 12; -fx-padding: 6 14; -fx-cursor: hand;" />
+                    <Button fx:id="chip4" text="🧾 Số hóa đơn" onAction="#handleQuickAction"
+                            style="-fx-background-color: #1E1E1E; -fx-text-fill: #D4AF37; -fx-border-color: #8B0000;
+                                   -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-size: 12; -fx-padding: 6 14; -fx-cursor: hand;" />
+                    <Button fx:id="chip5" text="🍜 Món bán chạy" onAction="#handleQuickAction"
+                            style="-fx-background-color: #1E1E1E; -fx-text-fill: #D4AF37; -fx-border-color: #8B0000;
+                                   -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-size: 12; -fx-padding: 6 14; -fx-cursor: hand;" />
+                </HBox>
+
+                <!-- ══════ CHAT AREA ══════ -->
+                <ScrollPane fx:id="scrollPane" fitToWidth="true" VBox.vgrow="ALWAYS"
+                            style="-fx-background-color: transparent; -fx-background: transparent; -fx-border-color: transparent;">
+                    <content>
+                        <VBox fx:id="chatBox" spacing="14"
+                              style="-fx-padding: 24 30 24 30; -fx-background-color: #1A1A1A;" />
+                    </content>
+                </ScrollPane>
+
+                <!-- ══════ INPUT BAR ══════ -->
+                <HBox fx:id="inputBar" alignment="CENTER" spacing="12"
+                      style="-fx-background-color: #111111; -fx-border-color: #D4AF37;
+                             -fx-border-width: 2 0 0 0; -fx-padding: 14 20 14 20;">
+                    <TextField fx:id="txtInput" onAction="#handleSend"
+                               prefHeight="50" promptText="Nhập câu hỏi của bạn tại đây..."
+                               HBox.hgrow="ALWAYS"
+                               style="-fx-background-color: #2A2A2A; -fx-text-fill: #EEEEEE;
+                                      -fx-prompt-text-fill: #666; -fx-background-radius: 25;
+                                      -fx-border-radius: 25; -fx-border-color: #3A3A3A;
+                                      -fx-border-width: 1; -fx-padding: 0 20; -fx-font-size: 15;">
+                        <font><Font size="15.0" /></font>
+                    </TextField>
+                    <Button fx:id="btnSend" mnemonicParsing="false" onAction="#handleSend"
+                            prefHeight="50" prefWidth="120" text="GỬI ➤"
+                            style="-fx-background-color: linear-gradient(to right, #8B0000, #A80000);
+                                   -fx-background-radius: 25; -fx-text-fill: white; -fx-font-weight: bold;
+                                   -fx-font-size: 15; -fx-cursor: hand;
+                                   -fx-effect: dropshadow(gaussian, rgba(139,0,0,0.5), 10, 0, 0, 3);">
+                        <font><Font name="System Bold" size="15.0" /></font>
+                    </Button>
+                </HBox>
+
+            </VBox>
+            <!-- end MAIN PANEL -->
+
+        </HBox>
+        <!-- end OUTER HBox -->
+
+    </children>
+</AnchorPane>

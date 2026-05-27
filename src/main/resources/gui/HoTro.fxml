@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="726.0" prefWidth="1314.0"
+    style="-fx-background-color: linear-gradient(to bottom, #fdf6f0, #f5f0eb);"
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="control.HoTro_Control">
+
+    <children>
+
+        <!-- ===== HEADER BANNER ===== -->
+        <HBox layoutX="0.0" layoutY="0.0" prefWidth="1314.0" prefHeight="70.0"
+              style="-fx-background-color: linear-gradient(to right, #6b0000, #8b0000, #6b0000);
+                     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 3);"
+              alignment="CENTER">
+            <Label text="HỖ TRỢ &amp; HƯỚNG DẪN NGHIỆP VỤ"
+                   textFill="white"
+                   style="-fx-effect: dropshadow(gaussian, rgba(212,175,55,0.6), 8, 0, 0, 0);">
+                <font><Font name="System Bold" size="30.0"/></font>
+            </Label>
+        </HBox>
+
+        <!-- ===== GOLD SEPARATOR LINE ===== -->
+        <HBox layoutX="0.0" layoutY="70.0" prefWidth="1314.0" prefHeight="4.0"
+              style="-fx-background-color: linear-gradient(to right, transparent, #D4AF37, #f0d060, #D4AF37, transparent);"/>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <VBox layoutX="30.0" layoutY="90.0" prefHeight="620.0" prefWidth="1254.0" spacing="0.0">
+            <children>
+
+                <!-- TAB PANE -->
+                <TabPane prefHeight="610.0" prefWidth="1254.0"
+                         tabClosingPolicy="UNAVAILABLE"
+                         tabMinWidth="160.0"
+                         tabMaxWidth="180.0"
+                         tabMinHeight="40.0"
+                         stylesheets="@../css/HoTro.css">
+                    <tabs>
+
+                        <!-- ===== TAB 1: HƯỚNG DẪN ĐẶT BÀN ===== -->
+                        <Tab text="📋  Hướng dẫn đặt bàn">
+                            <content>
+                                <ScrollPane fitToWidth="true"
+                                            style="-fx-background-color: transparent; -fx-padding: 0;">
+                                    <VBox spacing="0.0" style="-fx-padding: 30 40 30 40; -fx-background-color: white;">
+
+                                        <!-- Section 1 -->
+                                        <HBox style="-fx-background-color: #8b0000; -fx-background-radius: 8 8 0 0; -fx-padding: 12 20 12 20; -fx-spacing: 10;" alignment="CENTER_LEFT">
+                                            <Label text="🪑  QUY TRÌNH ĐẶT BÀN" textFill="white">
+                                                <font><Font name="System Bold" size="18.0"/></font>
+                                            </Label>
+                                        </HBox>
+                                        <VBox style="-fx-background-color: #fff8f8; -fx-border-color: #e8c0c0; -fx-border-width: 0 1 1 1; -fx-border-radius: 0 0 8 8; -fx-background-radius: 0 0 8 8; -fx-padding: 16 20 16 24;" spacing="10.0">
+                                            <Label text="•  Khu A: Dành cho 1–2 khách." wrapText="true" textFill="#3b0000"><font><Font size="15.0"/></font></Label>
+                                            <Label text="•  Khu B: Dành cho 3–6 khách." wrapText="true" textFill="#3b0000"><font><Font size="15.0"/></font></Label>
+                                            <Label text="•  Khu C: Dành cho nhóm từ 7 khách trở lên." wrapText="true" textFill="#3b0000"><font><Font size="15.0"/></font></Label>
+                                        </VBox>
+
+                                        <Region prefHeight="16.0"/>
+
+                                        <!-- Section 2 -->
+                                        <HBox style="-fx-background-color: #8b0000; -fx-background-radius: 8 8 0 0; -fx-padding: 12 20 12 20;" alignment="CENTER_LEFT">
+                                            <Label text="🕐  QUY ĐỊNH THỜI GIAN" textFill="white">
+                                                <font><Font name="System Bold" size="18.0"/></font>
+                                            </Label>
+                                        </HBox>
+                                        <VBox style="-fx-background-color: #fff8f8; -fx-border-color: #e8c0c0; -fx-border-width: 0 1 1 1; -fx-border-radius: 0 0 8 8; -fx-background-radius: 0 0 8 8; -fx-padding: 16 20 16 24;" spacing="10.0">
+                                            <Label text="•  Giờ nhận khách: 8h–13h và 18h–22h." wrapText="true" textFill="#3b0000"><font><Font size="15.0"/></font></Label>
+                                            <Label text="•  Không nhận khách đặt trước giờ đóng cửa 2 tiếng." wrapText="true" textFill="#3b0000"><font><Font size="15.0"/></font></Label>
+                                            <Label text="•  Chỉ được phép đặt trước từ 1 đến 7 ngày." wrapText="true" textFill="#3b0000"><font><Font size="15.0"/></font></Label>
+                                        </VBox>
+
+                                        <Region prefHeight="16.0"/>
+
+                                        <!-- Section 3 -->
+                                        <HBox style="-fx-background-color: #8b0000; -fx-background-radius: 8 8 0 0; -fx-padding: 12 20 12 20;" alignment="CENTER_LEFT">
+                                            <Label text="💰  ĐẶT CỌC &amp; HỦY BÀN" textFill="white">
+                                                <font><Font name="System Bold" size="18.0"/></font>
+                                            </Label>
+                                        </HBox>
+                                        <VBox style="-fx-background-color: #fff8f8; -fx-border-color: #e8c0c0; -fx-border-width: 0 1 1 1; -fx-border-radius: 0 0 8 8; -fx-background-radius: 0 0 8 8; -fx-padding: 16 20 16 24;" spacing="10.0">
+                                            <Label text="•  Đặt món trước: Yêu cầu khách cọc 50% giá trị món ăn." wrapText="true" textFill="#3b0000"><font><Font size="15.0"/></font></Label>
+                                            <Label text="•  Hủy/Dời lịch: Khách hàng phải báo trước 1 ngày." wrapText="true" textFill="#3b0000"><font><Font size="15.0"/></font></Label>
+                                        </VBox>
+
+                                    </VBox>
+                                </ScrollPane>
+                            </content>
+                        </Tab>
+
+                        <!-- ===== TAB 2: HƯỚNG DẪN PHẦN MỀM ===== -->
+                        <Tab text="💻  Hướng dẫn phần mềm">
+                            <content>
+                                <ScrollPane fitToWidth="true"
+                                            style="-fx-background-color: transparent; -fx-padding: 0;">
+                                    <VBox spacing="0.0" style="-fx-padding: 30 40 30 40; -fx-background-color: white;">
+
+                                        <HBox style="-fx-background-color: #8b0000; -fx-background-radius: 8 8 0 0; -fx-padding: 12 20 12 20;" alignment="CENTER_LEFT">
+                                            <Label text="⚙️  CHỨC NĂNG CHÍNH" textFill="white">
+                                                <font><Font name="System Bold" size="18.0"/></font>
+                                            </Label>
+                                        </HBox>
+                                        <VBox style="-fx-background-color: #fff8f8; -fx-border-color: #e8c0c0; -fx-border-width: 0 1 1 1; -fx-border-radius: 0 0 8 8; -fx-background-radius: 0 0 8 8; -fx-padding: 16 20 16 24;" spacing="14.0">
+
+                                            <!-- Step cards -->
+                                            <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                                <Label text="🪑" style="-fx-font-size: 20px;"/>
+                                                <VBox spacing="3.0">
+                                                    <Label text="ĐẶT BÀN" textFill="#8b0000"><font><Font name="System Bold" size="14.0"/></font></Label>
+                                                    <Label text="Chọn bàn trống  →  Nhập thông tin khách  →  Xác nhận" wrapText="true" textFill="#555555"><font><Font size="14.0"/></font></Label>
+                                                </VBox>
+                                            </HBox>
+
+                                            <HBox style="-fx-background-color: #f5e6e6; -fx-background-radius: 2; -fx-pref-height: 1;"/>
+
+                                            <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                                <Label text="💳" style="-fx-font-size: 20px;"/>
+                                                <VBox spacing="3.0">
+                                                    <Label text="THANH TOÁN" textFill="#8b0000"><font><Font name="System Bold" size="14.0"/></font></Label>
+                                                    <Label text="Tìm hóa đơn  →  Kiểm tra VAT  →  Nhập tiền khách đưa  →  Xuất hóa đơn" wrapText="true" textFill="#555555"><font><Font size="14.0"/></font></Label>
+                                                </VBox>
+                                            </HBox>
+
+                                            <HBox style="-fx-background-color: #f5e6e6; -fx-background-radius: 2; -fx-pref-height: 1;"/>
+
+                                            <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                                <Label text="🍜" style="-fx-font-size: 20px;"/>
+                                                <VBox spacing="3.0">
+                                                    <Label text="QUẢN LÝ MÓN" textFill="#8b0000"><font><Font name="System Bold" size="14.0"/></font></Label>
+                                                    <Label text="Thêm món  →  Sửa món  →  Cập nhật trạng thái" wrapText="true" textFill="#555555"><font><Font size="14.0"/></font></Label>
+                                                </VBox>
+                                            </HBox>
+
+                                            <HBox style="-fx-background-color: #f5e6e6; -fx-background-radius: 2; -fx-pref-height: 1;"/>
+
+                                            <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                                <Label text="📊" style="-fx-font-size: 20px;"/>
+                                                <VBox spacing="3.0">
+                                                    <Label text="THỐNG KÊ" textFill="#8b0000"><font><Font name="System Bold" size="14.0"/></font></Label>
+                                                    <Label text="Xem doanh thu ngày  →  Xem số hóa đơn  →  So sánh 7 ngày gần nhất" wrapText="true" textFill="#555555"><font><Font size="14.0"/></font></Label>
+                                                </VBox>
+                                            </HBox>
+
+                                        </VBox>
+                                    </VBox>
+                                </ScrollPane>
+                            </content>
+                        </Tab>
+
+                        <!-- ===== TAB 3: QUY ĐỊNH NGHIỆP VỤ ===== -->
+                        <Tab text="📜  Quy định nghiệp vụ">
+                            <content>
+                                <VBox style="-fx-padding: 30 40 20 40; -fx-background-color: white;" spacing="12">
+
+                                    <HBox style="-fx-background-color: #8b0000; -fx-background-radius: 8 8 0 0; -fx-padding: 12 20 12 20;" alignment="CENTER_LEFT">
+                                        <Label text="📋  CÁC QUY TẮC BẮT BUỘC TRÊN HỆ THỐNG" textFill="white">
+                                            <font><Font name="System Bold" size="18.0"/></font>
+                                        </Label>
+                                    </HBox>
+
+                                    <TableView fx:id="tableQuyDinh" prefHeight="460.0"
+                                               style="-fx-background-radius: 0 0 8 8; -fx-border-radius: 0 0 8 8; -fx-border-color: #e8c0c0; -fx-border-width: 0 1 1 1;">
+                                        <columns>
+                                            <TableColumn fx:id="colQuyDinh" prefWidth="380.0" text="Quy định" />
+                                            <TableColumn fx:id="colNoiDung" prefWidth="810.0" text="Nội dung chi tiết" />
+                                        </columns>
+                                    </TableView>
+                                </VBox>
+                            </content>
+                        </Tab>
+
+                        <!-- ===== TAB 4: XỬ LÝ TÌNH HUỐNG ===== -->
+                        <Tab text="⚠️  Xử lý tình huống">
+                            <content>
+                                <ScrollPane fitToWidth="true"
+                                            style="-fx-background-color: transparent; -fx-padding: 0;">
+                                    <VBox spacing="16.0" style="-fx-padding: 30 40 30 40; -fx-background-color: white;">
+
+                                        <!-- Situation card 1 -->
+                                        <VBox style="-fx-background-color: white; -fx-border-color: #D4AF37; -fx-border-width: 0 0 0 4; -fx-border-radius: 0 8 8 0; -fx-background-radius: 0 8 8 0; -fx-padding: 14 20 14 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 2, 2);" spacing="8.0">
+                                            <Label text="⏰  Khách đến trễ quá 30 phút" textFill="#8b0000">
+                                                <font><Font name="System Bold" size="16.0"/></font>
+                                            </Label>
+                                            <Label text="→  Hệ thống hoặc nhân viên tự động hủy bàn." wrapText="true" textFill="#444444">
+                                                <font><Font size="14.5"/></font>
+                                            </Label>
+                                        </VBox>
+
+                                        <!-- Situation card 2 -->
+                                        <VBox style="-fx-background-color: white; -fx-border-color: #D4AF37; -fx-border-width: 0 0 0 4; -fx-border-radius: 0 8 8 0; -fx-background-radius: 0 8 8 0; -fx-padding: 14 20 14 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 2, 2);" spacing="8.0">
+                                            <Label text="🔄  Khách muốn đổi bàn" textFill="#8b0000">
+                                                <font><Font name="System Bold" size="16.0"/></font>
+                                            </Label>
+                                            <Label text="→  Kiểm tra bàn trống ở khu vực tương ứng và cập nhật hóa đơn sang bàn mới." wrapText="true" textFill="#444444">
+                                                <font><Font size="14.5"/></font>
+                                            </Label>
+                                        </VBox>
+
+                                        <!-- Situation card 3 -->
+                                        <VBox style="-fx-background-color: white; -fx-border-color: #D4AF37; -fx-border-width: 0 0 0 4; -fx-border-radius: 0 8 8 0; -fx-background-radius: 0 8 8 0; -fx-padding: 14 20 14 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 2, 2);" spacing="8.0">
+                                            <Label text="❌  Khách muốn hủy món" textFill="#8b0000">
+                                                <font><Font name="System Bold" size="16.0"/></font>
+                                            </Label>
+                                            <Label text="→  Phải liên hệ xác nhận với bộ phận bếp trước khi thực hiện thao tác hủy trên phần mềm." wrapText="true" textFill="#444444">
+                                                <font><Font size="14.5"/></font>
+                                            </Label>
+                                        </VBox>
+
+                                    </VBox>
+                                </ScrollPane>
+                            </content>
+                        </Tab>
+
+                        <!-- ===== TAB 5: CÂU HỎI THƯỜNG GẶP ===== -->
+                        <Tab text="❓  Câu hỏi thường gặp">
+                            <content>
+                                <ScrollPane fitToWidth="true"
+                                            style="-fx-background-color: transparent; -fx-padding: 0;">
+                                    <VBox spacing="16.0" style="-fx-padding: 30 40 30 40; -fx-background-color: white;">
+
+                                        <!-- FAQ 1 -->
+                                        <VBox style="-fx-background-color: #fff8f8; -fx-border-color: #e8c0c0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 16 20 16 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 4, 0, 1, 2);" spacing="8.0">
+                                            <Label text="Q1.  Không tìm thấy khách trên hệ thống?" textFill="#8b0000">
+                                                <font><Font name="System Bold" size="15.0"/></font>
+                                            </Label>
+                                            <Label text="✅  Kiểm tra lại số điện thoại khách cung cấp đã nhập đúng chưa." wrapText="true" textFill="#444444">
+                                                <font><Font size="14.5"/></font>
+                                            </Label>
+                                        </VBox>
+
+                                        <!-- FAQ 2 -->
+                                        <VBox style="-fx-background-color: #fff8f8; -fx-border-color: #e8c0c0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 16 20 16 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 4, 0, 1, 2);" spacing="8.0">
+                                            <Label text="Q2.  Không nhấn nút thanh toán được?" textFill="#8b0000">
+                                                <font><Font name="System Bold" size="15.0"/></font>
+                                            </Label>
+                                            <Label text="✅  Kiểm tra lại trạng thái khách hàng đã 'Check-in' hay chưa." wrapText="true" textFill="#444444">
+                                                <font><Font size="14.5"/></font>
+                                            </Label>
+                                        </VBox>
+
+                                        <!-- FAQ 3 -->
+                                        <VBox style="-fx-background-color: #fff8f8; -fx-border-color: #e8c0c0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 16 20 16 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 4, 0, 1, 2);" spacing="8.0">
+                                            <Label text="Q3.  Tại sao không thể tạo đơn đặt bàn mới?" textFill="#8b0000">
+                                                <font><Font name="System Bold" size="15.0"/></font>
+                                            </Label>
+                                            <Label text="✅  Có thể do hết bàn, quá giờ nhận bàn, hoặc chọn ngày nằm ngoài khoảng 1–7 ngày quy định." wrapText="true" textFill="#444444">
+                                                <font><Font size="14.5"/></font>
+                                            </Label>
+                                        </VBox>
+
+                                    </VBox>
+                                </ScrollPane>
+                            </content>
+                        </Tab>
+
+                        <!-- ===== TAB 6: LIÊN HỆ KỸ THUẬT ===== -->
+                        <Tab text="📞  Liên hệ Kỹ thuật">
+                            <content>
+                                <VBox style="-fx-background-color: white; -fx-padding: 50 40 50 40;" spacing="20.0" alignment="CENTER">
+
+                                    <HBox alignment="CENTER">
+                                        <Label text="THÔNG TIN LIÊN HỆ HỖ TRỢ NỘI BỘ" textFill="#8b0000"
+                                               style="-fx-padding: 10 30 10 30; -fx-background-color: #fff0f0; -fx-background-radius: 30; -fx-border-color: #D4AF37; -fx-border-radius: 30; -fx-border-width: 2;">
+                                            <font><Font name="System Bold" size="22.0"/></font>
+                                        </Label>
+                                    </HBox>
+
+                                    <!-- Contact cards -->
+                                    <VBox spacing="16.0" maxWidth="600.0">
+
+                                        <HBox style="-fx-background-color: white; -fx-border-color: #D4AF37; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 18 24 18 24; -fx-effect: dropshadow(gaussian, rgba(139,0,0,0.15), 8, 0, 0, 3);" spacing="16.0" alignment="CENTER_LEFT">
+                                            <Label text="👨‍💼" style="-fx-font-size: 28px;"/>
+                                            <VBox spacing="4.0">
+                                                <Label text="Quản lý ca" textFill="#999999"><font><Font size="12.0"/></font></Label>
+                                                <Label text="Anh Bảo" textFill="#8b0000"><font><Font name="System Bold" size="17.0"/></font></Label>
+                                                <Label text="📱  0165 789 932" textFill="#333333"><font><Font name="System Bold" size="16.0"/></font></Label>
+                                            </VBox>
+                                        </HBox>
+
+                                        <HBox style="-fx-background-color: white; -fx-border-color: #D4AF37; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 18 24 18 24; -fx-effect: dropshadow(gaussian, rgba(139,0,0,0.15), 8, 0, 0, 3);" spacing="16.0" alignment="CENTER_LEFT">
+                                            <Label text="💻" style="-fx-font-size: 28px;"/>
+                                            <VBox spacing="4.0">
+                                                <Label text="IT hỗ trợ phần mềm" textFill="#999999"><font><Font size="12.0"/></font></Label>
+                                                <Label text="Ngô Phước Thiện" textFill="#8b0000"><font><Font name="System Bold" size="17.0"/></font></Label>
+                                                <Label text="📱  0325 716 914" textFill="#333333"><font><Font name="System Bold" size="16.0"/></font></Label>
+                                            </VBox>
+                                        </HBox>
+
+                                        <HBox style="-fx-background-color: #8b0000; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 18 24 18 24; -fx-effect: dropshadow(gaussian, rgba(139,0,0,0.35), 10, 0, 0, 4);" spacing="16.0" alignment="CENTER_LEFT">
+                                            <Label text="🚨" style="-fx-font-size: 28px;"/>
+                                            <VBox spacing="4.0">
+                                                <Label text="Hotline xử lý sự cố khẩn cấp" textFill="rgba(255,255,255,0.8)"><font><Font size="12.0"/></font></Label>
+                                                <Label text="📱  0988 100 146" textFill="white"><font><Font name="System Bold" size="18.0"/></font></Label>
+                                            </VBox>
+                                        </HBox>
+
+                                    </VBox>
+                                </VBox>
+                            </content>
+                        </Tab>
+
+                    </tabs>
+                </TabPane>
+
+            </children>
+        </VBox>
+
+    </children>
+</AnchorPane>
