@@ -620,11 +620,11 @@ public class QuanLyBan_Control {
     private void chonBtnCoc() {
 
         if (btnCoc.getText().equals("Chưa cọc")) {
-            if (lblTienCoc.getText().equals("0 VNĐ") || lblTienCoc.getText().equals("0.0 VNĐ")) {
+            if (lblTienCoc.getText().equals("0 VND") || lblTienCoc.getText().equals("0.0 VND")) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Thông báo");
                 alert.setHeaderText("Bàn đặt này không cần phải cọc!");
-                alert.setContentText("Tiền tọc của bàn đặt là 0 VNĐ");
+                alert.setContentText("Tiền tọc của bàn đặt là 0 VND");
                 // Hiển thị hộp thoại và chờ người dùng chọn
                 Optional<ButtonType> result = alert.showAndWait();
             } else {

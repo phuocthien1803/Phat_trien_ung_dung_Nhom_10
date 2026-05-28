@@ -182,10 +182,6 @@ public class ThongKe_DAO {
         return list;
     }
 
-
-
-
-
     public static ObservableList<HoaDon> getListDoanhThuNam(int year) {
         ObservableList<HoaDon> danhSachHoaDon = FXCollections.observableArrayList();
         Connection conn = null;
@@ -347,7 +343,6 @@ public class ThongKe_DAO {
                     "WHERE YEAR(ngayDat) = ? " +
                     "  AND (trangThaiHoaDon = 'DA_THANH_TOAN' OR trangThaiHoaDon = 'BI_HUY')";
 
-
             // Chuẩn bị câu lệnh SQL với tham số tháng và năm
             pstmt = conn.prepareStatement(query);
             pstmt.setInt(1, year);
@@ -392,7 +387,6 @@ public class ThongKe_DAO {
                 GROUP BY m.tenMonAn;
         """;
 
-
         try (Connection conn = ConnectDB.connect();
              PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setInt(1, date.getDayOfMonth());
@@ -423,7 +417,6 @@ public class ThongKe_DAO {
 
         try {
             conn = ConnectDB.connect();
-
 
             LocalDate sevenDaysAgo = day.minusDays(6);
 
@@ -585,8 +578,6 @@ public class ThongKe_DAO {
 
         try (Connection conn = ConnectDB.connect();
              PreparedStatement pstmt = conn.prepareStatement(query)) {
-
-
 
             // Đặt tham số ngày, tháng, và năm hiện tại vào câu truy vấn
             pstmt.setInt(1, date.getDayOfMonth());

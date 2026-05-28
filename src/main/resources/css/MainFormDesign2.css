@@ -61,3 +61,17 @@
     -fx-background-color: white;
     -fx-text-fill: #711019;
 }
+
+.gold-combo .list-cell {
+    -fx-text-fill: #D4AF37;
+}
+
+.gold-combo .combo-box-popup .list-view .list-cell {
+    -fx-text-fill: #D4AF37;
+}
+
+.gold-combo .combo-box-popup .list-view .list-cell:hover,
+.gold-combo .combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #8B0000;
+    -fx-text-fill: #D4AF37;
+}

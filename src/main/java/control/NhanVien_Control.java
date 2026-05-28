@@ -80,22 +80,22 @@ public class NhanVien_Control implements Initializable {
     @FXML
     private TextField txtCauHoi;
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        genderGroup = new ToggleGroup();
-        radNam.setSelected(true);
-        radNam.setToggleGroup(genderGroup);
-        radNu.setToggleGroup(genderGroup);
-        String chucVuNV[] = {"Nhân viên", "Quản lý"};
-        comboChucVu.setItems(FXCollections.observableArrayList(chucVuNV));
-        comboChucVu.setValue("Nhân viên");
+    public void initialize(URL url, ResourceBundle resourceBundle) {   
+        genderGroup = new ToggleGroup();   
+        radNam.setSelected(true); 
+        radNam.setToggleGroup(genderGroup); 
+        radNu.setToggleGroup(genderGroup); 
+        String chucVuNV[] = {"Nhân viên", "Quản lý"}; 
+        comboChucVu.setItems(FXCollections.observableArrayList(chucVuNV));  
+        comboChucVu.setValue("Nhân viên");  
         String trangThaiNV[] = {"NGHI", "DANG_LAM", "NGHI_DAI_HAN"};
         comboTrangThai.setItems(FXCollections.observableArrayList(trangThaiNV));
-        comboTrangThai.setValue("DANG_LAM");
+        comboTrangThai.setValue("DANG_LAM"); 
         String question[] = {"Màu sắc yêu thích của bạn là gì?", "Món ăn yêu thích của bạn là gì?", "Món uống yêu thích của bạn là gì?"};
         comboCauHoi.setItems(FXCollections.observableArrayList(question));
-        ObservableList<NhanVien> nhanVienList = NhanVien_DAO.getNhanVienList();
-        cellMaNV.setCellValueFactory(new PropertyValueFactory<>("maNV"));
-        cellTenNV.setCellValueFactory(new PropertyValueFactory<>("tenNV"));
+        ObservableList<NhanVien> nhanVienList = NhanVien_DAO.getNhanVienList(); 
+        cellMaNV.setCellValueFactory(new PropertyValueFactory<>("maNV")); 
+        cellTenNV.setCellValueFactory(new PropertyValueFactory<>("tenNV")); 
         cellGioiTinh.setCellValueFactory(cellData ->
                 new SimpleStringProperty(cellData.getValue().isGioiTinh() ? "Nam" : "Nữ")
         );
@@ -108,28 +108,6 @@ public class NhanVien_Control implements Initializable {
 
         // Gắn dữ liệu vào TableView
         tblNhanVien.setItems(nhanVienList);
-    }
-    public NhanVien RevertNhanVien(){
-
-        String ma = txtMaNV.getText();
-        String ten = txtTenNV.getText();
-        String sdt = txtSDT.getText();
-        LocalDate ngaySinhSelected = ngaySinh.getValue();
-        boolean gt = true;
-        if(genderGroup.getSelectedToggle() != null){
-            RadioButton SelectedGender = (RadioButton) genderGroup.getSelectedToggle();
-            gt = SelectedGender.getText().equals("Nam");
-        }
-        LocalDate ngayVaoLamSelected = LocalDate.now();
-        LocalDate ngayNghiLamSelected = null;
-        String cv = (String) comboChucVu.getValue();
-        TrangThaiNhanVien tTNV = null;
-        String tt = (String) comboTrangThai.getValue();
-        if(tt != null){
-            tTNV = TrangThaiNhanVien.valueOf(tt);
-        }
-        NhanVien nv = new NhanVien(ma, ten, gt, sdt, tTNV, cv, ngayVaoLamSelected, ngayNghiLamSelected, ngaySinhSelected);
-        return nv;
     }
     public void themNhanVien(ActionEvent actionEvent) {
         NhanVien_DAO dao = new NhanVien_DAO();
@@ -166,7 +144,6 @@ public class NhanVien_Control implements Initializable {
                 // Khởi tạo mã hóa mật khẩu
                 BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
                 String hashedPassword = encoder.encode("123"); // Hash mật khẩu mặc định "123"
-
                 TaiKhoan_DAO tk_Dao = new TaiKhoan_DAO();
                 TaiKhoan tk = new TaiKhoan(nv, hashedPassword); // Sử dụng mật khẩu đã hash
                 boolean isAddTK = tk_Dao.taoTaiKhoan(tk);
@@ -225,9 +202,9 @@ public class NhanVien_Control implements Initializable {
                 radNam.setSelected(true);
             }
             else {
-                radNu.setSelected(true);
+                radNu.setSelected(true); 
             }
-            if(SelectedNhanVien.getNgaySinh() != null){
+            if(SelectedNhanVien.getNgaySinh() != null){    
                 ngaySinh.setValue(SelectedNhanVien.getNgaySinh());
             }
             else {
@@ -296,8 +273,8 @@ public class NhanVien_Control implements Initializable {
             tblNhanVien.getItems().clear();
             tblNhanVien.setItems(nhanVienList);
         }else {
-            ObservableList<NhanVien> nhanVienList = dao.timKiemNhanVien(ma);
-            if(nhanVienList == null){
+            NhanVien nv = NhanVien_DAO.timKiemNhanVien1(ma);
+            if(nv == null){
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Thất bại");
                 alert.setHeaderText("Tìm kiếm không thành công");
@@ -305,7 +282,7 @@ public class NhanVien_Control implements Initializable {
                 alert.showAndWait();
             }else{
                 tblNhanVien.getItems().clear();
-                tblNhanVien.setItems(nhanVienList);
+                tblNhanVien.setItems(FXCollections.observableArrayList(nv));
             }
         }
     }
@@ -330,9 +307,9 @@ public class NhanVien_Control implements Initializable {
             showAlert("Lỗi", "Số điện thoại không được để trống.");
             return false;
         }
-        // Số điện thoại phải có 10 chữ số và bắt đầu bằng các cặp số [03, 05, 07, 08, 09]
-        if (!sDT.matches("^(03|05|07|08|09)\\d{8}$")) {
-            showAlert("Lỗi", "Số điện thoại phải có 10 chữ số và bắt đầu bằng các cặp số 03, 05, 07, 08, 09.");
+        // Số điện thoại phải có 10 chữ số và bắt đầu bằng các cặp số [03, 05, 07, 08]
+        if (!sDT.matches("^(03|05|07|08)\\d{8}$")) {
+            showAlert("Lỗi", "Số điện thoại phải có 10 chữ số và bắt đầu bằng các cặp số 03, 05, 07, 08.");
             return false;
         }
         // Kiểm tra ngày sinh: phải từ 18 đến dưới 60 tuổi

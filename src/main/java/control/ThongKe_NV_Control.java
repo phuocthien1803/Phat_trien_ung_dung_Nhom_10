@@ -26,8 +26,6 @@ public class ThongKe_NV_Control {
     public PieChart dishesPieChart;
     public LineChart<String, Number> revenueLast7DaysChart;
 
-
-
     private void populateRevenueLast7DaysChart(LineChart<String, Number> chart) {
         NV = SessionManager.getInstance().getCurrentNhanVien();
         String ma = NV.getMaNV();
@@ -35,14 +33,14 @@ public class ThongKe_NV_Control {
         ObservableList<HoaDon> list = getListDoanhThu7Day(ma);
 
         // Sắp xếp dữ liệu từ ngày xa nhất đến ngày gần nhất
-        FXCollections.sort(list, (a, b) -> a.   getNgayDat().compareTo(b.   getNgayDat()));
+        FXCollections.sort(list, (a, b) -> a.   getNgayDat().compareTo(b.   getNgayDat())); 
 
-        XYChart.Series<String, Number> series = new XYChart.Series<>();
-        series.setName("Doanh thu 7 ngày");
+        XYChart.Series<String, Number> series = new XYChart.Series<>(); 
+        series.setName("Doanh thu 7 ngày");  
+ 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM"); 
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM");
-
-        for (HoaDon hoaDon : list) {
+        for (HoaDon hoaDon : list) { 
             String date = hoaDon.getNgayDat().format(formatter);
             series.getData().add(new XYChart.Data<>(date, hoaDon.getTongTien()));
         }
@@ -99,8 +97,6 @@ public class ThongKe_NV_Control {
         // Gán dữ liệu vào PieChart
         dishesPieChart.setData(pieChartData);
     }
-
-
 
 
     public void initialize() {

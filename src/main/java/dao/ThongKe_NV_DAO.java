@@ -1,16 +1,16 @@
 package dao;
 
-import connectDB.ConnectDB;
-import entity.ChiTietHD_MonAn;
-import entity.HoaDon;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+
+import connectDB.ConnectDB;
+import entity.ChiTietHD_MonAn;
+import entity.HoaDon;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class ThongKe_NV_DAO {
 
@@ -178,13 +178,17 @@ public class ThongKe_NV_DAO {
         int hoaDon = 0;
         Connection conn = null;
         PreparedStatement pstmt = null;
+        PreparedStatement pstmt2 = null;
         ResultSet rs = null;
+        ResultSet rs2 = null;
 
         try {
             conn = ConnectDB.connect();
+            
 
             // Lấy ngày hiện tại
             LocalDate today = LocalDate.now();
+            // LocalDate yesterday = today.minusDays(1);
 
             String query = """
                 SELECT COUNT(maHD) AS soHoaDon
@@ -197,14 +201,38 @@ public class ThongKe_NV_DAO {
                   AND maNV = ?
                 """;
 
+            // String queryYesterday = """
+            //     SELECT COUNT(maHD) AS soHoaDon
+            //     FROM HoaDon
+            //     WHERE DAY(ngayDat) = ?  
+            //       AND MONTH(ngayDat) = ?
+            //       AND YEAR(ngayDat) = ?
+            //       AND (trangThaiHoaDon = 'DA_THANH_TOAN' 
+            //            OR (trangThaiHoaDon = 'BI_HUY' AND tienCoc > 0))
+            //       AND maNV = ?
+            //     """;
+
             // Chuẩn bị câu lệnh SQL với tham số ngày, tháng, năm hiện tại và mã nhân viên
             pstmt = conn.prepareStatement(query);
-            pstmt.setInt(1, today.getDayOfMonth());
+            pstmt.setInt(1, today.getDayOfMonth());      
             pstmt.setInt(2, today.getMonthValue());
             pstmt.setInt(3, today.getYear());
             pstmt.setString(4, maNV); // Thêm tham số maNV
 
-            // Thực hiện truy vấn
+            // pstmt2 = conn.prepareStatement(queryYesterday);
+            // pstmt2.setInt(1, yesterday.getDayOfMonth());
+            // pstmt2.setInt(2, yesterday.getMonthValue());
+            // pstmt2.setInt(3, yesterday.getYear());
+            // pstmt2.setString(4, maNV);
+
+            // // Thực hiện truy vấn
+            // rs = pstmt.executeQuery();
+            // rs2 = pstmt2.executeQuery();
+
+            // if (rs.next()) {
+            //     hoaDon = rs.getInt("soHoaDon") + (rs2.next() ? rs2.getInt("soHoaDon") : 0); // Lấy số hóa đơn hôm nay trừ đi số hóa đơn hôm qua
+            // }
+
             rs = pstmt.executeQuery();
 
             if (rs.next()) {

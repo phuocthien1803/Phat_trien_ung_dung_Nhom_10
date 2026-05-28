@@ -17,7 +17,7 @@ import javafx.collections.ObservableList;
 
 public class NhanVien_DAO {
     public static ObservableList<NhanVien> getNhanVienList() {
-        ObservableList<NhanVien> list = FXCollections.observableArrayList();
+        ObservableList<NhanVien> list = FXCollections.observableArrayList();  // Tạo một ObservableList để chứa danh sách nhân viên
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
@@ -80,7 +80,7 @@ public class NhanVien_DAO {
             statement.setString(2, nv.getTenNV());
             statement.setBoolean(3, nv.isGioiTinh());
             if (nv.getNgaySinh() != null) {
-                statement.setDate(4, java.sql.Date.valueOf(nv.getNgaySinh()));
+                statement.setDate(4, java.sql.Date.valueOf(nv.getNgaySinh())); //
             } else {
                 statement.setNull(4, Types.DATE); // Nếu ngày sinh là null, thì set null cho cột này
             }
@@ -117,11 +117,11 @@ public class NhanVien_DAO {
             String sql = "SELECT COUNT(*) FROM NhanVien WHERE ngayVaoLam = ?";
             statement = conn.prepareStatement(sql);
             statement.setDate(1, java.sql.Date.valueOf(LocalDate.now()));
-            rs = statement.executeQuery();
+            rs = statement.executeQuery(); 
             if (rs.next()) {
                 soThuTu = rs.getInt(1) + 1; //Lấy nhân viên trong ngày tăng thêm 1;
             }
-        } catch (SQLException e) {
+        } catch (SQLException e) {  
             throw new RuntimeException(e);
         } finally {
             try {
@@ -173,63 +173,11 @@ public class NhanVien_DAO {
         }
     }
 
-    public ObservableList<NhanVien> timKiemNhanVien(String ma){
-        ObservableList<NhanVien> list = FXCollections.observableArrayList();
-        Connection conn = null;
-        PreparedStatement statement = null;
-        ResultSet rs = null;
-
-        try {
-            conn = ConnectDB.connect();
-            String query = "SELECT maNV, tenNV, gioiTinh, ngaySinh, sDT, ngayVaoLam, ngayNghiLam, chucVu, trangThai FROM NhanVien WHERE maNV = ?";
-            statement = conn.prepareStatement(query);
-            statement.setString(1, ma);
-            rs = statement.executeQuery();
-            while (rs.next()) {
-                String maNV = rs.getString("maNV");
-                String tenNV = rs.getString("tenNV");
-                boolean gioiTinh = rs.getBoolean("gioiTinh");
-                Date ngaySinh = rs.getDate("ngaySinh");
-                String sDT = rs.getString("sDT");
-                Date ngayVaoLam = rs.getDate("ngayVaoLam");
-                Date ngayNghiLam = rs.getDate("ngayNghiLam");
-                String chucVu = rs.getString("chucVu");
-                String trangThai = rs.getString("trangThai");
-                TrangThaiNhanVien ttnv = null;
-                if(trangThai != null){
-                    ttnv = TrangThaiNhanVien.valueOf(trangThai);
-                }
-                // Kiểm tra nếu ngayNghiLam là null
-                LocalDate localNgayNghiLam = null;
-                LocalDate localNgaySinh= null;
-                if (ngayNghiLam != null) {
-                    localNgayNghiLam = ngayNghiLam.toLocalDate();
-                }
-                if (ngaySinh != null) {
-                    localNgaySinh = ngaySinh.toLocalDate();
-                }
-                NhanVien nv = new NhanVien(maNV, tenNV, gioiTinh, sDT, ttnv, chucVu,ngayVaoLam.toLocalDate(), localNgayNghiLam, localNgaySinh);
-                list.add(nv);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (rs != null) rs.close();
-                if (statement != null) statement.close();
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return list;
-    }
     public static NhanVien timKiemNhanVien1(String ma){
         NhanVien nv = null;
         Connection conn = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
-
         try {
             conn = ConnectDB.connect();
             String query = "SELECT maNV, tenNV, gioiTinh, ngaySinh, sDT, ngayVaoLam, ngayNghiLam, chucVu, trangThai, question, answer FROM NhanVien WHERE maNV = ?";

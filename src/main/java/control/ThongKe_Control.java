@@ -30,7 +30,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-
 public class ThongKe_Control {
 
     @FXML
@@ -252,7 +251,7 @@ public class ThongKe_Control {
             }
         });
     }
-    public void handleClick( ) {
+    public void nhanNutTongQuan( ) {
         //Tab tổng quan
         int selectedYear = Integer.parseInt(yearComboBox.getValue());
         DecimalFormat decimalFormat = new DecimalFormat("#,###.##");
@@ -278,7 +277,7 @@ public class ThongKe_Control {
         newCustomersLabel.setText(String.valueOf(ThongKe_DAO.getNewCustomerCountDay(date)));
     }
 
-    public void handleClick1() {
+    public void nhanNutChiTiet() {
         //Tab cụ thể
         DecimalFormat decimalFormat= new DecimalFormat("#,###.##");
         LocalDate date = pickDate.getValue();

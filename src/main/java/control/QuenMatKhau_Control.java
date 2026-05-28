@@ -56,6 +56,12 @@ public class QuenMatKhau_Control implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         String question[] = {"Màu sắc yêu thích của bạn là gì?", "Món ăn yêu thích của bạn là gì?", "Món uống yêu thích của bạn là gì?"};
         comboCH.setItems(FXCollections.observableArrayList(question));
+        
+        // Thiết lập trạng thái ban đầu cho panes
+        paneKT.setManaged(true);
+        paneKT.setVisible(true);
+        paneDMK.setManaged(false);
+        paneDMK.setVisible(false);
     }
 
     public void xacNhanClicked(ActionEvent actionEvent) {
@@ -108,19 +114,43 @@ public class QuenMatKhau_Control implements Initializable {
 
 
     public void troVeClicked(ActionEvent actionEvent) {
-        paneDMK.setVisible(false);
-        paneKT.setVisible(true);
+        if (paneDMK.isVisible()) {
+            paneDMK.setVisible(false);
+            paneDMK.setManaged(false);
+            paneKT.setManaged(true);
+            paneKT.setVisible(true);
+            return;
+        }
+
+        try {
+            ((Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow()).close();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/DangNhap.fxml"));
+            Parent root = loader.load();
+            Stage dangNhapStage = new Stage();
+            dangNhapStage.setScene(new Scene(root));
+            dangNhapStage.setTitle("Đăng nhập");
+            dangNhapStage.getIcons().add(new Image(DangNhap_GUI.class.getResourceAsStream("/images/logo.png")));
+            dangNhapStage.show();
+        } catch (Exception e) {
+            lblThongBao.setText("Không thể quay về màn hình đăng nhập.");
+            e.printStackTrace();
+        }
     }
 
     public void tiepTucClicked(ActionEvent actionEvent) {
         String ma = txtTenDN.getText();
         String ch = (String) comboCH.getValue();
         String tl = txtCTL.getText();
+        if (ma.isEmpty() || ch == null || tl.isEmpty()) {
+            lblThongBao.setText("Vui lòng nhập đầy đủ thông tin!!!");
+            return;
+        }
+
         TaiKhoan_DAO dao = new TaiKhoan_DAO();
         TaiKhoan tk = dao.timKiemTaiKhoan(ma);
         NhanVien_DAO nv_dao = new NhanVien_DAO();
         nv = nv_dao.timKiemNhanVien1(ma);
-        if(tk == null){
+        if(tk == null || nv == null){
             lblThongBao.setText("Không tìm thấy tài khoản!!!");
         }
         else{
@@ -131,6 +161,8 @@ public class QuenMatKhau_Control implements Initializable {
                     lblThongBao.setText("Câu trả lời không chính xác!!!");
                 }else{
                     paneKT.setVisible(false);
+                    paneKT.setManaged(false);
+                    paneDMK.setManaged(true);
                     paneDMK.setVisible(true);
                 }
             }
